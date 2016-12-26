@@ -33,47 +33,22 @@ IF (NOT CMAKE_BUILD_TYPE)
 ENDIF (NOT CMAKE_BUILD_TYPE)
 
 # C++11 support.
-include(EnableCPP11.cmake)
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR CMAKE_COMPILER_IS_GNUCXX)
+	include(CheckCXXCompilerFlag)
+	check_cxx_compiler_flag(--std=c++11 SUPPORTS_STD_CXX11)
+	check_cxx_compiler_flag(--std=c++0x SUPPORTS_STD_CXX0X)
+	if(SUPPORTS_STD_CXX11)
+		message("-- Enabling C++11 support with --std=c++11.")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11")
+	elseif(SUPPORTS_STD_CXX0X)
+		message("-- Enabling C++11 support with --std=c++0x.")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++0x")
+	else()
+		message(ERROR "Compiler does not support C++11.")
+	endif()
+endif()
 
 SET (MY_LIBRARY_DEPENDENCIES)
-
-# Multithreading using OpenMP
-OPTION(OPENMP
-       "Enable multi-threading (requires OpenMP)"
-       ON)
-IF (${OPENMP})
-  FIND_PACKAGE(OpenMP)
-  IF(${OPENMP_FOUND})
-    MESSAGE("-- Found OpenMP.")
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-    ADD_DEFINITIONS(-DUSE_OPENMP)
-
-    IF (NOT MSVC)
-      # OpenMP needs to be included as a library on some platforms.
-      LIST(APPEND MY_LIBRARY_DEPENDENCIES gomp)
-    ENDIF (NOT MSVC)
-  ELSE(${OPENMP_FOUND})
-    MESSAGE("-- Can't find OpenMP. Continuing without it.")
-  ENDIF(${OPENMP_FOUND})
-ENDIF (${OPENMP})
-
-
-SET(USE_CINDER ON)
-FIND_PATH(CINDER_INCLUDE NAMES cinder/Cinder.h PATHS ${SEARCH_HEADERS})
-IF (NOT EXISTS ${CINDER_INCLUDE})
-	MESSAGE("-- Did not find Cinder include directory.")
-	SET(USE_CINDER OFF)
-ELSE()
-	MESSAGE("-- Found Cinder include directory.")
-ENDIF()
-
-FIND_LIBRARY(CINDER_LIB cinder)
-IF (NOT EXISTS ${CINDER_LIB})
-	MESSAGE("-- Did not find the Cinder library.")
-	SET(USE_CINDER OFF)
-ELSE()
-	MESSAGE("-- Found the Cinder library.")
-ENDIF()
 
 
 #
@@ -116,4 +91,4 @@ ENDIF()
 FILE(GLOB MCTS_HEADERS ${CMAKE_SOURCE_DIR}/*.h)
 
 ADD_SUBDIRECTORY(games)
-ADD_SUBDIRECTORY(tests)
+#ADD_SUBDIRECTORY(tests)

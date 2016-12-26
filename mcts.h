@@ -51,13 +51,11 @@ struct ComputeOptions
 {
 	int number_of_threads;
 	int max_iterations;
-	double max_time;
 	bool verbose;
 
 	ComputeOptions() :
 		number_of_threads(8),
 		max_iterations(10000),
-		max_time(-1.0), // default is no time limit.
 		verbose(false)
 	{ }
 };
@@ -87,9 +85,6 @@ typename State::Move compute_move(const State root_state,
 #include <thread>
 #include <vector>
 
-#ifdef USE_OPENMP
-#include <omp.h>
-#endif
 
 namespace MCTS
 {
@@ -300,25 +295,17 @@ std::string Node<State>::indent_string(int indent) const
 
 template<typename State>
 std::unique_ptr<Node<State>>  compute_tree(const State root_state,
-                                           const ComputeOptions options,
-                                           std::mt19937_64::result_type initial_seed)
+                                           const ComputeOptions options)
 {
-	std::mt19937_64 random_engine(initial_seed);
+	//std::mt19937_64 random_engine(initial_seed);
+	std::random_device random_engine;
 
-	attest(options.max_iterations >= 0 || options.max_time >= 0);
-	if (options.max_time >= 0) {
-		#ifndef USE_OPENMP
-		throw std::runtime_error("ComputeOptions::max_time requires OpenMP.");
-		#endif
-	}
-	// Will support more players later.
+	attest(options.max_iterations >= 0);
+	
 	attest(root_state.player_to_move == 1 || root_state.player_to_move == 2);
+
 	auto root = std::unique_ptr<Node<State>>(new Node<State>(root_state));
 
-	#ifdef USE_OPENMP
-	double start_time = ::omp_get_wtime();
-	double print_time = start_time;
-	#endif
 
 	for (int iter = 1; iter <= options.max_iterations || options.max_iterations < 0; ++iter) {
 		auto node = root.get();
@@ -350,19 +337,6 @@ std::unique_ptr<Node<State>>  compute_tree(const State root_state,
 			node = node->parent;
 		}
 
-		#ifdef USE_OPENMP
-		if (options.verbose || options.max_time >= 0) {
-			double time = ::omp_get_wtime();
-			if (options.verbose && (time - print_time >= 1.0 || iter == options.max_iterations)) {
-				std::cerr << iter << " games played (" << double(iter) / (time - start_time) << " / second)." << endl;
-				print_time = time;
-			}
-
-			if (time - start_time >= options.max_time) {
-				break;
-			}
-		}
-		#endif
 	}
 
 	return root;
@@ -383,9 +357,6 @@ typename State::Move compute_move(const State root_state,
 		return moves[0];
 	}
 
-	#ifdef USE_OPENMP
-	double start_time = ::omp_get_wtime();
-	#endif
 
 	// Start all jobs to compute trees.
 	vector<future<unique_ptr<Node<State>>>> root_futures;
@@ -394,7 +365,7 @@ typename State::Move compute_move(const State root_state,
 	for (int t = 0; t < options.number_of_threads; ++t) {
 		auto func = [t, &root_state, &job_options] () -> std::unique_ptr<Node<State>>
 		{
-			return compute_tree(root_state, job_options, 1012411 * t + 12515);
+			return compute_tree(root_state, job_options);
 		};
 
 		root_futures.push_back(std::async(std::launch::async, func));
@@ -450,14 +421,6 @@ typename State::Move compute_move(const State root_state,
 		     << " (" << 100.0 * best_wins / best_visits << "% wins)" << endl;
 	}
 
-	#ifdef USE_OPENMP
-	if (options.verbose) {
-		double time = ::omp_get_wtime();
-		std::cerr << games_played << " games played in " << double(time - start_time) << " s. "
-		          << "(" << double(games_played) / (time - start_time) << " / second, "
-		          << options.number_of_threads << " parallel jobs)." << endl;
-	}
-	#endif
 
 	return best_move;
 }

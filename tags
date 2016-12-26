@@ -1,0 +1,749 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AND_THEN	tests/catch.hpp	8030;"	d
+AND_WHEN	tests/catch.hpp	8028;"	d
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	396;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	399;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	402;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	406;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	408;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	410;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	414;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	417;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	420;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	425;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	428;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	431;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	435;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	391;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	394;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	397;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	401;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	403;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	405;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	409;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	412;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	415;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	420;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	423;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	426;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	430;"	d	file:
+AutoReg	tests/catch.hpp	/^    AutoReg(    void (C::*method)(),$/;"	f	struct:Catch::AutoReg
+AutoReg	tests/catch.hpp	/^struct AutoReg {$/;"	s	namespace:Catch
+BreakIntoDebugger	tests/catch.hpp	1487;"	d
+CATCH_AND_THEN	tests/catch.hpp	7965;"	d
+CATCH_AND_WHEN	tests/catch.hpp	7963;"	d
+CATCH_ANON_TEST_CASE	tests/catch.hpp	7948;"	d
+CATCH_ARC_ENABLED	tests/catch.hpp	604;"	d
+CATCH_ARC_STRONG	tests/catch.hpp	622;"	d
+CATCH_ARC_STRONG	tests/catch.hpp	638;"	d
+CATCH_CAPTURE	tests/catch.hpp	7934;"	d
+CATCH_CHECK	tests/catch.hpp	7916;"	d
+CATCH_CHECKED_ELSE	tests/catch.hpp	7919;"	d
+CATCH_CHECKED_IF	tests/catch.hpp	7918;"	d
+CATCH_CHECK_FALSE	tests/catch.hpp	7917;"	d
+CATCH_CHECK_NOFAIL	tests/catch.hpp	7920;"	d
+CATCH_CHECK_NOTHROW	tests/catch.hpp	7924;"	d
+CATCH_CHECK_THROWS	tests/catch.hpp	7922;"	d
+CATCH_CHECK_THROWS_AS	tests/catch.hpp	7923;"	d
+CATCH_CONFIG_CONSOLE_WIDTH	tests/catch.hpp	2065;"	d
+CATCH_CONFIG_MAIN	tests/test_mcts.cpp	3;"	d	file:
+CATCH_CONFIG_VARIADIC_MACROS	tests/catch.hpp	111;"	d
+CATCH_FAIL	tests/catch.hpp	7931;"	d
+CATCH_GENERATE	tests/catch.hpp	7953;"	d
+CATCH_GIVEN	tests/catch.hpp	7961;"	d
+CATCH_INFO	tests/catch.hpp	7929;"	d
+CATCH_INTERNAL_ERROR	tests/catch.hpp	237;"	d
+CATCH_INTERNAL_LINEINFO	tests/catch.hpp	236;"	d
+CATCH_METHOD_AS_TEST_CASE	tests/catch.hpp	7940;"	d
+CATCH_NOT_IMPLEMENTED	tests/catch.hpp	260;"	d
+CATCH_PLATFORM_MAC	tests/catch.hpp	1429;"	d
+CATCH_REGISTER_LEGACY_REPORTER	tests/catch.hpp	7951;"	d
+CATCH_REGISTER_REPORTER	tests/catch.hpp	7950;"	d
+CATCH_REQUIRE	tests/catch.hpp	7909;"	d
+CATCH_REQUIRE_FALSE	tests/catch.hpp	7910;"	d
+CATCH_REQUIRE_NOTHROW	tests/catch.hpp	7914;"	d
+CATCH_REQUIRE_THAT	tests/catch.hpp	7927;"	d
+CATCH_REQUIRE_THROWS	tests/catch.hpp	7912;"	d
+CATCH_REQUIRE_THROWS_AS	tests/catch.hpp	7913;"	d
+CATCH_SCENARIO	tests/catch.hpp	7957;"	d
+CATCH_SCOPED_CAPTURE	tests/catch.hpp	7935;"	d
+CATCH_SCOPED_INFO	tests/catch.hpp	7933;"	d
+CATCH_SECTION	tests/catch.hpp	7941;"	d
+CATCH_SUCCEED	tests/catch.hpp	7932;"	d
+CATCH_TEST_CASE	tests/catch.hpp	7938;"	d
+CATCH_TEST_CASE_METHOD	tests/catch.hpp	7939;"	d
+CATCH_THEN	tests/catch.hpp	7964;"	d
+CATCH_TRANSLATE_EXCEPTION	tests/catch.hpp	8018;"	d
+CATCH_UNSAFE_UNRETAINED	tests/catch.hpp	621;"	d
+CATCH_UNSAFE_UNRETAINED	tests/catch.hpp	637;"	d
+CATCH_WARN	tests/catch.hpp	7930;"	d
+CATCH_WHEN	tests/catch.hpp	7962;"	d
+CHECK_THAT	tests/catch.hpp	7926;"	d
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
+CMAKE_BINARY_DIR	build/games/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
+CMAKE_BINARY_DIR	build/tests/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
+CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/games/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/tests/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
+CMAKE_SOURCE_DIR	build/games/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
+CMAKE_SOURCE_DIR	build/tests/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	103;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	117;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	124;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	132;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	144;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	147;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	14;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	150;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	153;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	168;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	192;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	210;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	219;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	222;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	237;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	244;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	262;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	265;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	268;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	37;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	45;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	51;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	57;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	75;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	96;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	108;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	115;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	129;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	13;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	142;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	212;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	221;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	224;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	239;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	257;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	260;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	263;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	50;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	56;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	62;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	71;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	94;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	105;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	112;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	133;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	139;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	157;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	172;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	183;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	194;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	213;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	225;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	230;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	239;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	247;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	252;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	38;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	53;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	59;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	68;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	78;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	83;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	91;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	103;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	117;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	124;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	130;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	138;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	144;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	159;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	174;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	185;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	196;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	215;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	227;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	232;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	242;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	247;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	43;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	58;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	64;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	73;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	83;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	88;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	96;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	106;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	120;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	126;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	185;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	195;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	20;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	214;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	226;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	231;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	240;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	248;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	253;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	39;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	47;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	54;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	60;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	69;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	79;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	84;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	99;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	111;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	118;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	131;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	139;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	145;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	160;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	16;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	175;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	197;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	216;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	228;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	233;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	243;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	248;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	25;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	44;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	52;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	84;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	89;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	97;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	100;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	114;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	121;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	141;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	159;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	174;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	188;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	215;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	227;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	232;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	241;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	249;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	24;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	254;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	41;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	48;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	62;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	71;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	85;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	93;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	105;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	112;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	126;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	133;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	176;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	201;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	204;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	217;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	229;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	234;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	244;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	249;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	29;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	46;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	53;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	67;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	76;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	85;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	90;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	165;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	208;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	33;"	d	file:
+Catch	tests/catch.hpp	/^namespace Catch {$/;"	n
+ComputeOptions	mcts.h	/^	ComputeOptions() :$/;"	f	struct:MCTS::ComputeOptions
+ComputeOptions	mcts.h	/^struct ComputeOptions$/;"	s	namespace:MCTS
+ConnectFourState	games/connect_four.h	/^	ConnectFourState(int num_rows_ = 6, int num_cols_ = 7)$/;"	f	class:ConnectFourState
+ConnectFourState	games/connect_four.h	/^class ConnectFourState$/;"	c
+DEC	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	439;"	d	file:
+DEC	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	434;"	d	file:
+Detail	tests/catch.hpp	/^namespace Detail {$/;"	n	namespace:Catch
+Disable	tests/catch.hpp	/^        typedef void Disable;$/;"	t	struct:Catch::FalseType
+EQUALS	build/Makefile	/^EQUALS = =$/;"	m
+EQUALS	build/games/Makefile	/^EQUALS = =$/;"	m
+EQUALS	build/tests/Makefile	/^EQUALS = =$/;"	m
+Enable	tests/catch.hpp	/^        typedef void Enable;$/;"	t	struct:Catch::TrueType
+FalseType	tests/catch.hpp	/^    struct FalseType {$/;"	s	namespace:Catch
+GIVEN	tests/catch.hpp	8026;"	d
+GoBangState	games/gobang.h	/^	GoBangState(int num_rows_ = 6, int num_cols_ = 7)$/;"	f	class:GoBangState
+GoBangState	games/gobang.h	/^class GoBangState$/;"	c
+HEX	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	450;"	d	file:
+HEX	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	445;"	d	file:
+IContext	tests/catch.hpp	/^    struct IContext$/;"	s	namespace:Catch
+ID_VOID_MAIN	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+IGeneratorInfo	tests/catch.hpp	/^    struct IGeneratorInfo {$/;"	s	namespace:Catch
+IGeneratorsForTest	tests/catch.hpp	/^    struct IGeneratorsForTest {$/;"	s	namespace:Catch
+IMutableContext	tests/catch.hpp	/^    struct IMutableContext : IContext$/;"	s	namespace:Catch
+INTERNAL_CATCH_ACCEPT_EXPR	tests/catch.hpp	2674;"	d
+INTERNAL_CATCH_ACCEPT_INFO	tests/catch.hpp	2683;"	d
+INTERNAL_CATCH_ASSERTIONINFO_NAME	tests/catch.hpp	2671;"	d
+INTERNAL_CATCH_ELSE	tests/catch.hpp	2706;"	d
+INTERNAL_CATCH_GENERATE	tests/catch.hpp	3003;"	d
+INTERNAL_CATCH_IF	tests/catch.hpp	2701;"	d
+INTERNAL_CATCH_INFO	tests/catch.hpp	2764;"	d
+INTERNAL_CATCH_LINESTR	tests/catch.hpp	3001;"	d
+INTERNAL_CATCH_LINESTR2	tests/catch.hpp	3000;"	d
+INTERNAL_CATCH_METHOD_AS_TEST_CASE	tests/catch.hpp	508;"	d
+INTERNAL_CATCH_MSG	tests/catch.hpp	2757;"	d
+INTERNAL_CATCH_NO_THROW	tests/catch.hpp	2711;"	d
+INTERNAL_CATCH_REGISTER_LEGACY_REPORTER	tests/catch.hpp	6511;"	d
+INTERNAL_CATCH_REGISTER_REPORTER	tests/catch.hpp	6513;"	d
+INTERNAL_CATCH_SECTION	tests/catch.hpp	2818;"	d
+INTERNAL_CATCH_STRINGIFY	tests/catch.hpp	35;"	d
+INTERNAL_CATCH_STRINGIFY2	tests/catch.hpp	34;"	d
+INTERNAL_CATCH_TEST	tests/catch.hpp	2687;"	d
+INTERNAL_CATCH_TESTCASE	tests/catch.hpp	502;"	d
+INTERNAL_CATCH_TEST_CASE_METHOD	tests/catch.hpp	512;"	d
+INTERNAL_CATCH_THROWS	tests/catch.hpp	2739;"	d
+INTERNAL_CATCH_THROWS_AS	tests/catch.hpp	2746;"	d
+INTERNAL_CATCH_THROWS_IMPL	tests/catch.hpp	2724;"	d
+INTERNAL_CATCH_TRANSLATE_EXCEPTION	tests/catch.hpp	3057;"	d
+INTERNAL_CATCH_UNIQUE_NAME	tests/catch.hpp	32;"	d
+INTERNAL_CATCH_UNIQUE_NAME_LINE	tests/catch.hpp	31;"	d
+INTERNAL_CATCH_UNIQUE_NAME_LINE2	tests/catch.hpp	30;"	d
+INTERNAL_CHECK_THAT	tests/catch.hpp	2768;"	d
+IShared	tests/catch.hpp	/^    struct IShared : NonCopyable {$/;"	s	namespace:Catch
+ITestCase	tests/catch.hpp	/^    struct ITestCase : IShared {$/;"	s	namespace:Catch
+ITestCaseRegistry	tests/catch.hpp	/^    struct ITestCaseRegistry {$/;"	s	namespace:Catch
+If	tests/catch.hpp	/^    template<> struct If<false> : FalseType {};$/;"	s	namespace:Catch
+If	tests/catch.hpp	/^    template<> struct If<true> : TrueType {};$/;"	s	namespace:Catch
+If	tests/catch.hpp	/^    template<bool c> struct If : NotABooleanExpression<c> {};$/;"	s	namespace:Catch
+IsStreamInsertableHelper	tests/catch.hpp	/^    class IsStreamInsertableHelper {$/;"	c	namespace:Catch::Detail
+MCTS	mcts.h	/^namespace MCTS$/;"	n
+MCTS_HEADER_PETTER	mcts.h	2;"	d
+MethodTestCase	tests/catch.hpp	/^    MethodTestCase( void (C::*method)() ) : m_method( method ) {}$/;"	f	class:Catch::MethodTestCase
+MethodTestCase	tests/catch.hpp	/^class MethodTestCase : public SharedImpl<ITestCase> {$/;"	c	namespace:Catch
+Move	games/connect_four.h	/^	typedef int Move;$/;"	t	class:ConnectFourState
+Move	games/gobang.h	/^	typedef int Move;$/;"	t	class:GoBangState
+Move	games/nim.h	/^	typedef int Move;$/;"	t	class:NimState
+Move	mcts.h	/^	typedef typename State::Move Move;$/;"	t	class:MCTS::Node
+Move	tests/test_mcts.cpp	/^	typedef int Move;$/;"	t	class:TestGame	file:
+NOMINMAX	tests/catch.hpp	5741;"	d
+NameAndDesc	tests/catch.hpp	/^    NameAndDesc( const char* _name = "", const char* _description= "" )$/;"	f	struct:Catch::NameAndDesc
+NameAndDesc	tests/catch.hpp	/^struct NameAndDesc {$/;"	s	namespace:Catch
+NimState	games/nim.h	/^	NimState(int chips_ = 17)$/;"	f	class:NimState
+NimState	games/nim.h	/^class NimState$/;"	c
+Node	mcts.h	/^Node<State>::Node(const State& state) :$/;"	f	class:MCTS::Node
+Node	mcts.h	/^Node<State>::Node(const State& state, const Move& move_, Node* parent_) :$/;"	f	class:MCTS::Node
+Node	mcts.h	/^class Node$/;"	c	namespace:MCTS
+NonCopyable	tests/catch.hpp	/^        NonCopyable() {}$/;"	f	class:Catch::NonCopyable
+NonCopyable	tests/catch.hpp	/^    class NonCopyable {$/;"	c	namespace:Catch
+NotImplementedException	tests/catch.hpp	/^    class NotImplementedException : public std::exception$/;"	c	namespace:Catch
+OC_TEST_CASE	tests/catch.hpp	3565;"	d
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	293;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	296;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	299;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	302;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	305;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	308;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	311;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	314;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	317;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	320;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	323;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	326;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	329;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	332;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	335;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	338;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	341;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	344;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	347;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	350;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	353;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	356;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	359;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	362;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	365;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	369;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	372;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	375;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	378;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	381;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	385;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	288;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	291;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	294;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	297;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	300;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	303;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	306;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	309;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	312;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	315;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	318;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	321;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	324;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	327;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	330;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	333;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	336;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	339;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	342;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	345;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	348;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	351;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	354;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	357;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	360;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	364;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	367;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	370;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	373;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	376;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	380;"	d	file:
+Ptr	tests/catch.hpp	/^        Ptr( Ptr const& other ) : m_p( other.m_p ){$/;"	f	class:Catch::Ptr
+Ptr	tests/catch.hpp	/^        Ptr( T* p ) : m_p( p ){$/;"	f	class:Catch::Ptr
+Ptr	tests/catch.hpp	/^        Ptr() : m_p( NULL ){}$/;"	f	class:Catch::Ptr
+Ptr	tests/catch.hpp	/^    class Ptr {$/;"	c	namespace:Catch
+RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/games/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/tests/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+SCENARIO	tests/catch.hpp	8022;"	d
+SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/games/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/tests/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	157;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	172;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	162;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	177;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	179;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	37;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	163;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	178;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	33;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	165;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	180;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	289;"	d	file:
+STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	288;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	283;"	d	file:
+SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/games/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/tests/Makefile	/^SUFFIXES =$/;"	m
+SafeBool	tests/catch.hpp	/^    class SafeBool {$/;"	c	namespace:Catch
+SharedImpl	tests/catch.hpp	/^        SharedImpl() : m_rc( 0 ){}$/;"	f	struct:Catch::SharedImpl
+SharedImpl	tests/catch.hpp	/^    struct SharedImpl : T {$/;"	s	namespace:Catch
+SizedIf	tests/catch.hpp	/^    template<> struct SizedIf<sizeof(FalseType)> : FalseType {};$/;"	s	namespace:Catch
+SizedIf	tests/catch.hpp	/^    template<> struct SizedIf<sizeof(TrueType)> : TrueType {};$/;"	s	namespace:Catch
+SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo( SourceLineInfo const& other )$/;"	f	struct:Catch::SourceLineInfo
+SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo( std::string const& _file, std::size_t _line )$/;"	f	struct:Catch::SourceLineInfo
+SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo() : line( 0 ){}$/;"	f	struct:Catch::SourceLineInfo
+SourceLineInfo	tests/catch.hpp	/^    struct SourceLineInfo {$/;"	s	namespace:Catch
+THEN	tests/catch.hpp	8029;"	d
+TWOBLUECUBES_CATCH_APPROX_HPP_INCLUDED	tests/catch.hpp	3063;"	d
+TWOBLUECUBES_CATCH_ASSERTIONRESULT_BUILDER_H_INCLUDED	tests/catch.hpp	554;"	d
+TWOBLUECUBES_CATCH_ASSERTIONRESULT_HPP_INCLUDED	tests/catch.hpp	5941;"	d
+TWOBLUECUBES_CATCH_ASSERTIONRESULT_H_INCLUDED	tests/catch.hpp	845;"	d
+TWOBLUECUBES_CATCH_CAPTURE_HPP_INCLUDED	tests/catch.hpp	545;"	d
+TWOBLUECUBES_CATCH_COMMANDLINE_HPP_INCLUDED	tests/catch.hpp	3594;"	d
+TWOBLUECUBES_CATCH_COMMON_H_INCLUDED	tests/catch.hpp	28;"	d
+TWOBLUECUBES_CATCH_COMPILER_CAPABILITIES_HPP_INCLUDED	tests/catch.hpp	42;"	d
+TWOBLUECUBES_CATCH_CONFIG_HPP_INCLUDED	tests/catch.hpp	1536;"	d
+TWOBLUECUBES_CATCH_CONSOLE_COLOUR_HPP_INCLUDED	tests/catch.hpp	4306;"	d
+TWOBLUECUBES_CATCH_CONSOLE_COLOUR_IMPL_HPP_INCLUDED	tests/catch.hpp	5730;"	d
+TWOBLUECUBES_CATCH_CONTEXT_H_INCLUDED	tests/catch.hpp	263;"	d
+TWOBLUECUBES_CATCH_CONTEXT_IMPL_HPP_INCLUDED	tests/catch.hpp	5631;"	d
+TWOBLUECUBES_CATCH_DEBUGGER_HPP_INCLUDED	tests/catch.hpp	1424;"	d
+TWOBLUECUBES_CATCH_DEFAULT_MAIN_HPP_INCLUDED	tests/catch.hpp	7873;"	d
+TWOBLUECUBES_CATCH_EVALUATE_HPP_INCLUDED	tests/catch.hpp	959;"	d
+TWOBLUECUBES_CATCH_EXCEPTION_TRANSLATOR_REGISTRY_HPP_INCLUDED	tests/catch.hpp	5481;"	d
+TWOBLUECUBES_CATCH_EXPRESSIONRESULT_BUILDER_HPP_INCLUDED	tests/catch.hpp	6021;"	d
+TWOBLUECUBES_CATCH_EXPRESSION_DECOMPOSER_HPP_INCLUDED	tests/catch.hpp	548;"	d
+TWOBLUECUBES_CATCH_EXPRESSION_LHS_HPP_INCLUDED	tests/catch.hpp	551;"	d
+TWOBLUECUBES_CATCH_GENERATORS_HPP_INCLUDED	tests/catch.hpp	2826;"	d
+TWOBLUECUBES_CATCH_GENERATORS_IMPL_HPP_INCLUDED	tests/catch.hpp	5867;"	d
+TWOBLUECUBES_CATCH_HPP_INCLUDED	tests/catch.hpp	14;"	d
+TWOBLUECUBES_CATCH_IMPL_HPP_INCLUDED	tests/catch.hpp	3580;"	d
+TWOBLUECUBES_CATCH_INTERFACES_CAPTURE_H_INCLUDED	tests/catch.hpp	1330;"	d
+TWOBLUECUBES_CATCH_INTERFACES_CONFIG_H_INCLUDED	tests/catch.hpp	1947;"	d
+TWOBLUECUBES_CATCH_INTERFACES_EXCEPTION_H_INCLUDED	tests/catch.hpp	3006;"	d
+TWOBLUECUBES_CATCH_INTERFACES_GENERATORS_H_INCLUDED	tests/catch.hpp	266;"	d
+TWOBLUECUBES_CATCH_INTERFACES_REGISTRY_HUB_H_INCLUDED	tests/catch.hpp	1530;"	d
+TWOBLUECUBES_CATCH_INTERFACES_REPORTER_H_INCLUDED	tests/catch.hpp	1533;"	d
+TWOBLUECUBES_CATCH_INTERFACES_RUNNER_H_INCLUDED	tests/catch.hpp	3371;"	d
+TWOBLUECUBES_CATCH_INTERFACES_TESTCASE_H_INCLUDED	tests/catch.hpp	416;"	d
+TWOBLUECUBES_CATCH_LEGACY_REPORTER_ADAPTER_HPP_INCLUDED	tests/catch.hpp	6347;"	d
+TWOBLUECUBES_CATCH_LEGACY_REPORTER_ADAPTER_H_INCLUDED	tests/catch.hpp	6350;"	d
+TWOBLUECUBES_CATCH_LIST_HPP_INCLUDED	tests/catch.hpp	4303;"	d
+TWOBLUECUBES_CATCH_MATCHERS_HPP_INCLUDED	tests/catch.hpp	3144;"	d
+TWOBLUECUBES_CATCH_MESSAGE_HPP_INCLUDED	tests/catch.hpp	6316;"	d
+TWOBLUECUBES_CATCH_MESSAGE_H_INCLUDED	tests/catch.hpp	1275;"	d
+TWOBLUECUBES_CATCH_NOTIMPLEMENTED_EXCEPTION_HPP_INCLUDED	tests/catch.hpp	5610;"	d
+TWOBLUECUBES_CATCH_NOTIMPLEMENTED_EXCEPTION_H_INCLUDED	tests/catch.hpp	25;"	d
+TWOBLUECUBES_CATCH_OBJC_ARC_HPP_INCLUDED	tests/catch.hpp	599;"	d
+TWOBLUECUBES_CATCH_OBJC_HPP_INCLUDED	tests/catch.hpp	3386;"	d
+TWOBLUECUBES_CATCH_OPTION_HPP_INCLUDED	tests/catch.hpp	2224;"	d
+TWOBLUECUBES_CATCH_PTR_HPP_INCLUDED	tests/catch.hpp	290;"	d
+TWOBLUECUBES_CATCH_REGISTRY_HUB_HPP_INCLUDED	tests/catch.hpp	5306;"	d
+TWOBLUECUBES_CATCH_REPORTER_BASIC_HPP_INCLUDED	tests/catch.hpp	6450;"	d
+TWOBLUECUBES_CATCH_REPORTER_CONSOLE_HPP_INCLUDED	tests/catch.hpp	7427;"	d
+TWOBLUECUBES_CATCH_REPORTER_JUNIT_HPP_INCLUDED	tests/catch.hpp	7189;"	d
+TWOBLUECUBES_CATCH_REPORTER_REGISTRARS_HPP_INCLUDED	tests/catch.hpp	6453;"	d
+TWOBLUECUBES_CATCH_REPORTER_REGISTRY_HPP_INCLUDED	tests/catch.hpp	5446;"	d
+TWOBLUECUBES_CATCH_REPORTER_XML_HPP_INCLUDED	tests/catch.hpp	6854;"	d
+TWOBLUECUBES_CATCH_RESULT_TYPE_H_INCLUDED	tests/catch.hpp	849;"	d
+TWOBLUECUBES_CATCH_RUNNER_HPP_INCLUDED	tests/catch.hpp	3591;"	d
+TWOBLUECUBES_CATCH_RUNNER_IMPL_HPP_INCLUDED	tests/catch.hpp	4545;"	d
+TWOBLUECUBES_CATCH_RUNNING_TEST_HPP_INCLUDED	tests/catch.hpp	4548;"	d
+TWOBLUECUBES_CATCH_SECTION_HPP_INCLUDED	tests/catch.hpp	2782;"	d
+TWOBLUECUBES_CATCH_SECTION_INFO_HPP_INCLUDED	tests/catch.hpp	4551;"	d
+TWOBLUECUBES_CATCH_SFINAE_HPP_INCLUDED	tests/catch.hpp	560;"	d
+TWOBLUECUBES_CATCH_STREAMBUF_H_INCLUDED	tests/catch.hpp	1972;"	d
+TWOBLUECUBES_CATCH_STREAM_HPP_INCLUDED	tests/catch.hpp	1969;"	d
+TWOBLUECUBES_CATCH_TAGS_HPP_INCLUDED	tests/catch.hpp	1613;"	d
+TWOBLUECUBES_CATCH_TEST_CASE_INFO_HPP_INCLUDED	tests/catch.hpp	6109;"	d
+TWOBLUECUBES_CATCH_TEST_CASE_INFO_H_INCLUDED	tests/catch.hpp	1542;"	d
+TWOBLUECUBES_CATCH_TEST_CASE_REGISTRY_IMPL_HPP_INCLUDED	tests/catch.hpp	5309;"	d
+TWOBLUECUBES_CATCH_TEST_REGISTRY_HPP_INCLUDED	tests/catch.hpp	413;"	d
+TWOBLUECUBES_CATCH_TEST_SPEC_H_INCLUDED	tests/catch.hpp	1539;"	d
+TWOBLUECUBES_CATCH_TEXT_HPP_INCLUDED	tests/catch.hpp	6232;"	d
+TWOBLUECUBES_CATCH_TEXT_H_INCLUDED	tests/catch.hpp	3600;"	d
+TWOBLUECUBES_CATCH_TOSTRING_HPP_INCLUDED	tests/catch.hpp	557;"	d
+TWOBLUECUBES_CATCH_TOTALS_HPP_INCLUDED	tests/catch.hpp	1334;"	d
+TWOBLUECUBES_CATCH_VERSION_HPP_INCLUDED	tests/catch.hpp	6223;"	d
+TWOBLUECUBES_CATCH_VERSION_H_INCLUDED	tests/catch.hpp	5059;"	d
+TWOBLUECUBES_CATCH_XMLWRITER_HPP_INCLUDED	tests/catch.hpp	6857;"	d
+TWOBLUECUBES_CLARA_H_INCLUDED	tests/catch.hpp	3597;"	d
+TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED	tests/catch.hpp	12;"	d
+TestFunction	tests/catch.hpp	/^typedef void(*TestFunction)();$/;"	t	namespace:Catch
+TestGame	tests/test_mcts.cpp	/^	TestGame(int X_ = 2)$/;"	f	class:TestGame
+TestGame	tests/test_mcts.cpp	/^class TestGame$/;"	c	file:
+TrueIfSizeable	tests/catch.hpp	/^        template<int N> struct TrueIfSizeable : TrueType {};$/;"	s	class:Catch::Detail::IsStreamInsertableHelper
+TrueType	tests/catch.hpp	/^    struct TrueType {$/;"	s	namespace:Catch
+UCT_score	mcts.h	/^	double UCT_score;$/;"	m	class:MCTS::Node
+WHEN	tests/catch.hpp	8027;"	d
+X	tests/test_mcts.cpp	/^	int X;$/;"	m	class:TestGame	file:
+addRef	tests/catch.hpp	/^        virtual void addRef() const {$/;"	f	struct:Catch::SharedImpl
+add_child	mcts.h	/^Node<State>* Node<State>::add_child(const Move& move, const State& state)$/;"	f	class:MCTS::Node
+arcSafeRelease	tests/catch.hpp	/^inline void arcSafeRelease( NSObject* ){}$/;"	f
+arcSafeRelease	tests/catch.hpp	/^inline void arcSafeRelease( NSObject* obj ) {$/;"	f
+assertion_failed	mcts.h	/^static void assertion_failed(const char* expr, const char* file_cstr, int line)$/;"	f	namespace:MCTS
+attest	mcts.h	99;"	d
+best_child	mcts.h	/^Node<State>* Node<State>::best_child() const$/;"	f	class:MCTS::Node
+board	games/connect_four.h	/^	vector<vector<char>> board;$/;"	m	class:ConnectFourState
+board	games/gobang.h	/^	vector<vector<char>> board;$/;"	m	class:GoBangState
+check	mcts.h	/^static void check(bool expr, const char* message)$/;"	f	namespace:MCTS
+check_invariant	games/connect_four.h	/^	void check_invariant() const$/;"	f	class:ConnectFourState
+check_invariant	games/gobang.h	/^	void check_invariant() const$/;"	f	class:GoBangState
+check_invariant	games/nim.h	/^	void check_invariant() const$/;"	f	class:NimState
+children	mcts.h	/^	std::vector<Node*> children;$/;"	m	class:MCTS::Node
+chips	games/nim.h	/^	int chips;$/;"	m	class:NimState
+compute_move	mcts.h	/^typename State::Move compute_move(const State root_state,$/;"	f	namespace:MCTS
+compute_tree	mcts.h	/^std::unique_ptr<Node<State>>  compute_tree(const State root_state,$/;"	f	namespace:MCTS
+contains	tests/catch.hpp	/^    inline bool contains( std::string const& s, std::string const& infix ) {$/;"	f	namespace:Catch
+dattest	mcts.h	101;"	d
+dattest	mcts.h	103;"	d
+deleteAll	tests/catch.hpp	/^    inline void deleteAll( ContainerT& container ) {$/;"	f	namespace:Catch
+deleteAllValues	tests/catch.hpp	/^    inline void deleteAllValues( AssociativeContainerT& container ) {$/;"	f	namespace:Catch
+description	tests/catch.hpp	/^    const char* description;$/;"	m	struct:Catch::NameAndDesc
+do_move	games/connect_four.h	/^	void do_move(Move move)$/;"	f	class:ConnectFourState
+do_move	games/gobang.h	/^	void do_move(Move move)$/;"	f	class:GoBangState
+do_move	games/nim.h	/^	void do_move(Move move)$/;"	f	class:NimState
+do_move	tests/test_mcts.cpp	/^	void do_move(Move move)$/;"	f	class:TestGame
+do_random_move	games/connect_four.h	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:ConnectFourState
+do_random_move	games/gobang.h	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:GoBangState
+do_random_move	games/nim.h	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:NimState
+do_random_move	tests/test_mcts.cpp	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:TestGame
+empty	tests/catch.hpp	/^        bool empty() const {$/;"	f	struct:Catch::SourceLineInfo
+endsWith	tests/catch.hpp	/^    inline bool endsWith( std::string const& s, std::string const& suffix ) {$/;"	f	namespace:Catch
+features	build/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
+features	build/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
+file	tests/catch.hpp	/^        std::string file;$/;"	m	struct:Catch::SourceLineInfo
+forEach	tests/catch.hpp	/^    inline void forEach( ContainerT const& container, Function function ) {$/;"	f	namespace:Catch
+forEach	tests/catch.hpp	/^    inline void forEach( ContainerT& container, Function function ) {$/;"	f	namespace:Catch
+get	tests/catch.hpp	/^        T* get() { return m_p; }$/;"	f	class:Catch::Ptr
+get	tests/catch.hpp	/^        const T* get() const{ return m_p; }$/;"	f	class:Catch::Ptr
+get_moves	games/connect_four.h	/^	std::vector<Move> get_moves() const$/;"	f	class:ConnectFourState
+get_moves	games/gobang.h	/^	std::vector<Move> get_moves() const$/;"	f	class:GoBangState
+get_moves	games/nim.h	/^	std::vector<Move> get_moves() const$/;"	f	class:NimState
+get_moves	tests/test_mcts.cpp	/^	std::vector<Move> get_moves() const$/;"	f	class:TestGame
+get_result	games/connect_four.h	/^	double get_result(int current_player_to_move) const$/;"	f	class:ConnectFourState
+get_result	games/gobang.h	/^	double get_result(int current_player_to_move) const$/;"	f	class:GoBangState
+get_result	games/nim.h	/^	double get_result(int current_player_to_move) const$/;"	f	class:NimState
+get_result	tests/test_mcts.cpp	/^	double get_result(int current_player_to_move) const$/;"	f	class:TestGame
+get_untried_move	mcts.h	/^typename State::Move Node<State>::get_untried_move(RandomEngine* engine) const$/;"	f	class:MCTS::Node
+get_winner	games/connect_four.h	/^	char get_winner() const$/;"	f	class:ConnectFourState
+get_winner	games/gobang.h	/^	char get_winner() const$/;"	f	class:GoBangState
+has_children	mcts.h	/^	bool has_children() const$/;"	f	class:MCTS::Node
+has_moves	games/connect_four.h	/^	bool has_moves() const$/;"	f	class:ConnectFourState
+has_moves	games/gobang.h	/^	bool has_moves() const$/;"	f	class:GoBangState
+has_moves	games/nim.h	/^	bool has_moves() const$/;"	f	class:NimState
+has_moves	tests/test_mcts.cpp	/^	bool has_moves() const$/;"	f	class:TestGame
+has_untried_moves	mcts.h	/^bool Node<State>::has_untried_moves() const$/;"	f	class:MCTS::Node
+indent_string	mcts.h	/^std::string Node<State>::indent_string(int indent) const$/;"	f	class:MCTS::Node
+info_arch	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_cray	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_cray	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_language_dialect_default	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v
+info_language_dialect_default	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v
+info_platform	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+invoke	tests/catch.hpp	/^    virtual void invoke() const {$/;"	f	class:Catch::MethodTestCase
+isTrue	tests/catch.hpp	/^    inline bool isTrue( bool value ){ return value; }$/;"	f	namespace:Catch
+last_col	games/connect_four.h	/^	int last_col;$/;"	m	class:ConnectFourState
+last_col	games/gobang.h	/^	int last_col;$/;"	m	class:GoBangState
+last_row	games/connect_four.h	/^	int last_row;$/;"	m	class:ConnectFourState
+last_row	games/gobang.h	/^	int last_row;$/;"	m	class:GoBangState
+line	tests/catch.hpp	/^        std::size_t line;$/;"	m	struct:Catch::SourceLineInfo
+m_count	tests/catch.hpp	/^        std::size_t m_count;$/;"	m	struct:Catch::pluralise
+m_label	tests/catch.hpp	/^        std::string m_label;$/;"	m	struct:Catch::pluralise
+m_lineInfo	tests/catch.hpp	/^        SourceLineInfo m_lineInfo;$/;"	m	class:Catch::NotImplementedException
+m_method	tests/catch.hpp	/^    void (C::*m_method)();$/;"	m	class:Catch::MethodTestCase
+m_p	tests/catch.hpp	/^        T* m_p;$/;"	m	class:Catch::Ptr
+m_rc	tests/catch.hpp	/^        mutable unsigned int m_rc;$/;"	m	struct:Catch::SharedImpl
+m_what	tests/catch.hpp	/^        std::string m_what;$/;"	m	class:Catch::NotImplementedException
+main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	build/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	games/connect_four.cpp	/^int main()$/;"	f
+main	games/gobang.cpp	/^int main()$/;"	f
+main	games/nim.cpp	/^int main()$/;"	f
+main_program	games/connect_four.cpp	/^void main_program()$/;"	f
+main_program	games/gobang.cpp	/^void main_program()$/;"	f
+makeSafe	tests/catch.hpp	/^        static type makeSafe( bool value ) {$/;"	f	class:Catch::SafeBool
+max_iterations	mcts.h	/^	int max_iterations;$/;"	m	struct:MCTS::ComputeOptions
+move	mcts.h	/^	const Move move;$/;"	m	class:MCTS::Node
+moves	mcts.h	/^	std::vector<Move> moves;$/;"	m	class:MCTS::Node
+name	tests/catch.hpp	/^    const char* name;$/;"	m	struct:Catch::NameAndDesc
+no_move	games/connect_four.h	/^	static const Move no_move = -1;$/;"	m	class:ConnectFourState
+no_move	games/gobang.h	/^	static const Move no_move = -1;$/;"	m	class:GoBangState
+no_move	games/nim.h	/^	static const Move no_move = -1;$/;"	m	class:NimState
+no_move	tests/test_mcts.cpp	/^	static const Move no_move = -1;$/;"	m	class:TestGame	file:
+num_cols	games/connect_four.h	/^	int num_rows, num_cols;$/;"	m	class:ConnectFourState
+num_cols	games/gobang.h	/^	int num_rows, num_cols;$/;"	m	class:GoBangState
+num_rows	games/connect_four.h	/^	int num_rows, num_cols;$/;"	m	class:ConnectFourState
+num_rows	games/gobang.h	/^	int num_rows, num_cols;$/;"	m	class:GoBangState
+number_of_threads	mcts.h	/^	int number_of_threads;$/;"	m	struct:MCTS::ComputeOptions
+operator !	tests/catch.hpp	/^        bool operator !() const { return m_p == NULL; }$/;"	f	class:Catch::Ptr
+operator *	tests/catch.hpp	/^        T& operator*() const { return *m_p; }$/;"	f	class:Catch::Ptr
+operator ->	tests/catch.hpp	/^        T* operator->() const { return m_p; }$/;"	f	class:Catch::Ptr
+operator <<	games/connect_four.h	/^ostream& operator << (ostream& out, const ConnectFourState& state)$/;"	f
+operator <<	games/gobang.h	/^ostream& operator << (ostream& out, const GoBangState& state)$/;"	f
+operator <<	tests/catch.hpp	/^        friend std::ostream& operator << ( std::ostream& os, pluralise const& pluraliser ) {$/;"	f	struct:Catch::pluralise
+operator <<	tests/catch.hpp	/^    inline std::ostream& operator << ( std::ostream& os, SourceLineInfo const& info ) {$/;"	f	namespace:Catch
+operator =	tests/catch.hpp	/^        Ptr& operator = ( Ptr const& other ){$/;"	f	class:Catch::Ptr
+operator =	tests/catch.hpp	/^        Ptr& operator = ( T* p ){$/;"	f	class:Catch::Ptr
+operator SafeBool::type	tests/catch.hpp	/^        operator SafeBool::type() const { return SafeBool::makeSafe( m_p != NULL ); }$/;"	f	class:Catch::Ptr
+parent	mcts.h	/^	Node* const parent;$/;"	m	class:MCTS::Node
+performOptionalSelector	tests/catch.hpp	/^inline id performOptionalSelector( id obj, SEL sel ) {$/;"	f
+player_markers	games/connect_four.h	/^	static const char player_markers[3]; $/;"	m	class:ConnectFourState
+player_markers	games/connect_four.h	/^const char ConnectFourState::player_markers[3] = {'.', 'X', 'O'}; $/;"	m	class:ConnectFourState
+player_markers	games/gobang.h	/^	static const char player_markers[3]; $/;"	m	class:GoBangState
+player_markers	games/gobang.h	/^const char GoBangState::player_markers[3] = {'.', 'X', 'O'}; $/;"	m	class:GoBangState
+player_to_move	games/connect_four.h	/^	int player_to_move;$/;"	m	class:ConnectFourState
+player_to_move	games/gobang.h	/^	int player_to_move;$/;"	m	class:GoBangState
+player_to_move	games/nim.h	/^	int player_to_move;$/;"	m	class:NimState
+player_to_move	mcts.h	/^	const int player_to_move;$/;"	m	class:MCTS::Node
+player_to_move	tests/test_mcts.cpp	/^	int player_to_move;$/;"	m	class:TestGame	file:
+pluralise	tests/catch.hpp	/^        pluralise( std::size_t count, std::string const& label )$/;"	f	struct:Catch::pluralise
+pluralise	tests/catch.hpp	/^    struct pluralise {$/;"	s	namespace:Catch
+print	games/connect_four.h	/^	void print(ostream& out) const$/;"	f	class:ConnectFourState
+print	games/gobang.h	/^	void print(ostream& out) const$/;"	f	class:GoBangState
+qnxnto	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+qnxnto	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+release	tests/catch.hpp	/^        virtual void release() const {$/;"	f	struct:Catch::SharedImpl
+reset	tests/catch.hpp	/^        void reset() {$/;"	f	class:Catch::Ptr
+select_child_UCT	mcts.h	/^Node<State>* Node<State>::select_child_UCT() const$/;"	f	class:MCTS::Node
+sizer	tests/catch.hpp	/^        char sizer[1];$/;"	m	struct:Catch::TrueType
+sizer	tests/catch.hpp	/^        char sizer[2];$/;"	m	struct:Catch::FalseType
+startsWith	tests/catch.hpp	/^    inline bool startsWith( std::string const& s, std::string const& prefix ) {$/;"	f	namespace:Catch
+swap	tests/catch.hpp	/^        void swap( Ptr& other ) { std::swap( m_p, other.m_p ); }$/;"	f	class:Catch::Ptr
+throwLogicError	tests/catch.hpp	/^    inline void throwLogicError( std::string const& message, SourceLineInfo const& locationInfo ) {$/;"	f	namespace:Catch
+toLower	tests/catch.hpp	/^    inline std::string toLower( std::string const& s ) {$/;"	f	namespace:Catch
+toLowerInPlace	tests/catch.hpp	/^    inline void toLowerInPlace( std::string& s ) {$/;"	f	namespace:Catch
+to_string	mcts.h	/^std::string Node<State>::to_string() const$/;"	f	class:MCTS::Node
+tree_to_string	mcts.h	/^std::string Node<State>::tree_to_string(int max_depth, int indent) const$/;"	f	class:MCTS::Node
+trueValue	tests/catch.hpp	/^        void trueValue() const {}$/;"	f	class:Catch::SafeBool
+update	mcts.h	/^void Node<State>::update(double result)$/;"	f	class:MCTS::Node
+value	tests/catch.hpp	/^        static const bool value = false;$/;"	m	struct:Catch::FalseType
+value	tests/catch.hpp	/^        static const bool value = true;$/;"	m	struct:Catch::TrueType
+verbose	mcts.h	/^	bool verbose;$/;"	m	struct:MCTS::ComputeOptions
+visits	mcts.h	/^	int visits;$/;"	m	class:MCTS::Node
+winner	tests/test_mcts.cpp	/^	int winner;$/;"	m	class:TestGame	file:
+wins	mcts.h	/^	double wins;$/;"	m	class:MCTS::Node
+~MethodTestCase	tests/catch.hpp	/^    virtual ~MethodTestCase() {}$/;"	f	class:Catch::MethodTestCase
+~Node	mcts.h	/^Node<State>::~Node()$/;"	f	class:MCTS::Node
+~NotImplementedException	tests/catch.hpp	/^        virtual ~NotImplementedException() throw() {}$/;"	f	class:Catch::NotImplementedException
+~Ptr	tests/catch.hpp	/^        ~Ptr(){$/;"	f	class:Catch::Ptr
