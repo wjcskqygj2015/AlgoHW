@@ -51,8 +51,9 @@ public:
 		last_row = move.x;
 		last_col = move.y;
 
-		player_to_move = 3 - player_to_move;
 		reserved_num--;
+		
+		player_to_move = 3 - player_to_move;
 	}
 
 	template<typename RandomEngine>
@@ -80,14 +81,6 @@ public:
 			return false;
 		}
 
-		////The better choice is to reserve the space num;
-		//for (int col = 0; col < num_cols; ++col) {
-			//for (int row = 0; row < num_rows; ++row) {
-				//if (board[row][col] == player_markers[0]) {
-				//return true;
-				//}
-			//}
-		//}
 		if(reserved_num!=0) return true;
 		return false;
 	}
