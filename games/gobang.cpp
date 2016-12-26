@@ -10,7 +10,9 @@ void main_program()
 
 	bool human_player = false;
 
-	MCTS::ComputeOptions player1_options, player2_options;
+	MCTS::ComputeOptions player0_options, player1_options, player2_options;
+	player0_options.max_iterations = 400000;
+	player0_options.verbose = true;
 	player1_options.max_iterations = 400000;
 	player1_options.verbose = true;
 	player2_options.max_iterations = 400000;
@@ -21,11 +23,11 @@ void main_program()
 		cout << endl << "State: " << state << endl;
 
 		GoBangState::Move move = GoBangState::no_move;
-		if (state.player_to_move == 1) {
-			move = MCTS::compute_move(state, player1_options);
+		if (state.player_to_move == 0) {
+			move = MCTS::compute_move(state, player0_options);
 			state.do_move(move);
 		}
-		else {
+		else if(state.player_to_move== 1) {
 			if (human_player) {
 				while (true) {
 					cout << "Input your move: ";
@@ -41,18 +43,25 @@ void main_program()
 				}
 			}
 			else {
-				move = MCTS::compute_move(state, player2_options);
+				move = MCTS::compute_move(state, player1_options);
 				state.do_move(move);
 			}
+		}
+		else if(state.player_to_move==2){
+			move=MCTS::compute_move(state,player2_options);
+			state.do_move(move);
 		}
 	}
 
 	cout << endl << "Final state: " << state << endl;
 
-	if (state.get_result(2) == 1.0) {
+	if (state.get_result(1) == 1.0) {
+		cout << "Player 0 wins!" << endl;
+	}
+	else if (state.get_result(2) == 1.0) {
 		cout << "Player 1 wins!" << endl;
 	}
-	else if (state.get_result(1) == 1.0) {
+	else if (state.get_result(0) == 1.0) {
 		cout << "Player 2 wins!" << endl;
 	}
 	else {

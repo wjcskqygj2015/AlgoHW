@@ -41,15 +41,21 @@ public:
   } Move;
   static const Move no_move;
 
-  static const char player_markers[3];
+  static const int Support_Num_Players = 3;
+
+  static const char player_markers[Support_Num_Players];
+
+	static const char none_player_marker = '.';
 
   GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,
               short int num_zs_ = 6)
-    : player_to_move(1), num_xs(num_xs_), num_ys(num_ys_), num_zs(num_zs_),
-      last_x(-1), last_y(-1)
+    : player_to_move(0), 
+			num_xs(num_xs_), num_ys(num_ys_), num_zs(num_zs_), 
+			last_x(-1), last_y(-1), last_z(-1)
   {
+
     board.resize(num_xs, vector<vector<char>>(
-                           num_ys, vector<char>(num_zs, player_markers[0])));
+                           num_ys, vector<char>(num_zs, none_player_marker)));
 
     for (short int x = 0; x < num_xs; ++x)
       for (short int y = 0; y < num_ys; ++y)
@@ -62,11 +68,11 @@ public:
     attest(0 <= move.x && move.x < num_xs);
     attest(0 <= move.y && move.y < num_ys);
     attest(0 <= move.z && move.z < num_zs);
-    attest(board[move.x][move.y][move.z] == player_markers[0]);
+    attest(board[move.x][move.y][move.z] == none_player_marker);
     check_invariant();
 
     // int x = num_xs - 1;
-    // while (board[x][move] != player_markers[0]) x--;
+    // while (board[x][move] != none_player_marker) x--;
     board[move.x][move.y][move.z] = player_markers[player_to_move];
     last_x = move.x;
     last_y = move.y;
@@ -79,7 +85,8 @@ public:
         break;
       }
 
-    player_to_move = 3 - player_to_move;
+    player_to_move ++;
+    player_to_move %= Support_Num_Players;
   }
 
   template<typename RandomEngine>
@@ -94,7 +101,7 @@ public:
     while (true)
     {
       Move move = {moves_x(*engine), moves_y(*engine), moves_z(*engine)};
-      if (board[move.x][move.y][move.z] == player_markers[0])
+      if (board[move.x][move.y][move.z] == none_player_marker)
       {
         do_move(move);
         return;
@@ -107,7 +114,7 @@ public:
     check_invariant();
 
     char winner = get_winner();
-    if (winner != player_markers[0])
+    if (winner != none_player_marker)
     {
       return false;
     }
@@ -131,7 +138,7 @@ public:
 
     if (last_y < 0)
     {
-      return player_markers[0];
+      return none_player_marker;
     }
 
     // We only need to check around the last piece played.
@@ -284,22 +291,28 @@ public:
     if (increase + 1 + decrease >= JOIN_NUM)
       return piece;
 
-    return player_markers[0];
+    return none_player_marker;
   }
 
   double get_result(int current_player_to_move) const
   {
+	
+		#pragma message "Here current_player_to_move always represents the Next player of state"	
+
+		current_player_to_move += (Support_Num_Players-1);
+		current_player_to_move %= (Support_Num_Players);
+
     dattest(!has_moves());
     check_invariant();
 
     auto winner = get_winner();
-    if (winner == player_markers[0])
+    if (winner == none_player_marker)
       return 0.5;
 
     if (winner == player_markers[current_player_to_move])
-      return 0.0;
-    else
       return 1.0;
+    else
+      return 0.0;
   }
 
   void print(ostream& out) const
@@ -338,7 +351,7 @@ public:
 private:
   void check_invariant() const
   {
-    attest(player_to_move == 1 || player_to_move == 2);
+    attest(player_to_move >= 0 && player_to_move < Support_Num_Players);
   }
 
   short int num_xs, num_ys, num_zs;
@@ -355,4 +368,4 @@ operator<<(ostream& out, const GoBangState& state)
 }
 
 const GoBangState::Move GoBangState::no_move = {-1, -1, -1};
-const char GoBangState::player_markers[3] = {'.', 'X', 'O'};
+const char GoBangState::player_markers[GoBangState::Support_Num_Players] = {'X', 'O', 'L'};
