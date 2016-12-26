@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wjc/src/mycode/homework/algo/gobang
+CMAKE_SOURCE_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wjc/src/mycode/homework/algo/gobang/build
+CMAKE_BINARY_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,17 +67,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -89,16 +78,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles /home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/progress.marks
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles 0
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/progress.marks
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/clean
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,52 +108,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-games/CMakeFiles/connect_four.dir/rule:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/connect_four.dir/rule
-.PHONY : games/CMakeFiles/connect_four.dir/rule
-
-# Convenience name for target.
-connect_four: games/CMakeFiles/connect_four.dir/rule
-
-.PHONY : connect_four
-
-# fast build rule for target.
-connect_four/fast:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/connect_four.dir/build.make games/CMakeFiles/connect_four.dir/build
-.PHONY : connect_four/fast
-
-# Convenience name for target.
-games/CMakeFiles/nim.dir/rule:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/nim.dir/rule
-.PHONY : games/CMakeFiles/nim.dir/rule
-
-# Convenience name for target.
-nim: games/CMakeFiles/nim.dir/rule
-
-.PHONY : nim
-
-# fast build rule for target.
-nim/fast:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/nim.dir/build.make games/CMakeFiles/nim.dir/build
-.PHONY : nim/fast
-
-# Convenience name for target.
 games/CMakeFiles/gobang.dir/rule:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/gobang.dir/rule
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/gobang.dir/rule
 .PHONY : games/CMakeFiles/gobang.dir/rule
 
 # Convenience name for target.
@@ -163,35 +133,8 @@ gobang: games/CMakeFiles/gobang.dir/rule
 
 # fast build rule for target.
 gobang/fast:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/build
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/build
 .PHONY : gobang/fast
-
-connect_four.o: connect_four.cpp.o
-
-.PHONY : connect_four.o
-
-# target to build an object file
-connect_four.cpp.o:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/connect_four.dir/build.make games/CMakeFiles/connect_four.dir/connect_four.cpp.o
-.PHONY : connect_four.cpp.o
-
-connect_four.i: connect_four.cpp.i
-
-.PHONY : connect_four.i
-
-# target to preprocess a source file
-connect_four.cpp.i:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/connect_four.dir/build.make games/CMakeFiles/connect_four.dir/connect_four.cpp.i
-.PHONY : connect_four.cpp.i
-
-connect_four.s: connect_four.cpp.s
-
-.PHONY : connect_four.s
-
-# target to generate assembly for a file
-connect_four.cpp.s:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/connect_four.dir/build.make games/CMakeFiles/connect_four.dir/connect_four.cpp.s
-.PHONY : connect_four.cpp.s
 
 gobang.o: gobang.cpp.o
 
@@ -199,7 +142,7 @@ gobang.o: gobang.cpp.o
 
 # target to build an object file
 gobang.cpp.o:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.o
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.o
 .PHONY : gobang.cpp.o
 
 gobang.i: gobang.cpp.i
@@ -208,7 +151,7 @@ gobang.i: gobang.cpp.i
 
 # target to preprocess a source file
 gobang.cpp.i:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.i
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.i
 .PHONY : gobang.cpp.i
 
 gobang.s: gobang.cpp.s
@@ -217,35 +160,8 @@ gobang.s: gobang.cpp.s
 
 # target to generate assembly for a file
 gobang.cpp.s:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.s
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.s
 .PHONY : gobang.cpp.s
-
-nim.o: nim.cpp.o
-
-.PHONY : nim.o
-
-# target to build an object file
-nim.cpp.o:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/nim.dir/build.make games/CMakeFiles/nim.dir/nim.cpp.o
-.PHONY : nim.cpp.o
-
-nim.i: nim.cpp.i
-
-.PHONY : nim.i
-
-# target to preprocess a source file
-nim.cpp.i:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/nim.dir/build.make games/CMakeFiles/nim.dir/nim.cpp.i
-.PHONY : nim.cpp.i
-
-nim.s: nim.cpp.s
-
-.PHONY : nim.s
-
-# target to generate assembly for a file
-nim.cpp.s:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/nim.dir/build.make games/CMakeFiles/nim.dir/nim.cpp.s
-.PHONY : nim.cpp.s
 
 # Help Target
 help:
@@ -254,20 +170,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test"
-	@echo "... connect_four"
-	@echo "... edit_cache"
-	@echo "... nim"
-	@echo "... gobang"
 	@echo "... rebuild_cache"
-	@echo "... connect_four.o"
-	@echo "... connect_four.i"
-	@echo "... connect_four.s"
+	@echo "... edit_cache"
+	@echo "... gobang"
 	@echo "... gobang.o"
 	@echo "... gobang.i"
 	@echo "... gobang.s"
-	@echo "... nim.o"
-	@echo "... nim.i"
-	@echo "... nim.s"
 .PHONY : help
 
 
@@ -279,6 +187,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wjc/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

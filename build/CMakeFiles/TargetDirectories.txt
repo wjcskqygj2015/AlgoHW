@@ -1,9 +1,7 @@
-/home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles/test.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles/edit_cache.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles/rebuild_cache.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/test.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/connect_four.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/edit_cache.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/nim.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/gobang.dir
-/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/rebuild_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/test.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/edit_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/rebuild_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/test.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/rebuild_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/edit_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/gobang.dir

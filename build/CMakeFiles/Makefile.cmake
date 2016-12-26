@@ -46,7 +46,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "games/CMakeFiles/connect_four.dir/DependInfo.cmake"
-  "games/CMakeFiles/nim.dir/DependInfo.cmake"
   "games/CMakeFiles/gobang.dir/DependInfo.cmake"
   )

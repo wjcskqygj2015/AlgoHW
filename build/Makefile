@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wjc/src/mycode/homework/algo/gobang
+CMAKE_SOURCE_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wjc/src/mycode/homework/algo/gobang/build
+CMAKE_BINARY_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles /home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/mycode/homework/algo/gobang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,32 +122,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named connect_four
-
-# Build rule for target.
-connect_four: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 connect_four
-.PHONY : connect_four
-
-# fast build rule for target.
-connect_four/fast:
-	$(MAKE) -f games/CMakeFiles/connect_four.dir/build.make games/CMakeFiles/connect_four.dir/build
-.PHONY : connect_four/fast
-
-#=============================================================================
-# Target rules for targets named nim
-
-# Build rule for target.
-nim: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nim
-.PHONY : nim
-
-# fast build rule for target.
-nim/fast:
-	$(MAKE) -f games/CMakeFiles/nim.dir/build.make games/CMakeFiles/nim.dir/build
-.PHONY : nim/fast
-
-#=============================================================================
 # Target rules for targets named gobang
 
 # Build rule for target.
@@ -169,8 +143,6 @@ help:
 	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... connect_four"
-	@echo "... nim"
 	@echo "... gobang"
 .PHONY : help
 

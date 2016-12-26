@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wjc/src/mycode/homework/algo/gobang/games/gobang.cpp" "/home/wjc/src/mycode/homework/algo/gobang/build/games/CMakeFiles/gobang.dir/gobang.cpp.o"
+  "/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.cpp" "/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/gobang.dir/gobang.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/media/wjc/Workspace/src/mycode/homework/algo/gobang"
+  "../"
   "../third-party/Catch"
   )
 

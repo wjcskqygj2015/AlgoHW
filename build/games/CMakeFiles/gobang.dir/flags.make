@@ -6,5 +6,5 @@ CXX_FLAGS =  --std=c++11 -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/media/wjc/Workspace/src/mycode/homework/algo/gobang -I/home/wjc/src/mycode/homework/algo/gobang/third-party/Catch 
+CXX_INCLUDES = -I/media/wjc/Workspace/src/mycode/homework/algo/gobang -I/media/wjc/Workspace/src/mycode/homework/algo/gobang/third-party/Catch 
 

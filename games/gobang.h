@@ -134,9 +134,14 @@ public:
   char get_winner() const
   {
 
-    const int JOIN_NUM = 5;
+    static const int JOIN_NUM = 5;
 
-    if (last_y < 0)
+    int up = 0, down = 0;
+    int left = 0, right = 0;
+    int front = 0, back = 0;
+    int increase = 0, decrease = 0;
+    
+		if (last_y < 0)
     {
       return none_player_marker;
     }
@@ -145,7 +150,7 @@ public:
     auto piece = board[last_x][last_y][last_z];
 
     // along x
-    int up = 0, down = 0;
+    up = 0, down = 0;
     for (short int x = last_x - 1; x >= 0 && board[x][last_y][last_z] == piece;
          --x)
       up++;
@@ -156,7 +161,7 @@ public:
       return piece;
 
     // along y
-    int left = 0, right = 0;
+    left = 0, right = 0;
     for (short int y = last_y - 1; y >= 0 && board[last_x][y][last_z] == piece;
          --y)
       left++;
@@ -167,7 +172,7 @@ public:
       return piece;
 
     // along z
-    int front = 0, back = 0;
+    front = 0, back = 0;
     for (short int z = last_z - 1; z >= 0 && board[last_x][last_y][z] == piece;
          --z)
       front++;
@@ -243,8 +248,8 @@ public:
     if (front + 1 + back >= JOIN_NUM)
       return piece;
 
-    int increase = 0, decrease = 0;
     // along xyz (0,0,0) - (x+,y+,z+)
+    increase = 0, decrease = 0;
     for (short int x = last_x - 1, y = last_y - 1, z = last_z - 1;
          x >= 0 && y >= 0 && z >= 0 && board[x][y][z] == piece; --x, --y, --z)
       decrease++;
@@ -256,6 +261,7 @@ public:
       return piece;
 
     // along xyz (0,0,0) - (x+,y+,z-)
+    increase = 0, decrease = 0;
     for (short int x = last_x - 1, y = last_y - 1, z = last_z + 1;
          x >= 0 && y >= 0 && z < num_zs && board[x][y][z] == piece;
          --x, --y, ++z)
@@ -268,6 +274,7 @@ public:
       return piece;
 
     // along xyz (0,0,0) - (x+,y-,z+)
+   	increase = 0, decrease = 0;
     for (short int x = last_x - 1, y = last_y + 1, z = last_z - 1;
          x >= 0 && y < num_ys && z >= 0 && board[x][y][z] == piece;
          --x, ++y, --z)
@@ -280,6 +287,7 @@ public:
       return piece;
 
     // along xyz (0,0,0) - (x+,y-,z-)
+   	increase = 0, decrease = 0;
     for (short int x = last_x - 1, y = last_y + 1, z = last_z + 1;
          x >= 0 && y < num_ys && z < num_zs && board[x][y][z] == piece;
          --x, ++y, ++z)
@@ -307,7 +315,7 @@ public:
 
     auto winner = get_winner();
     if (winner == none_player_marker)
-      return 0.5;
+      return 1.0/Support_Num_Players;
 
     if (winner == player_markers[current_player_to_move])
       return 1.0;

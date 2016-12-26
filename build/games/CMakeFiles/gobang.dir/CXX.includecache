@@ -6,23 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wjc/src/mycode/homework/algo/gobang/games/gobang.cpp
-iostream
--
-mcts.h
--
-gobang.h
-/home/wjc/src/mycode/homework/algo/gobang/games/gobang.h
-
-/home/wjc/src/mycode/homework/algo/gobang/games/gobang.h
-algorithm
--
-iostream
--
-../mcts.h
-/home/wjc/src/mycode/homework/algo/gobang/mcts.h
-
-/home/wjc/src/mycode/homework/algo/gobang/mcts.h
+..//mcts.h
 algorithm
 -
 cstdlib
@@ -49,6 +33,22 @@ thread
 -
 vector
 -
+
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.cpp
+iostream
+-
+mcts.h
+-
+gobang.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
+
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
+algorithm
+-
+iostream
+-
+../mcts.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
 
 /media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
 algorithm
