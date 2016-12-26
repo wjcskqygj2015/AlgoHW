@@ -352,7 +352,7 @@ public:
       out << "-+" << endl;
     }
     out << player_markers[player_is_moved] << " finished move " << endl << endl;
-		out << player_markers[(player_is_moved+1)%Support_Num_Players] << "is to Moving" << endl;
+		out << player_markers[(player_is_moved+1)%Support_Num_Players] << " is to Moving" << endl;
   }
 
   int player_is_moved;
