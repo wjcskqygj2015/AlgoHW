@@ -49,7 +49,7 @@ public:
 
   GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,
               short int num_zs_ = 6)
-    : player_to_move(0), 
+    : player_is_moved(-1+Support_Num_Players), 
 			num_xs(num_xs_), num_ys(num_ys_), num_zs(num_zs_), 
 			last_x(-1), last_y(-1), last_z(-1)
   {
@@ -71,9 +71,11 @@ public:
     attest(board[move.x][move.y][move.z] == none_player_marker);
     check_invariant();
 
+    player_is_moved ++;
+    player_is_moved %= Support_Num_Players;
     // int x = num_xs - 1;
     // while (board[x][move] != none_player_marker) x--;
-    board[move.x][move.y][move.z] = player_markers[player_to_move];
+    board[move.x][move.y][move.z] = player_markers[player_is_moved];
     last_x = move.x;
     last_y = move.y;
     last_z = move.z;
@@ -85,8 +87,6 @@ public:
         break;
       }
 
-    player_to_move ++;
-    player_to_move %= Support_Num_Players;
   }
 
   template<typename RandomEngine>
@@ -302,13 +302,13 @@ public:
     return none_player_marker;
   }
 
-  double get_result(int current_player_to_move) const
+  double get_result(int current_player_is_moved) const
   {
 	
-		#pragma message "Here current_player_to_move always represents the Next player of state"	
+		#pragma message "Here current_player_is_moved always represents the Next player of state"	
 
-		current_player_to_move += (Support_Num_Players-1);
-		current_player_to_move %= (Support_Num_Players);
+		//current_player_is_moved += (Support_Num_Players-1);
+		//current_player_is_moved %= (Support_Num_Players);
 
     dattest(!has_moves());
     check_invariant();
@@ -317,7 +317,7 @@ public:
     if (winner == none_player_marker)
       return 1.0/Support_Num_Players;
 
-    if (winner == player_markers[current_player_to_move])
+    if (winner == player_markers[current_player_is_moved])
       return 1.0;
     else
       return 0.0;
@@ -351,15 +351,18 @@ public:
       }
       out << "-+" << endl;
     }
-    out << player_markers[player_to_move] << " to move " << endl << endl;
+    out << player_markers[player_is_moved] << " finished move " << endl << endl;
+		out << player_markers[(player_is_moved+1)%Support_Num_Players] << "is to Moving" << endl;
   }
 
-  int player_to_move;
+  int player_is_moved;
+
+	const Move getLastMove(){return {last_x,last_y,last_z};}
 
 private:
   void check_invariant() const
   {
-    attest(player_to_move >= 0 && player_to_move < Support_Num_Players);
+    attest(player_is_moved >= 0 && player_is_moved < Support_Num_Players);
   }
 
   short int num_xs, num_ys, num_zs;

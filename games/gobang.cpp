@@ -21,13 +21,15 @@ void main_program()
 	GoBangState state(6,6,6);
 	while (state.has_moves()) {
 		cout << endl << "State: " << state << endl;
+	
+		int is_to_move_player=(state.player_is_moved+1)%GoBangState::Support_Num_Players;
 
 		GoBangState::Move move = GoBangState::no_move;
-		if (state.player_to_move == 0) {
+		if (is_to_move_player == 0) {
 			move = MCTS::compute_move(state, player0_options);
 			state.do_move(move);
 		}
-		else if(state.player_to_move== 1) {
+		else if(is_to_move_player == 1) {
 			if (human_player) {
 				while (true) {
 					cout << "Input your move: ";
@@ -47,7 +49,7 @@ void main_program()
 				state.do_move(move);
 			}
 		}
-		else if(state.player_to_move==2){
+		else if(is_to_move_player ==2){
 			move=MCTS::compute_move(state,player2_options);
 			state.do_move(move);
 		}
@@ -55,13 +57,15 @@ void main_program()
 
 	cout << endl << "Final state: " << state << endl;
 
-	if (state.get_result(1) == 1.0) {
+	//auto getPlayerForResult=[](int id){return (id+1)%GoBangState::Support_Num_Players;};
+
+	if (state.get_result(0) == 1.0) {
 		cout << "Player 0 wins!" << endl;
 	}
-	else if (state.get_result(2) == 1.0) {
+	else if (state.get_result(1) == 1.0) {
 		cout << "Player 1 wins!" << endl;
 	}
-	else if (state.get_result(0) == 1.0) {
+	else if (state.get_result(2) == 1.0) {
 		cout << "Player 2 wins!" << endl;
 	}
 	else {

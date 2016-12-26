@@ -29,9 +29,9 @@ public:
         // Returns a value in {0, 0.5, 1}.
         // This should not be an evaluation function, because it will only be
         // called for finished games. Return 0.5 to indicate a draw.
-        double get_result(int current_player_to_move) const;
+        double get_result(int current_player_is_moved) const;
 
-        int player_to_move;
+        int player_is_moved;
 
         // ...
 private:
@@ -139,7 +139,7 @@ namespace MCTS
 
     const Move move;
     Node* const parent;
-    const int player_to_move;
+    const int player_is_moved;
 
     // std::atomic<double> wins;
     // std::atomic<int> visits;
@@ -166,14 +166,14 @@ namespace MCTS
   template<typename State>
   Node<State>::Node(const State& state)
     : move(State::no_move), parent(nullptr),
-      player_to_move(state.player_to_move), wins(0), visits(0),
+      player_is_moved(state.player_is_moved), wins(0), visits(0),
       moves(state.get_moves()), UCT_score(0)
   {
   }
 
   template<typename State>
   Node<State>::Node(const State& state, const Move& move_, Node* parent_)
-    : move(move_), parent(parent_), player_to_move(state.player_to_move),
+    : move(move_), parent(parent_), player_is_moved(state.player_is_moved),
       wins(0), visits(0), moves(state.get_moves()), UCT_score(0)
   {
   }
@@ -261,7 +261,7 @@ namespace MCTS
   {
     std::stringstream sout;
     sout << "["
-         << "P" << 3 - player_to_move << " "
+         << "P" << 3 - player_is_moved << " "
          << "M:" << move << " "
          << "W/V: " << wins << "/" << visits << " "
          << "U: " << moves.size() << "]\n";
@@ -321,7 +321,7 @@ namespace MCTS
 
     attest(options.max_iterations >= 0);
 
-    // attest(root_state.player_to_move == 1 || root_state.player_to_move == 2);
+    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved == 2);
 
     auto root = std::unique_ptr<Node<State>>(new Node<State>(root_state));
 
@@ -347,12 +347,16 @@ namespace MCTS
         node = node->add_child(move, state);
       }
 
+			int need_to_end_count=0;
       // We now play randomly until the game ends.
       while (state.has_moves())
       {
+				need_to_end_count++;
         state.do_random_move(&random_engine);
       }
 
+			if(need_to_end_count==0)
+				cout<<state.getLastMove()<<endl;
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
@@ -365,7 +369,7 @@ namespace MCTS
 
       while (node != nullptr)
       {
-        node->update(result[node->player_to_move]);
+        node->update(result[node->player_is_moved]);
         node = node->parent;
       }
     }
@@ -380,7 +384,7 @@ namespace MCTS
     using namespace std;
 
     // Will support more players later.
-    // attest(root_state.player_to_move == 1 || root_state.player_to_move == 2);
+    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved == 2);
 
     auto moves = root_state.get_moves();
     attest(moves.size() > 0);
@@ -447,7 +451,7 @@ namespace MCTS
       {
         cerr << "Move: " << itr.first << " (" << setw(4) << right
              << 100.0 * v / double(games_played) << "% visits)"
-             << " (" << setw(4) << right << 100.0 * w / v << "% wins)" << endl;
+             << " (" << setw(4) <<  w << ' ' << v <<' '<< (w/v)*100.0 << "% wins)" << endl;
       }
     }
 
