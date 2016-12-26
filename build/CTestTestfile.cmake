@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /media/wjc/Workspace/src/mycode/homework/algo/gobang
-# Build directory: /media/wjc/Workspace/src/mycode/homework/algo/gobang/build
+# Source directory: /home/wjc/src/AlgoHW
+# Build directory: /home/wjc/src/AlgoHW/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

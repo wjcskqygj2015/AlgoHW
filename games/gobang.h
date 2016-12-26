@@ -12,7 +12,6 @@ static int __COUNT__ = 0;
 class GoBangState
 {
 public:
-  // static const int DIM=2;
   typedef struct Move
   {
     short int x;
@@ -80,12 +79,17 @@ public:
     last_y = move.y;
     last_z = move.z;
 
-    for (auto it = reserved_moves.cbegin(); it != reserved_moves.cend(); it++)
-      if (*it == Move({move.x, move.y, move.z}))
-      {
-        reserved_moves.erase(it);
-        break;
-      }
+    auto itr = reserved_moves.begin();
+    for (; itr != reserved_moves.end() && *itr != move; ++itr)
+      ;
+    attest(itr != reserved_moves.end());
+    reserved_moves.erase(itr);
+    //for (auto it = reserved_moves.cbegin(); it != reserved_moves.cend(); it++)
+      //if (*it == Move({move.x, move.y, move.z}))
+      //{
+        //reserved_moves.erase(it);
+        //break;
+      //}
 
   }
 
@@ -128,7 +132,11 @@ public:
   {
     check_invariant();
 
-    return reserved_moves;
+		std::vector<Move> moves;
+		if (get_winner() != none_player_marker) 
+			return moves;
+    
+		return reserved_moves;
   }
 
   char get_winner() const
@@ -305,7 +313,7 @@ public:
   double get_result(int current_player_is_moved) const
   {
 	
-		#pragma message "Here current_player_is_moved always represents the Next player of state"	
+		//#pragma message "Here current_player_is_moved always represents the Next player of state"	
 
 		//current_player_is_moved += (Support_Num_Players-1);
 		//current_player_is_moved %= (Support_Num_Players);
@@ -357,7 +365,9 @@ public:
 
   int player_is_moved;
 
-	const Move getLastMove(){return {last_x,last_y,last_z};}
+	const Move getLastMove() const {return {last_x,last_y,last_z};}
+
+	const bool reserved_moves_empty()const {return reserved_moves.empty();}
 
 private:
   void check_invariant() const

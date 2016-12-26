@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang
+CMAKE_SOURCE_DIR = /home/wjc/src/AlgoHW
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/wjc/Workspace/src/mycode/homework/algo/gobang/build
+CMAKE_BINARY_DIR = /home/wjc/src/AlgoHW/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,14 +91,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/progress.marks
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles 0
+	cd /home/wjc/src/AlgoHW/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/AlgoHW/build/CMakeFiles /home/wjc/src/AlgoHW/build/games/CMakeFiles/progress.marks
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f CMakeFiles/Makefile2 games/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjc/src/AlgoHW/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/clean
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f CMakeFiles/Makefile2 games/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,22 +108,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f CMakeFiles/Makefile2 games/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wjc/src/AlgoHW/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 games/CMakeFiles/gobang.dir/rule:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/gobang.dir/rule
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f CMakeFiles/Makefile2 games/CMakeFiles/gobang.dir/rule
 .PHONY : games/CMakeFiles/gobang.dir/rule
 
 # Convenience name for target.
@@ -133,7 +133,7 @@ gobang: games/CMakeFiles/gobang.dir/rule
 
 # fast build rule for target.
 gobang/fast:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/build
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/build
 .PHONY : gobang/fast
 
 gobang.o: gobang.cpp.o
@@ -142,7 +142,7 @@ gobang.o: gobang.cpp.o
 
 # target to build an object file
 gobang.cpp.o:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.o
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.o
 .PHONY : gobang.cpp.o
 
 gobang.i: gobang.cpp.i
@@ -151,7 +151,7 @@ gobang.i: gobang.cpp.i
 
 # target to preprocess a source file
 gobang.cpp.i:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.i
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.i
 .PHONY : gobang.cpp.i
 
 gobang.s: gobang.cpp.s
@@ -160,7 +160,7 @@ gobang.s: gobang.cpp.s
 
 # target to generate assembly for a file
 gobang.cpp.s:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.s
+	cd /home/wjc/src/AlgoHW/build && $(MAKE) -f games/CMakeFiles/gobang.dir/build.make games/CMakeFiles/gobang.dir/gobang.cpp.s
 .PHONY : gobang.cpp.s
 
 # Help Target
@@ -187,6 +187,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /media/wjc/Workspace/src/mycode/homework/algo/gobang/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wjc/src/AlgoHW/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /media/wjc/Workspace/src/mycode/homework/algo/gobang/games
+# Install script for directory: /home/wjc/src/AlgoHW/games
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

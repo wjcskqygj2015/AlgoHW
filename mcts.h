@@ -317,7 +317,7 @@ namespace MCTS
                                             const ComputeOptions options)
   {
     // std::mt19937_64 random_engine(initial_seed);
-    std::random_device random_engine;
+  	std::random_device random_engine;
 
     attest(options.max_iterations >= 0);
 
@@ -331,15 +331,17 @@ namespace MCTS
       auto node = root.get();
       State state = root_state;
 
+			//int need_to_end_count=0;
       // Select a path through the tree to a leaf node.
       while (!node->has_untried_moves() && node->has_children())
       {
         node = node->select_child_UCT();
-        state.do_move(node->move);
+        //need_to_end_count++;
+				state.do_move(node->move);
       }
 
       // If we are not already at the final state, expand the
-      // tree with a new node and move there.
+      // tree with a new node and move there
       if (node->has_untried_moves())
       {
         auto move = node->get_untried_move(&random_engine);
@@ -347,16 +349,15 @@ namespace MCTS
         node = node->add_child(move, state);
       }
 
-			int need_to_end_count=0;
       // We now play randomly until the game ends.
       while (state.has_moves())
       {
-				need_to_end_count++;
+				//need_to_end_count++;
         state.do_random_move(&random_engine);
       }
 
-			if(need_to_end_count==0)
-				cout<<state.getLastMove()<<endl;
+			//if(need_to_end_count==0)
+				//cout<<state.getLastMove()<<' '<<state.reserved_moves_empty()<<' '<<node->player_is_moved<<endl;
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
