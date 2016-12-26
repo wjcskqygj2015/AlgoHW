@@ -42,8 +42,8 @@ public:
   static const char player_markers[3];
 
   GoBangState(short int num_rows_ = 6, short int num_cols_ = 7)
-    : player_to_move(1), num_rows(num_rows_), num_cols(num_cols_), 
-			last_col(-1), last_row(-1)
+    : player_to_move(1), num_rows(num_rows_), num_cols(num_cols_), last_col(-1),
+      last_row(-1)
   {
     board.resize(num_rows, vector<char>(num_cols, player_markers[0]));
 
@@ -65,12 +65,12 @@ public:
     last_row = move.x;
     last_col = move.y;
 
-		for(auto it=reserved_moves.cbegin();it!=reserved_moves.cend();it++)
-			if(*it==Move({move.x,move.y}))
-			{
-				reserved_moves.erase(it);
-				break;
-			}
+    for (auto it = reserved_moves.cbegin(); it != reserved_moves.cend(); it++)
+      if (*it == Move({move.x, move.y}))
+      {
+        reserved_moves.erase(it);
+        break;
+      }
 
     player_to_move = 3 - player_to_move;
   }
@@ -130,8 +130,8 @@ public:
 
     // X X X X
     int left = 0, right = 0;
-    for (short int col = last_col - 1; col >= 0 && board[last_row][col] == piece;
-         --col)
+    for (short int col = last_col - 1;
+         col >= 0 && board[last_row][col] == piece; --col)
       left++;
     for (short int col = last_col + 1;
          col < num_cols && board[last_row][col] == piece; ++col)
@@ -146,8 +146,8 @@ public:
     // X
     // X
     int up = 0, down = 0;
-    for (short int row = last_row - 1; row >= 0 && board[row][last_col] == piece;
-         --row)
+    for (short int row = last_row - 1;
+         row >= 0 && board[row][last_col] == piece; --row)
       up++;
     for (short int row = last_row + 1;
          row < num_rows && board[row][last_col] == piece; ++row)
