@@ -11,9 +11,9 @@ void main_program()
 	bool human_player = false;
 
 	MCTS::ComputeOptions player1_options, player2_options;
-	player1_options.max_iterations = 100000;
+	player1_options.max_iterations = 400000;
 	player1_options.verbose = true;
-	player2_options.max_iterations = 100000;
+	player2_options.max_iterations = 400000;
 	player2_options.verbose = true;
 
 	GoBangState state(6,6,6);
