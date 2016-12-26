@@ -3,5 +3,6 @@
 
 games/CMakeFiles/gobang.dir/gobang.cpp.o: ../games/gobang.cpp
 games/CMakeFiles/gobang.dir/gobang.cpp.o: ../games/gobang.h
+games/CMakeFiles/gobang.dir/gobang.cpp.o: ../mcts.h
 games/CMakeFiles/gobang.dir/gobang.cpp.o: /media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
 
