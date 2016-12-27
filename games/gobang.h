@@ -128,8 +128,16 @@ public:
   {
     check_invariant();
 
+    char winner = get_winner();
+    if (winner != none_player_marker)
+      return std::vector<Move>();
     return reserved_moves;
   }
+
+	bool has_winner() const
+	{
+		return get_winner() != none_player_marker;
+	}
 
   char get_winner() const
   {
@@ -305,7 +313,7 @@ public:
   double get_result(int current_player_is_moved) const
   {
 	
-		#pragma message "Here current_player_is_moved always represents the Next player of state"	
+		//#pragma message "Here current_player_is_moved always represents the Next player of state"	
 
 		//current_player_is_moved += (Support_Num_Players-1);
 		//current_player_is_moved %= (Support_Num_Players);
@@ -357,7 +365,7 @@ public:
 
   int player_is_moved;
 
-	const Move getLastMove(){return {last_x,last_y,last_z};}
+	const Move getLastMove()const {return {last_x,last_y,last_z};}
 
 private:
   void check_invariant() const

@@ -49,14 +49,11 @@ namespace MCTS
 {
   struct ComputeOptions
   {
-    int number_of_threads;
+    static const int number_of_threads = 8;
     int max_iterations;
     bool verbose;
 
-    ComputeOptions()
-      : number_of_threads(8), max_iterations(10000), verbose(false)
-    {
-    }
+    ComputeOptions() : max_iterations(10000), verbose(false) {}
   };
 
   template<typename State>
@@ -132,6 +129,9 @@ namespace MCTS
 
     Node* select_child_UCT() const;
     Node* add_child(const Move& move, const State& state);
+    Node* get_child_from_move_and_prune_other_child(const Move& move);
+    void add_child_and_wont_add_anymore(const Move& move, const State& state);
+    void prune_all_childs_without_one(const Node<State>* lucky_one_child);
     void update(double result);
 
     std::string to_string() const;
@@ -144,7 +144,7 @@ namespace MCTS
     // std::atomic<double> wins;
     // std::atomic<int> visits;
     double wins;
-    int visits;
+    long long int visits;
 
     std::vector<Move> moves;
     std::vector<Node*> children;
@@ -247,6 +247,62 @@ namespace MCTS
   }
 
   template<typename State>
+  void Node<State>::add_child_and_wont_add_anymore(const Move& move,
+                                                   const State& state)
+  {
+    auto node = new Node(state, move, this);
+
+    attest(children.empty());
+    children.push_back(node);
+    attest(!children.empty());
+
+    moves.erase(moves.begin(), moves.end());
+  }
+
+  template<typename State>
+  void Node<State>::prune_all_childs_without_one(
+    const Node<State>* lucky_one_child)
+  {
+
+    if ((lucky_one_child == NULL) && (children.size() == 1) &&
+        (moves.size() == 0) && (children[0] == lucky_one_child))
+      return;
+
+    auto itr = children.cbegin();
+    for (; itr != children.cend() && *itr != lucky_one_child; ++itr)
+      delete *itr;
+
+    attest(itr != children.cend())
+
+      children.erase(children.cbegin(), itr);
+
+    for (itr = children.cbegin() + 1; itr != children.cend(); itr++)
+      delete *itr;
+    children.erase(children.cbegin() + 1, children.cend());
+
+    moves.erase(moves.cbegin(), moves.cend());
+  }
+
+  template<typename State>
+  Node<State>* Node<State>::get_child_from_move_and_prune_other_child(
+    const Move& move)
+  {
+    Node<State>* selected_child = NULL;
+    auto itr = children.cbegin();
+    for (; itr != children.cend() && (*itr)->move != move; ++itr)
+      delete *itr;
+
+    selected_child = (*itr);
+    itr++;
+
+    for (; itr != children.cend(); itr++)
+      delete *itr;
+    // Release selected_child's property without release the selected children
+    children.erase(children.cbegin(), children.cend());
+    return selected_child;
+  }
+
+  template<typename State>
   void Node<State>::update(double result)
   {
     visits++;
@@ -305,15 +361,18 @@ namespace MCTS
   };
 
   template<typename State>
-  struct getSupportNumPlayers<State, decltype(typename std::enable_if<std::is_integral<decltype(State::Support_Num_Players)>::value>::type())>
+  struct getSupportNumPlayers<
+    State, decltype(typename std::enable_if<std::is_integral<decltype(
+                      State::Support_Num_Players)>::value>::type())>
   {
     static const int value = State::Support_Num_Players;
-		
-		static const int only_for_test = 0;
+
+    static const int only_for_test = 0;
   };
 
   template<typename State>
   std::unique_ptr<Node<State>> compute_tree(const State root_state,
+                                            Node<State>* last_state,
                                             const ComputeOptions options)
   {
     // std::mt19937_64 random_engine(initial_seed);
@@ -321,9 +380,11 @@ namespace MCTS
 
     attest(options.max_iterations >= 0);
 
-    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved == 2);
+    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved ==
+    // 2);
 
-    auto root = std::unique_ptr<Node<State>>(new Node<State>(root_state));
+    // auto root = std::unique_ptr<Node<State>>(new Node<State>(root_state));
+    auto root = std::unique_ptr<Node<State>>(last_state);
 
     for (int iter = 1;
          iter <= options.max_iterations || options.max_iterations < 0; ++iter)
@@ -347,22 +408,50 @@ namespace MCTS
         node = node->add_child(move, state);
       }
 
-			int need_to_end_count=0;
+      // We apply Pruning Techniques while we are playing this games
+      // Of course, when we find the non-random step caused terminal
+      // It is easily to pruning other possibility for its parents
+
+      int need_to_end_count = 0;
       // We now play randomly until the game ends.
       while (state.has_moves())
       {
-				need_to_end_count++;
+        need_to_end_count++;
         state.do_random_move(&random_engine);
       }
 
-			if(need_to_end_count==0)
-				cout<<state.getLastMove()<<endl;
+      bool has_winner = state.has_winner();
+      // need_to_end_count represents that the winners are cause by itself
+      // Of course the result is that whatever happened we would choose the
+      // action when we are in parent state
+      if (need_to_end_count == 0 && has_winner)
+      {
+        auto parent_node = node->parent;
+        parent_node->prune_all_childs_without_one(node);
+      }
+
+      // Here the pruning techniques base on such facts
+      // when we just choose one random and cause the winner
+      // means that when I was in this state ( after I chose untries_move before
+      // start random)
+      // and choose this state is unwise for me,
+      // However, we could suppose that enemy has this possiblity when there is
+      // no other move
+      // So we could not just pruning from this state's parent
+      // But We could just pruning its child let only thin
+      if (need_to_end_count == 1 && has_winner)
+      {
+        auto last_move = state.getLastMove();
+        node->add_child_and_wont_add_anymore(last_move, state);
+      }
+
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
       static const int Support_Num_Players = getSupportNumPlayers<State>::value;
-      //const int for_test = getSupportNumPlayers<State>::only_for_test;
-			static double result[Support_Num_Players] = {};
+
+      // const int for_test = getSupportNumPlayers<State>::only_for_test;
+      static double result[Support_Num_Players] = {};
 
       for (int i = 0; i < Support_Num_Players; i++)
         result[i] = state.get_result(i);
@@ -384,7 +473,8 @@ namespace MCTS
     using namespace std;
 
     // Will support more players later.
-    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved == 2);
+    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved ==
+    // 2);
 
     auto moves = root_state.get_moves();
     attest(moves.size() > 0);
@@ -393,15 +483,32 @@ namespace MCTS
       return moves[0];
     }
 
+    static bool if_is_first = true;
+    static Node<State>* last_state[options.number_of_threads];
+    if (if_is_first == true)
+    {
+      for (int i = 0; i < options.number_of_threads; i++)
+        last_state[i] = new Node<State>(root_state);
+      if_is_first = false;
+    }
+    else
+		{
+      // Here we assume that no  artificial players
+      for (int i = 0; i < options.number_of_threads; i++)
+        last_state[i] =
+          last_state[i]->get_child_from_move_and_prune_other_child(
+            root_state.getLastMove());
+    }
+
     // Start all jobs to compute trees.
     vector<future<unique_ptr<Node<State>>>> root_futures;
     ComputeOptions job_options = options;
     job_options.verbose = false;
     for (int t = 0; t < options.number_of_threads; ++t)
     {
-      auto func = [t, &root_state,
+      auto func = [t, &root_state, &last_state,
                    &job_options]() -> std::unique_ptr<Node<State>> {
-        return compute_tree(root_state, job_options);
+        return compute_tree(root_state, last_state[t], job_options);
       };
 
       root_futures.push_back(std::async(std::launch::async, func));
@@ -415,7 +522,7 @@ namespace MCTS
     }
 
     // Merge the children of all root nodes.
-    map<typename State::Move, int> visits;
+    map<typename State::Move, long long int> visits;
     map<typename State::Move, double> wins;
     long long games_played = 0;
     for (int t = 0; t < options.number_of_threads; ++t)
@@ -429,6 +536,9 @@ namespace MCTS
         wins[(*child)->move] += (*child)->wins;
       }
     }
+
+    for (auto iter = roots.begin(); iter != roots.end(); iter++)
+      iter->release();
 
     // Find the node with the highest score.
     double best_score = -1;
@@ -451,7 +561,8 @@ namespace MCTS
       {
         cerr << "Move: " << itr.first << " (" << setw(4) << right
              << 100.0 * v / double(games_played) << "% visits)"
-             << " (" << setw(4) <<  w << ' ' << v <<' '<< (w/v)*100.0 << "% wins)" << endl;
+             << " (" << setw(4) << w << ' ' << v << ' ' << (w / v) * 100.0
+             << "% wins)" << endl;
       }
     }
 
