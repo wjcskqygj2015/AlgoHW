@@ -106,6 +106,21 @@ namespace MCTS
 #define dattest(expr) ((void)0)
 #endif
 
+  template<typename State, typename = void>
+  struct getSupportNumPlayers
+  {
+    static const int value = 3;
+  };
+
+  template<typename State>
+  struct getSupportNumPlayers<
+    State, decltype(typename std::enable_if<std::is_integral<decltype(
+                      State::Support_Num_Players)>::value>::type())>
+  {
+    static const int value = State::Support_Num_Players;
+
+    static const int only_for_test = 0;
+  };
   //
   // This class is used to build the game tree. The root is created by the users
   // and
@@ -129,21 +144,25 @@ namespace MCTS
 
     Node* select_child_UCT() const;
     Node* add_child(const Move& move, const State& state);
-    Node* get_child_from_move_and_prune_other_child(const Move& move);
+    Node* get_child_from_move_and_prune_other_child_and_unchina_all(
+      const Move& move);
     void add_child_and_wont_add_anymore(const Move& move, const State& state);
     void prune_all_childs_without_one(const Node<State>* lucky_one_child);
-    void update(double result);
+    void update(double result[]);
+
+		void set_parent_nullptr();
 
     std::string to_string() const;
     std::string tree_to_string(int max_depth = 1000000, int indent = 0) const;
 
     const Move move;
-    Node* const parent;
+    Node* parent;
     const int player_is_moved;
 
+		static const int Support_Num_Players = getSupportNumPlayers<State>::value;
     // std::atomic<double> wins;
     // std::atomic<int> visits;
-    double wins;
+    double wins[Support_Num_Players];
     long long int visits;
 
     std::vector<Move> moves;
@@ -166,16 +185,20 @@ namespace MCTS
   template<typename State>
   Node<State>::Node(const State& state)
     : move(State::no_move), parent(nullptr),
-      player_is_moved(state.player_is_moved), wins(0), visits(0),
+      player_is_moved(state.player_is_moved), visits(0),
       moves(state.get_moves()), UCT_score(0)
   {
+		for(int i=0;i<Support_Num_Players;i++)
+			wins[i]=0;
   }
 
   template<typename State>
   Node<State>::Node(const State& state, const Move& move_, Node* parent_)
     : move(move_), parent(parent_), player_is_moved(state.player_is_moved),
-      wins(0), visits(0), moves(state.get_moves()), UCT_score(0)
+      visits(0), moves(state.get_moves()), UCT_score(0)
   {
+		for(int i=0;i<Support_Num_Players;i++)
+			wins[i]=0;
   }
 
   template<typename State>
@@ -194,6 +217,12 @@ namespace MCTS
   }
 
   template<typename State>
+  void Node<State>::set_parent_nullptr()
+  {
+    this->parent = nullptr;
+  }
+  
+	template<typename State>
   template<typename RandomEngine>
   typename State::Move Node<State>::get_untried_move(RandomEngine* engine) const
   {
@@ -222,7 +251,7 @@ namespace MCTS
     for (auto child : children)
     {
       child->UCT_score =
-        double(child->wins) / double(child->visits) +
+        double(child->wins[child->player_is_moved]) / double(child->visits) +
         std::sqrt(2.0 * std::log(double(this->visits)) / child->visits);
     }
 
@@ -284,7 +313,8 @@ namespace MCTS
   }
 
   template<typename State>
-  Node<State>* Node<State>::get_child_from_move_and_prune_other_child(
+  Node<State>*
+  Node<State>::get_child_from_move_and_prune_other_child_and_unchina_all(
     const Move& move)
   {
     Node<State>* selected_child = NULL;
@@ -303,11 +333,12 @@ namespace MCTS
   }
 
   template<typename State>
-  void Node<State>::update(double result)
+  void Node<State>::update(double result[])
   {
     visits++;
 
-    wins += result;
+		for(int i=0;i<Support_Num_Players;i++)
+    	wins[i] += result[i];
     // double my_wins = wins.load();
     // while ( ! wins.compare_exchange_strong(my_wins, my_wins + result));
   }
@@ -354,42 +385,80 @@ namespace MCTS
   /////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////
 
-  template<typename State, typename = void>
-  struct getSupportNumPlayers
+
+  template<typename State>
+  void human_do_move(const State& root_state);
+  template<typename State>
+  typename State::Move compute_move(const State root_state,
+                                    const ComputeOptions options);
+  template<typename State>
+  class Preserve_State
   {
-    static const int value = 3;
+  public:
+    friend void human_do_move<State>(const State& root_state);
+
+    friend typename State::Move compute_move<State>(
+      const State root_state, const ComputeOptions options);
+
+  private:
+    static Node<State>* last_state[ComputeOptions::number_of_threads];
+
+    static void do_last_move_for_preserve_state(const State& root_state)
+    {
+      for (int i = 0; i < ComputeOptions::number_of_threads; i++)
+      {
+        Node<State>* temp = Preserve_State<State>::last_state[i];
+        Preserve_State<State>::last_state[i] =
+          Preserve_State<State>::last_state[i]
+            ->get_child_from_move_and_prune_other_child_and_unchina_all(
+              root_state.getLastMove());
+				if(Preserve_State<State>::last_state[i] == NULL)
+        	Preserve_State<State>::last_state[i] = new Node<State>(root_state);
+				Preserve_State<State>::last_state[i]->set_parent_nullptr();
+        delete temp;
+      }
+    }
   };
 
   template<typename State>
-  struct getSupportNumPlayers<
-    State, decltype(typename std::enable_if<std::is_integral<decltype(
-                      State::Support_Num_Players)>::value>::type())>
-  {
-    static const int value = State::Support_Num_Players;
-
-    static const int only_for_test = 0;
-  };
+  Node<State>*
+    Preserve_State<State>::last_state[ComputeOptions::number_of_threads] = {};
 
   template<typename State>
-  std::unique_ptr<Node<State>> compute_tree(const State root_state,
-                                            Node<State>* last_state,
-                                            const ComputeOptions options)
+  void human_do_move(const State& root_state)
+  {
+    Preserve_State<State>::do_last_move_for_preserve_state(root_state);
+    // for (int i = 0; i < ComputeOptions::number_of_threads; i++)
+    //{
+    // Node<State>* temp = Preserve_State<State>::last_state[i];
+    // Preserve_State<State>::last_state[i] =
+    // Preserve_State<State>::last_state[i]
+    //->get_child_from_move_and_prune_other_child(root_state.getLastMove());
+    // delete temp;
+    //}
+  }
+
+  template<typename State>
+  const Node<State>* compute_tree(const State root_state,
+                                  Node<State>* last_state,
+                                  const ComputeOptions options)
   {
     // std::mt19937_64 random_engine(initial_seed);
     std::random_device random_engine;
 
     attest(options.max_iterations >= 0);
 
-    // attest(root_state.player_is_moved == 1 || root_state.player_is_moved ==
-    // 2);
+    auto root = last_state;
 
-    // auto root = std::unique_ptr<Node<State>>(new Node<State>(root_state));
-    auto root = std::unique_ptr<Node<State>>(last_state);
+    //static const int Support_Num_Players = getSupportNumPlayers<State>::value;
 
-    for (int iter = 1;
+      // const int for_test = getSupportNumPlayers<State>::only_for_test;
+    double result[Node<State>::Support_Num_Players] = {};
+    
+		for (int iter = 1;
          iter <= options.max_iterations || options.max_iterations < 0; ++iter)
     {
-      auto node = root.get();
+      auto node = root;
       State state = root_state;
 
       // Select a path through the tree to a leaf node.
@@ -448,17 +517,13 @@ namespace MCTS
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
-      static const int Support_Num_Players = getSupportNumPlayers<State>::value;
 
-      // const int for_test = getSupportNumPlayers<State>::only_for_test;
-      static double result[Support_Num_Players] = {};
-
-      for (int i = 0; i < Support_Num_Players; i++)
+      for (int i = 0; i < Node<State>::Support_Num_Players; i++)
         result[i] = state.get_result(i);
 
       while (node != nullptr)
       {
-        node->update(result[node->player_is_moved]);
+        node->update(result);
         node = node->parent;
       }
     }
@@ -483,42 +548,40 @@ namespace MCTS
       return moves[0];
     }
 
+    //------------------------
     static bool if_is_first = true;
-    static Node<State>* last_state[options.number_of_threads];
+    // static Node<State>* last_state[options.number_of_threads];
     if (if_is_first == true)
     {
       for (int i = 0; i < options.number_of_threads; i++)
-        last_state[i] = new Node<State>(root_state);
+        Preserve_State<State>::last_state[i] = new Node<State>(root_state);
       if_is_first = false;
     }
     else
-		{
-      // Here we assume that no  artificial players
-      for (int i = 0; i < options.number_of_threads; i++)
-        last_state[i] =
-          last_state[i]->get_child_from_move_and_prune_other_child(
-            root_state.getLastMove());
+    {
+      Preserve_State<State>::do_last_move_for_preserve_state(root_state);
     }
 
+    //------------------------------------
     // Start all jobs to compute trees.
-    vector<future<unique_ptr<Node<State>>>> root_futures;
+    vector<future<const Node<State>*>> root_futures;
     ComputeOptions job_options = options;
     job_options.verbose = false;
     for (int t = 0; t < options.number_of_threads; ++t)
     {
-      auto func = [t, &root_state, &last_state,
-                   &job_options]() -> std::unique_ptr<Node<State>> {
-        return compute_tree(root_state, last_state[t], job_options);
+      auto func = [t, &root_state, &job_options]() -> const Node<State>* {
+        return compute_tree(root_state, Preserve_State<State>::last_state[t],
+                            job_options);
       };
 
       root_futures.push_back(std::async(std::launch::async, func));
     }
 
     // Collect the results.
-    vector<unique_ptr<Node<State>>> roots;
+    vector<const Node<State>*> roots;
     for (int t = 0; t < options.number_of_threads; ++t)
     {
-      roots.push_back(std::move(root_futures[t].get()));
+      roots.push_back(root_futures[t].get());
     }
 
     // Merge the children of all root nodes.
@@ -527,18 +590,15 @@ namespace MCTS
     long long games_played = 0;
     for (int t = 0; t < options.number_of_threads; ++t)
     {
-      auto root = roots[t].get();
+      auto root = roots[t];
       games_played += root->visits;
       for (auto child = root->children.cbegin(); child != root->children.cend();
            ++child)
       {
         visits[(*child)->move] += (*child)->visits;
-        wins[(*child)->move] += (*child)->wins;
+        wins[(*child)->move] += (*child)->wins[(*child)->player_is_moved];
       }
     }
-
-    for (auto iter = roots.begin(); iter != roots.end(); iter++)
-      iter->release();
 
     // Find the node with the highest score.
     double best_score = -1;

@@ -45,7 +45,7 @@ public:
 
   static const char player_markers[Support_Num_Players];
 
-	static const char none_player_marker = '.';
+	static const char none_player_marker;
 
   GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,
               short int num_zs_ = 6)
@@ -388,3 +388,4 @@ operator<<(ostream& out, const GoBangState& state)
 
 const GoBangState::Move GoBangState::no_move = {-1, -1, -1};
 const char GoBangState::player_markers[GoBangState::Support_Num_Players] = {'X', 'O', 'L'};
+const char GoBangState::none_player_marker = '.';

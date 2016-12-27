@@ -31,9 +31,12 @@ void main_program()
 		}
 		else if(is_to_move_player == 1) {
 			if (human_player) {
+				MCTS::human_do_move(state);
 				while (true) {
 					cout << "Input your move: ";
 					move = GoBangState::no_move;
+					cin.clear();
+					cin.sync();
 					cin >> move;
 					try {
 						state.do_move(move);
