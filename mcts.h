@@ -132,7 +132,7 @@ namespace MCTS
 
     Node* select_child_UCT() const;
     Node* add_child(const Move& move, const State& state);
-    void update(double result);
+    void update(double visit_weight, double result_weight);
 
     std::string to_string() const;
     std::string tree_to_string(int max_depth = 1000000, int indent = 0) const;
@@ -144,7 +144,7 @@ namespace MCTS
     // std::atomic<double> wins;
     // std::atomic<int> visits;
     double wins;
-    int visits;
+    double visits;
 
     std::vector<Move> moves;
     std::vector<Node*> children;
@@ -247,11 +247,11 @@ namespace MCTS
   }
 
   template<typename State>
-  void Node<State>::update(double result)
+  void Node<State>::update(double visit_weight, double result_weight)
   {
-    visits++;
+    visits += visit_weight;
 
-    wins += result;
+    wins += result_weight;
     // double my_wins = wins.load();
     // while ( ! wins.compare_exchange_strong(my_wins, my_wins + result));
   }
@@ -363,15 +363,25 @@ namespace MCTS
 
       static const int Support_Num_Players = getSupportNumPlayers<State>::value;
       //const int for_test = getSupportNumPlayers<State>::only_for_test;
-			static double result[Support_Num_Players] = {};
+			static double result_weight[Support_Num_Players] = {};
+
+			static double visit_weight[Support_Num_Players]={};
 
       for (int i = 0; i < Support_Num_Players; i++)
-        result[i] = state.get_result(i);
-
+			{	
+				visit_weight[i] = 1.0;
+			 	result_weight[i] = state.get_result(i);
+			}
+			
+			static const double decay_value = 0.95;
+			//int layer_count=0;
       while (node != nullptr)
       {
-        node->update(result[node->player_is_moved]);
-        node = node->parent;
+				int player_is_moved = node -> player_is_moved;
+        node->update(visit_weight[player_is_moved],result_weight[player_is_moved]);
+				visit_weight[player_is_moved] *= decay_value;
+				result_weight[player_is_moved] *= decay_value;
+				node = node->parent;
       }
     }
 
@@ -416,7 +426,7 @@ namespace MCTS
     }
 
     // Merge the children of all root nodes.
-    map<typename State::Move, int> visits;
+    map<typename State::Move, double> visits;
     map<typename State::Move, double> wins;
     long long games_played = 0;
     for (int t = 0; t < options.number_of_threads; ++t)
