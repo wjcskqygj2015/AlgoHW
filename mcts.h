@@ -150,7 +150,7 @@ namespace MCTS
     void prune_all_childs_without_one(const Node<State>* lucky_one_child);
     void update(double result[]);
 
-		void set_parent_nullptr();
+    void set_parent_nullptr();
 
     std::string to_string() const;
     std::string tree_to_string(int max_depth = 1000000, int indent = 0) const;
@@ -159,7 +159,7 @@ namespace MCTS
     Node* parent;
     const int player_is_moved;
 
-		static const int Support_Num_Players = getSupportNumPlayers<State>::value;
+    static const int Support_Num_Players = getSupportNumPlayers<State>::value;
     // std::atomic<double> wins;
     // std::atomic<int> visits;
     double wins[Support_Num_Players];
@@ -188,8 +188,8 @@ namespace MCTS
       player_is_moved(state.player_is_moved), visits(0),
       moves(state.get_moves()), UCT_score(0)
   {
-		for(int i=0;i<Support_Num_Players;i++)
-			wins[i]=0;
+    for (int i = 0; i < Support_Num_Players; i++)
+      wins[i] = 0;
   }
 
   template<typename State>
@@ -197,8 +197,8 @@ namespace MCTS
     : move(move_), parent(parent_), player_is_moved(state.player_is_moved),
       visits(0), moves(state.get_moves()), UCT_score(0)
   {
-		for(int i=0;i<Support_Num_Players;i++)
-			wins[i]=0;
+    for (int i = 0; i < Support_Num_Players; i++)
+      wins[i] = 0;
   }
 
   template<typename State>
@@ -221,8 +221,8 @@ namespace MCTS
   {
     this->parent = nullptr;
   }
-  
-	template<typename State>
+
+  template<typename State>
   template<typename RandomEngine>
   typename State::Move Node<State>::get_untried_move(RandomEngine* engine) const
   {
@@ -250,9 +250,33 @@ namespace MCTS
     attest(!children.empty());
     for (auto child : children)
     {
+      //double square_sum = 0.0;
+      //double linear_sum = 0.0;
+      //for (int i =
+             //(child->player_is_moved + 1) % Node<State>::Support_Num_Players;
+           //i != child->player_is_moved;
+           //i = (i + 1) % Node<State>::Support_Num_Players)
+      //{
+        //double temp = double(child->wins[i]) / double(child->visits);
+        //square_sum += temp * temp;
+        //linear_sum += temp;
+      //}
+      //square_sum -= (linear_sum * linear_sum);
+      //square_sum /= (Node<State>::Support_Num_Players - 1);
+
+			double max_non_me = 0.0;
+			for (int i =
+						 (child->player_is_moved + 1) % Node<State>::Support_Num_Players;
+					 i != child->player_is_moved;
+					 i = (i + 1) % Node<State>::Support_Num_Players)
+			{
+				double temp = double(child->wins[i]) / double(child->visits);
+				if(temp>max_non_me)
+					max_non_me=temp;
+			}
       child->UCT_score =
-        double(child->wins[child->player_is_moved]) / double(child->visits) +
-        std::sqrt(2.0 * std::log(double(this->visits)) / child->visits);
+        ( double(child->wins[child->player_is_moved]) / double(child->visits) + (1.0 - max_non_me ) +
+        std::sqrt(2.0 * std::log(double(this->visits)) / child->visits) );
     }
 
     return *std::max_element(
@@ -337,8 +361,8 @@ namespace MCTS
   {
     visits++;
 
-		for(int i=0;i<Support_Num_Players;i++)
-    	wins[i] += result[i];
+    for (int i = 0; i < Support_Num_Players; i++)
+      wins[i] += result[i];
     // double my_wins = wins.load();
     // while ( ! wins.compare_exchange_strong(my_wins, my_wins + result));
   }
@@ -385,7 +409,6 @@ namespace MCTS
   /////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////
 
-
   template<typename State>
   void human_do_move(const State& root_state);
   template<typename State>
@@ -412,9 +435,9 @@ namespace MCTS
           Preserve_State<State>::last_state[i]
             ->get_child_from_move_and_prune_other_child_and_unchina_all(
               root_state.getLastMove());
-				if(Preserve_State<State>::last_state[i] == NULL)
-        	Preserve_State<State>::last_state[i] = new Node<State>(root_state);
-				Preserve_State<State>::last_state[i]->set_parent_nullptr();
+        if (Preserve_State<State>::last_state[i] == NULL)
+          Preserve_State<State>::last_state[i] = new Node<State>(root_state);
+        Preserve_State<State>::last_state[i]->set_parent_nullptr();
         delete temp;
       }
     }
@@ -428,14 +451,6 @@ namespace MCTS
   void human_do_move(const State& root_state)
   {
     Preserve_State<State>::do_last_move_for_preserve_state(root_state);
-    // for (int i = 0; i < ComputeOptions::number_of_threads; i++)
-    //{
-    // Node<State>* temp = Preserve_State<State>::last_state[i];
-    // Preserve_State<State>::last_state[i] =
-    // Preserve_State<State>::last_state[i]
-    //->get_child_from_move_and_prune_other_child(root_state.getLastMove());
-    // delete temp;
-    //}
   }
 
   template<typename State>
@@ -450,12 +465,13 @@ namespace MCTS
 
     auto root = last_state;
 
-    //static const int Support_Num_Players = getSupportNumPlayers<State>::value;
+    // static const int Support_Num_Players =
+    // getSupportNumPlayers<State>::value;
 
-      // const int for_test = getSupportNumPlayers<State>::only_for_test;
+    // const int for_test = getSupportNumPlayers<State>::only_for_test;
     double result[Node<State>::Support_Num_Players] = {};
-    
-		for (int iter = 1;
+
+    for (int iter = 1;
          iter <= options.max_iterations || options.max_iterations < 0; ++iter)
     {
       auto node = root;
@@ -497,6 +513,7 @@ namespace MCTS
       {
         auto parent_node = node->parent;
         parent_node->prune_all_childs_without_one(node);
+        parent_node->wins[parent_node->player_is_moved] = 0;
       }
 
       // Here the pruning techniques base on such facts
@@ -512,11 +529,11 @@ namespace MCTS
       {
         auto last_move = state.getLastMove();
         node->add_child_and_wont_add_anymore(last_move, state);
+        node->wins[node->player_is_moved] = 0;
       }
 
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
-
 
       for (int i = 0; i < Node<State>::Support_Num_Players; i++)
         result[i] = state.get_result(i);
