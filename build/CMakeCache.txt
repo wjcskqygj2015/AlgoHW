@@ -178,8 +178,6 @@ MCTS_SOURCE_DIR:STATIC=/media/wjc/Workspace/src/mycode/homework/algo/gobang
 
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-MODIFIED:INTERNAL=ON
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/media/wjc/Workspace/src/mycode/homework/algo/gobang/build
 //Major version of cmake used to create the current loaded cache

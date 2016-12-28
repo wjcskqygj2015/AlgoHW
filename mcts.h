@@ -56,12 +56,18 @@ namespace MCTS
     double self_win;
     double suppress_others;
     double active_search;
-    ComputeOptions()
-      : max_iterations(10000), verbose(false), self_win(1.0),
-        suppress_others(1.0), active_search(2.0)
+    ComputeOptions(int max_iterations=1000000, bool verbose =false, double self_win=1.0,double suppress_others=1.0, double active_search=2.0)
+      : max_iterations(max_iterations), verbose(verbose), self_win(self_win),
+        suppress_others(suppress_others), active_search(active_search)
     {
-    }
+    }	
   };
+	
+	static ComputeOptions default_search(1000000,false,1.0,1.0,2.0);
+	static ComputeOptions active_search(1000000,false,1.0,1.0,4.0);
+	static ComputeOptions sag_search(1000000,false,1.0,1.0,1.0);
+	static ComputeOptions suppress_search(1000000,false,1.0,4.0,2.0);
+	static ComputeOptions selfwin_search(1000000,false,1.0,0.5,2.0);
 
   template<typename State>
   typename State::Move compute_move(const State root_state,

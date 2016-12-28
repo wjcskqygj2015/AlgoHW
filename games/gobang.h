@@ -412,7 +412,3 @@ operator<<(ostream& out, const GoBangState<num_players>& state)
   return out;
 }
 
-
-//const GoBangState::Move GoBangState::no_move = {-1, -1, -1};
-//const char GoBangState::player_markers[GoBangState::Support_Num_Players] = {'X', 'O', 'L'};
-//const char GoBangState::none_player_marker = '.';
