@@ -4,57 +4,65 @@
 using namespace std;
 #include <mcts.h>
 #include "gobang.h"
-void main_program()
+
+template<int num_player, int num_iterations>
+void main_program(const int human_player_id=-1)
 {
 	using namespace std;
 
 	bool human_player = false;
 
-	MCTS::ComputeOptions player0_options, player1_options, player2_options;
-	player0_options.max_iterations = 400000;
-	player0_options.verbose = true;
-	player1_options.max_iterations = 400000;
-	player1_options.verbose = true;
-	player2_options.max_iterations = 400000;
-	player2_options.verbose = true;
+	if(human_player_id>=0&&human_player_id<num_player)
+		human_player=true;
 
-	GoBangState state(6,6,6);
-	while (state.has_moves()) {
+	MCTS::ComputeOptions player_options[num_player];
+	
+	for(int i=0;i<num_player;i++)
+	{
+		player_options[i].max_iterations=num_iterations;
+		player_options[i].verbose = true;
+	}
+	//player0_options.max_iterations =;
+	//player0_options.verbose = true;
+	//player1_options.max_iterations = 400000;
+	//player1_options.verbose = true;
+	//player2_options.max_iterations = 400000;
+	//player2_options.verbose = true;
+
+	GoBangState<num_player> state(6,6,6);
+	while (state.has_moves()) 
+	{
 		cout << endl << "State: " << state << endl;
 	
-		int is_to_move_player=(state.player_is_moved+1)%GoBangState::Support_Num_Players;
+		int is_to_move_player=(state.player_is_moved+1)%GoBangState<num_player>::Support_Num_Players;
 
-		GoBangState::Move move = GoBangState::no_move;
-		if (is_to_move_player == 0) {
-			move = MCTS::compute_move(state, player0_options);
-			state.do_move(move);
-		}
-		else if(is_to_move_player == 1) {
-			if (human_player) {
-				MCTS::human_do_move(state);
-				while (true) {
-					cout << "Input your move: ";
-					move = GoBangState::no_move;
-					cin.clear();
-					cin.sync();
-					cin >> move;
-					try {
-						state.do_move(move);
-						break;
-					}
-					catch (std::exception& ) {
-						cout << "Invalid move." << endl;
-					}
+		typename GoBangState<num_player>::Move move = GoBangState<num_player>::no_move;
+
+		if(human_player&&human_player_id==is_to_move_player)
+		{
+			MCTS::human_do_move(state);
+			while (true) 
+			{
+				cout << "Input your move: ";
+				move = GoBangState<num_player>::no_move;
+				cin.clear();
+				cin.sync();
+				cin >> move;
+				try 
+				{
+					state.do_move(move);
+					break;
+				}
+				catch (std::exception& ) 
+				{
+					cout << "Invalid move." << endl;
 				}
 			}
-			else {
-				move = MCTS::compute_move(state, player1_options);
-				state.do_move(move);
-			}
 		}
-		else if(is_to_move_player ==2){
-			move=MCTS::compute_move(state,player2_options);
-			state.do_move(move);
+		else
+		{
+			move = MCTS :: compute_move(state, player_options[is_to_move_player]);
+			state.do_move(move);	
 		}
 	}
 
@@ -79,7 +87,7 @@ void main_program()
 int main()
 {
 	try {
-		main_program();
+		main_program<3,4000000>();
 	}
 	catch (std::runtime_error& error) {
 		std::cerr << "ERROR: " << error.what() << std::endl;

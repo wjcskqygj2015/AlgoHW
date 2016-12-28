@@ -84,15 +84,12 @@ CATCH_UNSAFE_UNRETAINED	tests/catch.hpp	637;"	d
 CATCH_WARN	tests/catch.hpp	7930;"	d
 CATCH_WHEN	tests/catch.hpp	7962;"	d
 CHECK_THAT	tests/catch.hpp	7926;"	d
-CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
-CMAKE_BINARY_DIR	build/games/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
-CMAKE_BINARY_DIR	build/tests/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/wjc\/src\/AlgoHW\/build$/;"	m
+CMAKE_BINARY_DIR	build/games/Makefile	/^CMAKE_BINARY_DIR = \/home\/wjc\/src\/AlgoHW\/build$/;"	m
 CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_COMMAND	build/games/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_COMMAND	build/tests/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
-CMAKE_SOURCE_DIR	build/games/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
-CMAKE_SOURCE_DIR	build/tests/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/wjc\/src\/AlgoHW$/;"	m
+CMAKE_SOURCE_DIR	build/games/Makefile	/^CMAKE_SOURCE_DIR = \/home\/wjc\/src\/AlgoHW$/;"	m
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	103;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	117;"	d	file:
@@ -324,7 +321,6 @@ Detail	tests/catch.hpp	/^namespace Detail {$/;"	n	namespace:Catch
 Disable	tests/catch.hpp	/^        typedef void Disable;$/;"	t	struct:Catch::FalseType
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 EQUALS	build/games/Makefile	/^EQUALS = =$/;"	m
-EQUALS	build/tests/Makefile	/^EQUALS = =$/;"	m
 Enable	tests/catch.hpp	/^        typedef void Enable;$/;"	t	struct:Catch::TrueType
 FalseType	tests/catch.hpp	/^    struct FalseType {$/;"	s	namespace:Catch
 GIVEN	tests/catch.hpp	8026;"	d
@@ -463,11 +459,9 @@ Ptr	tests/catch.hpp	/^        Ptr() : m_p( NULL ){}$/;"	f	class:Catch::Ptr
 Ptr	tests/catch.hpp	/^    class Ptr {$/;"	c	namespace:Catch
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	build/games/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
-RM	build/tests/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SCENARIO	tests/catch.hpp	8022;"	d
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	build/games/Makefile	/^SHELL = \/bin\/sh$/;"	m
-SHELL	build/tests/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
@@ -492,7 +486,6 @@ STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	288;"	d	f
 STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	283;"	d	file:
 SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
 SUFFIXES	build/games/Makefile	/^SUFFIXES =$/;"	m
-SUFFIXES	build/tests/Makefile	/^SUFFIXES =$/;"	m
 SafeBool	tests/catch.hpp	/^    class SafeBool {$/;"	c	namespace:Catch
 SharedImpl	tests/catch.hpp	/^        SharedImpl() : m_rc( 0 ){}$/;"	f	struct:Catch::SharedImpl
 SharedImpl	tests/catch.hpp	/^    struct SharedImpl : T {$/;"	s	namespace:Catch
@@ -503,7 +496,7 @@ SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo( std::string const& _fil
 SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo() : line( 0 ){}$/;"	f	struct:Catch::SourceLineInfo
 SourceLineInfo	tests/catch.hpp	/^    struct SourceLineInfo {$/;"	s	namespace:Catch
 Support_Num_Players	games/gobang.h	/^  static const int Support_Num_Players = 3;$/;"	m	class:GoBangState
-Support_Num_Players	mcts.h	/^		static const int Support_Num_Players = getSupportNumPlayers<State>::value;$/;"	m	class:MCTS::Node
+Support_Num_Players	mcts.h	/^    static const int Support_Num_Players = getSupportNumPlayers<State>::value;$/;"	m	class:MCTS::Node
 THEN	tests/catch.hpp	8029;"	d
 TWOBLUECUBES_CATCH_APPROX_HPP_INCLUDED	tests/catch.hpp	3063;"	d
 TWOBLUECUBES_CATCH_ASSERTIONRESULT_BUILDER_H_INCLUDED	tests/catch.hpp	554;"	d

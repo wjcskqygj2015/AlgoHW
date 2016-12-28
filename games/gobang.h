@@ -7,10 +7,35 @@ using namespace std;
 
 #include "../mcts.h"
 
-static int __COUNT__ = 0;
+//static int __COUNT__ = 0;
 
+namespace CONST_STATIC_ARRAY_GENERATOR
+{
+	template<char ... args> struct ArrayHolder { static const char data[sizeof ... (args)]; };
+
+	template<char ... args>
+	const char ArrayHolder<args ...>::data[sizeof ... (args)] ={ args ... };
+
+	template<size_t N, template<size_t> class F, char ... args>
+	struct generate_array_impl { typedef typename generate_array_impl<N-1,F,F<N>::value,args...>::result result; };
+
+	template<template<size_t> class F, char ... args>
+	struct generate_array_impl<0, F, args ...> { typedef ArrayHolder<F<0>::value, args...> result; };
+
+	template<size_t N, template<size_t> class F>
+	struct generate_array { typedef typename generate_array_impl<N-1,F>::result result; };
+
+	constexpr char player_sign_map[]={'X','O','L','G','H','T','S','V','M'}; 
+
+	template<size_t index>
+	struct SignGenerator { static const char value=player_sign_map[index]; };
+
+}
+template<int num_player>
 class GoBangState
 {
+	
+	typedef typename CONST_STATIC_ARRAY_GENERATOR::generate_array<num_player,CONST_STATIC_ARRAY_GENERATOR::SignGenerator>::result markers_result;
 public:
   // static const int DIM=2;
   typedef struct Move
@@ -41,9 +66,9 @@ public:
   } Move;
   static const Move no_move;
 
-  static const int Support_Num_Players = 3;
+  static constexpr const int Support_Num_Players = num_player;
 
-  static const char player_markers[Support_Num_Players];
+  static constexpr const char (&player_markers)[Support_Num_Players]=markers_result::data;
 
 	static const char none_player_marker;
 
@@ -379,13 +404,24 @@ private:
   short int last_x, last_y, last_z;
 };
 
+template<int num_player>
 ostream&
-operator<<(ostream& out, const GoBangState& state)
+operator<<(ostream& out, const GoBangState<num_player>& state)
 {
   state.print(out);
   return out;
 }
 
-const GoBangState::Move GoBangState::no_move = {-1, -1, -1};
-const char GoBangState::player_markers[GoBangState::Support_Num_Players] = {'X', 'O', 'L'};
-const char GoBangState::none_player_marker = '.';
+
+
+
+
+
+template<int num_player>
+const typename GoBangState<num_player>::Move GoBangState<num_player>::no_move = {-1, -1, -1};
+
+//template<int num_player>
+//const char GoBangState<num_player>::player_markers[GoBangState<num_player>::Support_Num_Players] = {'X', 'O', 'L'};
+
+template<int num_player>
+const char GoBangState<num_player>::none_player_marker = '.';
