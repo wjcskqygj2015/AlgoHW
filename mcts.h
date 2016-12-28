@@ -68,10 +68,14 @@ namespace MCTS
 //
 
 #include <algorithm>
+#include <array>
+#include <cmath>
+#include <cstddef>
 #include <cstdlib>
 #include <future>
 #include <iomanip>
 #include <iostream>
+#include <iterator>
 #include <map>
 #include <memory>
 #include <random>
@@ -79,6 +83,8 @@ namespace MCTS
 #include <sstream>
 #include <string>
 #include <thread>
+#include <type_traits>
+#include <typeinfo>
 #include <vector>
 
 namespace MCTS
@@ -91,8 +97,14 @@ namespace MCTS
 // static void check(bool expr, const char* message);
 // static void assertion_failed(const char* expr, const char* file, int line);
 
-#define attest(expr) do{}while(0)
-#define dattest(expr) do{}while(0)
+#define attest(expr)                                                           \
+  do                                                                           \
+  {                                                                            \
+  } while (0)
+#define dattest(expr)                                                          \
+  do                                                                           \
+  {                                                                            \
+  } while (0)
 
   template<typename State, typename = void>
   struct getSupportNumPlayers
@@ -136,7 +148,7 @@ namespace MCTS
       const Move& move);
     void add_child_and_wont_add_anymore(const Move& move, const State& state);
     void prune_all_childs_without_one(const Node<State>* lucky_one_child);
-    void update(double result[]);
+    void update(double result[], double visit);
 
     void set_parent_nullptr();
 
@@ -151,7 +163,7 @@ namespace MCTS
     // std::atomic<double> wins;
     // std::atomic<int> visits;
     double wins[Support_Num_Players];
-    long long int visits;
+    double visits;
 
     std::vector<Move> moves;
     std::vector<Node*> children;
@@ -264,8 +276,8 @@ namespace MCTS
       }
       child->UCT_score =
         (double(child->wins[child->player_is_moved]) / double(child->visits) +
-         (1.0 - max_non_me) +
-         std::sqrt(2.0 * std::log(double(this->visits)) / child->visits));
+         (1.0 - max_non_me) / (Node<State>::Support_Num_Players) +
+         std::sqrt(4.0 * std::log(double(this->visits)) / child->visits));
     }
 
     return *std::max_element(
@@ -316,7 +328,7 @@ namespace MCTS
 
     attest(itr != children.cend());
 
-      children.erase(children.cbegin(), itr);
+    children.erase(children.cbegin(), itr);
 
     for (itr = children.cbegin() + 1; itr != children.cend(); itr++)
       delete *itr;
@@ -346,9 +358,9 @@ namespace MCTS
   }
 
   template<typename State>
-  void Node<State>::update(double result[])
+  void Node<State>::update(double result[], double visit)
   {
-    visits++;
+    visits += visit;
 
     for (int i = 0; i < Support_Num_Players; i++)
       wins[i] += result[i];
@@ -403,6 +415,61 @@ namespace MCTS
   template<typename State>
   typename State::Move compute_move(const State root_state,
                                     const ComputeOptions options);
+
+  namespace EXPR_DECAY_DOUBLE_ARRAY
+  {
+    template<template<size_t> class Func, int... args>
+    struct ArrayHolder
+    {
+      static constexpr const double data[sizeof...(args)] = {
+        Func<args>::output...};
+    };
+
+    template<template<size_t> class Func, int... args>
+    constexpr const double ArrayHolder<Func, args...>::data[sizeof...(args)];
+
+    template<size_t N, template<size_t> class Func, template<size_t> class F,
+             int... args>
+    struct generate_array_impl
+    {
+      typedef typename generate_array_impl<N - 1, Func, F, F<N>::value,
+                                           args...>::result result;
+    };
+
+    template<template<size_t> class Func, template<size_t> class F, int... args>
+    struct generate_array_impl<0, Func, F, args...>
+    {
+      typedef ArrayHolder<Func, F<0>::value, args...> result;
+    };
+
+    template<size_t N, template<size_t> class Func, template<size_t> class F>
+    struct generate_array
+    {
+      typedef typename generate_array_impl<N - 1, Func, F>::result result;
+    };
+
+    template<size_t index>
+    struct OriginGenerator
+    {
+      static constexpr const int value = index;
+    };
+
+    template<size_t input>
+    struct ExprDecayGenerator
+    {
+      static constexpr const double decay_per_times = 0.95;
+      static constexpr const double output = pow(decay_per_times, input);
+    };
+    // constexpr double fun(size_t x) { return pow(0.95,x); }
+    template<size_t index>
+    struct EXPR_DECAY_DOUBLE_ARRAY
+    {
+      typedef typename generate_array<index, ExprDecayGenerator,
+                                      OriginGenerator>::result result;
+      // static constexpr const double (&markers)[index] = result::data;
+    };
+  }
+
   template<typename State>
   class Preserve_State
   {
@@ -411,6 +478,10 @@ namespace MCTS
 
     friend typename State::Move compute_move<State>(
       const State root_state, const ComputeOptions options);
+
+    static constexpr int max_depth = 60;
+    static constexpr const double (&decay_value)[max_depth] =
+      EXPR_DECAY_DOUBLE_ARRAY::EXPR_DECAY_DOUBLE_ARRAY<max_depth>::result::data;
 
   private:
     static Node<State>* last_state[ComputeOptions::number_of_threads];
@@ -454,6 +525,7 @@ namespace MCTS
 
     auto root = last_state;
 
+    // const int max_depth = Preserve_State<State>::max_d
     // static const int Support_Num_Players =
     // getSupportNumPlayers<State>::value;
 
@@ -502,7 +574,12 @@ namespace MCTS
       {
         auto parent_node = node->parent;
         parent_node->prune_all_childs_without_one(node);
-        parent_node->wins[parent_node->player_is_moved] = 0;
+        for (int i =
+               (node->player_is_moved + 1) % Node<State>::Support_Num_Players;
+             i != node->player_is_moved;
+             i = (i + 1) % Node<State>::Support_Num_Players)
+          parent_node->wins[i] = 0;
+        parent_node->wins[node->player_is_moved] = parent_node->visits;
       }
 
       // Here the pruning techniques base on such facts
@@ -518,18 +595,32 @@ namespace MCTS
       {
         auto last_move = state.getLastMove();
         node->add_child_and_wont_add_anymore(last_move, state);
-        node->wins[node->player_is_moved] = 0;
+        int next_player =
+          (node->player_is_moved + 1) % Node<State>::Support_Num_Players;
+        for (int i = (next_player + 1) % Node<State>::Support_Num_Players;
+             i != next_player; i = (i + 1) % Node<State>::Support_Num_Players)
+          node->wins[i] = 0;
+        node->wins[next_player] = node->visits;
       }
 
+      if (need_to_end_count >= Preserve_State<State>::max_depth)
+        need_to_end_count = Preserve_State<State>::max_depth - 1;
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
+      // for (int i = 0; i < Node<State>::Support_Num_Players; i++)
+      // result[i] = state.get_result(i) *
+      // Preserve_State<State>::decay_value[need_to_end_count];
+
+      // double visit = Preserve_State<State>::decay_value[need_to_end_count];
       for (int i = 0; i < Node<State>::Support_Num_Players; i++)
         result[i] = state.get_result(i);
 
+      double visit = 1.0;
+
       while (node != nullptr)
       {
-        node->update(result);
+        node->update(result, visit);
         node = node->parent;
       }
     }
@@ -591,8 +682,8 @@ namespace MCTS
     }
 
     // Merge the children of all root nodes.
-    map<typename State::Move, long long int> visits;
-    map<typename State::Move, double> wins;
+    map<typename State::Move, double> visits;
+    map<typename State::Move, double> wins[Node<State>::Support_Num_Players];
     long long games_played = 0;
     for (int t = 0; t < options.number_of_threads; ++t)
     {
@@ -602,9 +693,13 @@ namespace MCTS
            ++child)
       {
         visits[(*child)->move] += (*child)->visits;
-        wins[(*child)->move] += (*child)->wins[(*child)->player_is_moved];
+        for (int i = 0; i < Node<State>::Support_Num_Players; i++)
+          wins[i][(*child)->move] += (*child)->wins[i];
       }
     }
+
+    const int player_is_to_move =
+      (root_state.player_is_moved + 1) % Node<State>::Support_Num_Players;
 
     // Find the node with the highest score.
     double best_score = -1;
@@ -613,10 +708,18 @@ namespace MCTS
     {
       auto move = itr.first;
       double v = itr.second;
-      double w = wins[move];
+      double w = wins[player_is_to_move][move];
+      double max_no_me_wins = 0.0;
+      for (int i = (player_is_to_move + 1) % Node<State>::Support_Num_Players;
+           i != player_is_to_move;
+           i = (i + 1) % Node<State>::Support_Num_Players)
+        if (wins[i][move] > max_no_me_wins)
+          max_no_me_wins = wins[i][move];
       // Expected success rate assuming a uniform prior (Beta(1, 1)).
       // https://en.wikipedia.org/wiki/Beta_distribution
-      double expected_success_rate = (w + 1) / (v + 2);
+      double expected_success_rate = (w + 1) / (v + 2) +
+                                     (1.0 - (max_no_me_wins + 1) / (v + 2)) /
+                                       Node<State>::Support_Num_Players;
       if (expected_success_rate > best_score)
       {
         best_move = move;
@@ -634,7 +737,7 @@ namespace MCTS
 
     if (options.verbose)
     {
-      auto best_wins = wins[best_move];
+      auto best_wins = wins[player_is_to_move][best_move];
       auto best_visits = visits[best_move];
       cerr << "----" << endl;
       cerr << "Best: " << best_move << " ("
