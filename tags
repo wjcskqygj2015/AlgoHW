@@ -4,7 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-A	tests/varidicInit.cpp	/^struct A$/;"	s	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	396;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	399;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	402;"	d	file:
@@ -34,15 +33,7 @@ ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	430;
 ArrayHolder	games/gobang.h	/^	template<char ... args> struct ArrayHolder { static const char data[sizeof ... (args)]; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
 ArrayHolder	mcts.h	/^    struct ArrayHolder$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 ArrayHolder	tests/varidicInit.cpp	/^template<template<size_t> class Func, int ... args> struct ArrayHolder$/;"	s	file:
-CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
-CMAKE_BINARY_DIR	build/games/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
-CMAKE_BINARY_DIR	build/tests/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
-CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_COMMAND	build/games/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_COMMAND	build/tests/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
-CMAKE_SOURCE_DIR	build/games/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
-CMAKE_SOURCE_DIR	build/tests/Makefile	/^CMAKE_SOURCE_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang$/;"	m
+A	tests/varidicInit.cpp	/^struct A$/;"	s	file:
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	103;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	117;"	d	file:
@@ -268,27 +259,24 @@ ComputeOptions	mcts.h	/^    ComputeOptions() : max_iterations(10000), verbose(fa
 ComputeOptions	mcts.h	/^  struct ComputeOptions$/;"	s	namespace:MCTS
 DEC	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	439;"	d	file:
 DEC	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	434;"	d	file:
-EQUALS	build/Makefile	/^EQUALS = =$/;"	m
-EQUALS	build/games/Makefile	/^EQUALS = =$/;"	m
-EQUALS	build/tests/Makefile	/^EQUALS = =$/;"	m
-EXPR_DECAY_DOUBLE_ARRAY	mcts.h	/^    struct EXPR_DECAY_DOUBLE_ARRAY$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 EXPR_DECAY_DOUBLE_ARRAY	mcts.h	/^  namespace EXPR_DECAY_DOUBLE_ARRAY$/;"	n	namespace:MCTS
+EXPR_DECAY_DOUBLE_ARRAY	mcts.h	/^    struct EXPR_DECAY_DOUBLE_ARRAY$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 ExprDecayGenerator	mcts.h	/^    struct ExprDecayGenerator$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 ExprDecayGenerator	tests/varidicInit.cpp	/^struct ExprDecayGenerator$/;"	s	file:
-GoBangState	games/gobang.h	/^  GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,$/;"	f	class:GoBangState
 GoBangState	games/gobang.h	/^class GoBangState$/;"	c
+GoBangState	games/gobang.h	/^  GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,$/;"	f	class:GoBangState
 HEX	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	450;"	d	file:
 HEX	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	445;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-MCTS	mcts.h	/^namespace MCTS$/;"	n
 MCTS_HEADER_PETTER	mcts.h	2;"	d
+MCTS	mcts.h	/^namespace MCTS$/;"	n
 Move	games/gobang.h	/^  typedef struct Move$/;"	s	class:GoBangState
 Move	games/gobang.h	/^  } Move;$/;"	t	class:GoBangState	typeref:struct:GoBangState::Move
 Move	mcts.h	/^    typedef typename State::Move Move;$/;"	t	class:MCTS::Node
-N	tests/doubleInit.cpp	/^constexpr auto N = 40;$/;"	v
+Node	mcts.h	/^  class Node$/;"	c	namespace:MCTS
 Node	mcts.h	/^  Node<State>::Node(const State& state)$/;"	f	class:MCTS::Node
 Node	mcts.h	/^  Node<State>::Node(const State& state, const Move& move_, Node* parent_)$/;"	f	class:MCTS::Node
-Node	mcts.h	/^  class Node$/;"	c	namespace:MCTS
+N	tests/doubleInit.cpp	/^constexpr auto N = 40;$/;"	v
 OriginGenerator	mcts.h	/^    struct OriginGenerator$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 OriginGenerator	tests/varidicInit.cpp	/^struct OriginGenerator$/;"	s	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	293;"	d	file:
@@ -354,12 +342,6 @@ PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	373;"	d	
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	376;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	380;"	d	file:
 Preserve_State	mcts.h	/^  class Preserve_State$/;"	c	namespace:MCTS
-RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
-RM	build/games/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
-RM	build/tests/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
-SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
-SHELL	build/games/Makefile	/^SHELL = \/bin\/sh$/;"	m
-SHELL	build/tests/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
 SIMULATE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
@@ -378,21 +360,18 @@ SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	33;
 SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	165;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	180;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
-STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	289;"	d	file:
-STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	288;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	283;"	d	file:
-SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
-SUFFIXES	build/games/Makefile	/^SUFFIXES =$/;"	m
-SUFFIXES	build/tests/Makefile	/^SUFFIXES =$/;"	m
+STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	289;"	d	file:
+STRINGIFY	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
 SignGenerator	games/gobang.h	/^	struct SignGenerator { static const char value=player_sign_map[index]; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
 Support_Num_Players	games/gobang.h	/^  static constexpr const int Support_Num_Players = num_players;$/;"	m	class:GoBangState
 Support_Num_Players	mcts.h	/^    static const int Support_Num_Players = getSupportNumPlayers<State>::value;$/;"	m	class:MCTS::Node
 UCT_score	mcts.h	/^    double UCT_score;$/;"	m	class:MCTS::Node
-a	tests/doubleInit.cpp	/^constexpr auto a = make_array<N>(fun);$/;"	v
-add_child	mcts.h	/^  Node<State>* Node<State>::add_child(const Move& move, const State& state)$/;"	f	class:MCTS::Node
 add_child_and_wont_add_anymore	mcts.h	/^  void Node<State>::add_child_and_wont_add_anymore(const Move& move,$/;"	f	class:MCTS::Node
+add_child	mcts.h	/^  Node<State>* Node<State>::add_child(const Move& move, const State& state)$/;"	f	class:MCTS::Node
 attest	mcts.h	100;"	d
+a	tests/doubleInit.cpp	/^constexpr auto a = make_array<N>(fun);$/;"	v
 best_child	mcts.h	/^  Node<State>* Node<State>::best_child() const$/;"	f	class:MCTS::Node
 board	games/gobang.h	/^  vector<vector<vector<char>>> board;$/;"	m	class:GoBangState
 check_invariant	games/gobang.h	/^  void check_invariant() const$/;"	f	class:GoBangState
@@ -415,15 +394,15 @@ do_random_move	games/gobang.h	/^  void do_random_move(RandomEngine* engine)$/;"	
 features	build/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
 features	build/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
 fun	tests/doubleInit.cpp	/^constexpr double fun(double x) { return pow(0.95,x); }$/;"	f
-generate_array	games/gobang.h	/^	struct generate_array { typedef typename generate_array_impl<N-1,F>::result result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
-generate_array	mcts.h	/^    struct generate_array$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
-generate_array	tests/varidicInit.cpp	/^struct generate_array$/;"	s	file:
 generate_array_impl	games/gobang.h	/^	struct generate_array_impl { typedef typename generate_array_impl<N-1,F,F<N>::value,args...>::result result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
 generate_array_impl	games/gobang.h	/^	struct generate_array_impl<0, F, args ...> { typedef ArrayHolder<F<0>::value, args...> result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
 generate_array_impl	mcts.h	/^    struct generate_array_impl$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 generate_array_impl	mcts.h	/^    struct generate_array_impl<0, Func, F, args...>$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
 generate_array_impl	tests/varidicInit.cpp	/^struct generate_array_impl$/;"	s	file:
 generate_array_impl	tests/varidicInit.cpp	/^struct generate_array_impl<0, Func, F, args ...>$/;"	s	file:
+generate_array	games/gobang.h	/^	struct generate_array { typedef typename generate_array_impl<N-1,F>::result result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+generate_array	mcts.h	/^    struct generate_array$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+generate_array	tests/varidicInit.cpp	/^struct generate_array$/;"	s	file:
 getLastMove	games/gobang.h	/^	const Move getLastMove()const {return {last_x,last_y,last_z};}$/;"	f	class:GoBangState
 getSupportNumPlayers	mcts.h	/^  struct getSupportNumPlayers$/;"	s	namespace:MCTS
 getSupportNumPlayers	mcts.h	/^  struct getSupportNumPlayers<$/;"	s	namespace:MCTS
@@ -448,10 +427,10 @@ info_language_dialect_default	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerI
 info_language_dialect_default	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v
 info_platform	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
 info_platform	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
-info_simulate	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
-info_simulate	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
 info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
 info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_simulate	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
 info_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
 info_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
 integer_sequence	tests/doubleInit.cpp	/^    struct integer_sequence$/;"	s	namespace:std	file:
@@ -462,6 +441,7 @@ last_state	mcts.h	/^    static Node<State>* last_state[ComputeOptions::number_of
 last_x	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
 last_y	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
 last_z	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
+main_program	games/gobang.cpp	/^main_program(const int human_player_id = -1)$/;"	f
 main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
 main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
@@ -470,9 +450,8 @@ main	build/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (voi
 main	games/gobang.cpp	/^main()$/;"	f
 main	tests/doubleInit.cpp	/^int main() $/;"	f
 main	tests/varidicInit.cpp	/^int main()$/;"	f
-main_program	games/gobang.cpp	/^main_program(const int human_player_id = -1)$/;"	f
-markers	tests/varidicInit.cpp	/^	static constexpr const double (&markers)[index] = result::data;$/;"	m	struct:A	file:
 markers_result	games/gobang.h	/^	typedef typename CONST_STATIC_ARRAY_GENERATOR::generate_array<num_players,CONST_STATIC_ARRAY_GENERATOR::SignGenerator>::result markers_result;$/;"	t	class:GoBangState
+markers	tests/varidicInit.cpp	/^	static constexpr const double (&markers)[index] = result::data;$/;"	m	struct:A	file:
 max_depth	mcts.h	/^    static constexpr int max_depth = 60;$/;"	m	class:MCTS::Preserve_State
 max_iterations	mcts.h	/^    int max_iterations;$/;"	m	struct:MCTS::ComputeOptions
 move	mcts.h	/^    const Move move;$/;"	m	class:MCTS::Node
@@ -485,9 +464,9 @@ num_zs	games/gobang.h	/^  const short int num_xs, num_ys, num_zs;$/;"	m	class:Go
 number_of_threads	mcts.h	/^    static const int number_of_threads = 8;$/;"	m	struct:MCTS::ComputeOptions
 only_for_test	mcts.h	/^    static const int only_for_test = 0;$/;"	m	struct:MCTS::getSupportNumPlayers
 operator !=	games/gobang.h	/^    bool operator!=(const struct Move& ot) const { return !((*this) == ot); }$/;"	f	struct:GoBangState::Move
-operator <	games/gobang.h	/^    bool operator<(const struct Move& ot) const$/;"	f	struct:GoBangState::Move
 operator <<	games/gobang.h	/^    friend std::ostream& operator<<(std::ostream& out, const struct Move& move)$/;"	f	struct:GoBangState::Move
 operator <<	games/gobang.h	/^operator<<(ostream& out, const GoBangState<num_players>& state)$/;"	f
+operator <	games/gobang.h	/^    bool operator<(const struct Move& ot) const$/;"	f	struct:GoBangState::Move
 operator ==	games/gobang.h	/^    bool operator==(const struct Move& ot) const$/;"	f	struct:GoBangState::Move
 operator >>	games/gobang.h	/^    friend std::istream& operator>>(std::istream& in, struct Move& move)$/;"	f	struct:GoBangState::Move
 output	mcts.h	/^      static constexpr const double output = pow(decay_per_times, input);$/;"	m	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::ExprDecayGenerator

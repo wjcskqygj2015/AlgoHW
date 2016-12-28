@@ -603,8 +603,8 @@ namespace MCTS
         node->wins[next_player] = node->visits;
       }
 
-      if (need_to_end_count >= Preserve_State<State>::max_depth)
-        need_to_end_count = Preserve_State<State>::max_depth - 1;
+      //if (need_to_end_count >= Preserve_State<State>::max_depth)
+        //need_to_end_count = Preserve_State<State>::max_depth - 1;
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
