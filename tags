@@ -4,8 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-AND_THEN	tests/catch.hpp	8030;"	d
-AND_WHEN	tests/catch.hpp	8028;"	d
+A	tests/varidicInit.cpp	/^struct A$/;"	s	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	396;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	399;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	402;"	d	file:
@@ -32,58 +31,9 @@ ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	420;
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	423;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	426;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	430;"	d	file:
-AutoReg	tests/catch.hpp	/^    AutoReg(    void (C::*method)(),$/;"	f	struct:Catch::AutoReg
-AutoReg	tests/catch.hpp	/^struct AutoReg {$/;"	s	namespace:Catch
-BreakIntoDebugger	tests/catch.hpp	1487;"	d
-CATCH_AND_THEN	tests/catch.hpp	7965;"	d
-CATCH_AND_WHEN	tests/catch.hpp	7963;"	d
-CATCH_ANON_TEST_CASE	tests/catch.hpp	7948;"	d
-CATCH_ARC_ENABLED	tests/catch.hpp	604;"	d
-CATCH_ARC_STRONG	tests/catch.hpp	622;"	d
-CATCH_ARC_STRONG	tests/catch.hpp	638;"	d
-CATCH_CAPTURE	tests/catch.hpp	7934;"	d
-CATCH_CHECK	tests/catch.hpp	7916;"	d
-CATCH_CHECKED_ELSE	tests/catch.hpp	7919;"	d
-CATCH_CHECKED_IF	tests/catch.hpp	7918;"	d
-CATCH_CHECK_FALSE	tests/catch.hpp	7917;"	d
-CATCH_CHECK_NOFAIL	tests/catch.hpp	7920;"	d
-CATCH_CHECK_NOTHROW	tests/catch.hpp	7924;"	d
-CATCH_CHECK_THROWS	tests/catch.hpp	7922;"	d
-CATCH_CHECK_THROWS_AS	tests/catch.hpp	7923;"	d
-CATCH_CONFIG_CONSOLE_WIDTH	tests/catch.hpp	2065;"	d
-CATCH_CONFIG_MAIN	tests/test_mcts.cpp	3;"	d	file:
-CATCH_CONFIG_VARIADIC_MACROS	tests/catch.hpp	111;"	d
-CATCH_FAIL	tests/catch.hpp	7931;"	d
-CATCH_GENERATE	tests/catch.hpp	7953;"	d
-CATCH_GIVEN	tests/catch.hpp	7961;"	d
-CATCH_INFO	tests/catch.hpp	7929;"	d
-CATCH_INTERNAL_ERROR	tests/catch.hpp	237;"	d
-CATCH_INTERNAL_LINEINFO	tests/catch.hpp	236;"	d
-CATCH_METHOD_AS_TEST_CASE	tests/catch.hpp	7940;"	d
-CATCH_NOT_IMPLEMENTED	tests/catch.hpp	260;"	d
-CATCH_PLATFORM_MAC	tests/catch.hpp	1429;"	d
-CATCH_REGISTER_LEGACY_REPORTER	tests/catch.hpp	7951;"	d
-CATCH_REGISTER_REPORTER	tests/catch.hpp	7950;"	d
-CATCH_REQUIRE	tests/catch.hpp	7909;"	d
-CATCH_REQUIRE_FALSE	tests/catch.hpp	7910;"	d
-CATCH_REQUIRE_NOTHROW	tests/catch.hpp	7914;"	d
-CATCH_REQUIRE_THAT	tests/catch.hpp	7927;"	d
-CATCH_REQUIRE_THROWS	tests/catch.hpp	7912;"	d
-CATCH_REQUIRE_THROWS_AS	tests/catch.hpp	7913;"	d
-CATCH_SCENARIO	tests/catch.hpp	7957;"	d
-CATCH_SCOPED_CAPTURE	tests/catch.hpp	7935;"	d
-CATCH_SCOPED_INFO	tests/catch.hpp	7933;"	d
-CATCH_SECTION	tests/catch.hpp	7941;"	d
-CATCH_SUCCEED	tests/catch.hpp	7932;"	d
-CATCH_TEST_CASE	tests/catch.hpp	7938;"	d
-CATCH_TEST_CASE_METHOD	tests/catch.hpp	7939;"	d
-CATCH_THEN	tests/catch.hpp	7964;"	d
-CATCH_TRANSLATE_EXCEPTION	tests/catch.hpp	8018;"	d
-CATCH_UNSAFE_UNRETAINED	tests/catch.hpp	621;"	d
-CATCH_UNSAFE_UNRETAINED	tests/catch.hpp	637;"	d
-CATCH_WARN	tests/catch.hpp	7930;"	d
-CATCH_WHEN	tests/catch.hpp	7962;"	d
-CHECK_THAT	tests/catch.hpp	7926;"	d
+ArrayHolder	games/gobang.h	/^	template<char ... args> struct ArrayHolder { static const char data[sizeof ... (args)]; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+ArrayHolder	mcts.h	/^    struct ArrayHolder$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+ArrayHolder	tests/varidicInit.cpp	/^template<template<size_t> class Func, int ... args> struct ArrayHolder$/;"	s	file:
 CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
 CMAKE_BINARY_DIR	build/games/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
 CMAKE_BINARY_DIR	build/tests/Makefile	/^CMAKE_BINARY_DIR = \/media\/wjc\/Workspace\/src\/mycode\/homework\/algo\/gobang\/build$/;"	m
@@ -313,87 +263,34 @@ COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	28;
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	208;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	33;"	d	file:
-Catch	tests/catch.hpp	/^namespace Catch {$/;"	n
+CONST_STATIC_ARRAY_GENERATOR	games/gobang.h	/^namespace CONST_STATIC_ARRAY_GENERATOR$/;"	n
 ComputeOptions	mcts.h	/^    ComputeOptions() : max_iterations(10000), verbose(false) {}$/;"	f	struct:MCTS::ComputeOptions
 ComputeOptions	mcts.h	/^  struct ComputeOptions$/;"	s	namespace:MCTS
-ConnectFourState	games/connect_four.h	/^	ConnectFourState(int num_rows_ = 6, int num_cols_ = 7)$/;"	f	class:ConnectFourState
-ConnectFourState	games/connect_four.h	/^class ConnectFourState$/;"	c
 DEC	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	439;"	d	file:
 DEC	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	434;"	d	file:
-Detail	tests/catch.hpp	/^namespace Detail {$/;"	n	namespace:Catch
-Disable	tests/catch.hpp	/^        typedef void Disable;$/;"	t	struct:Catch::FalseType
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 EQUALS	build/games/Makefile	/^EQUALS = =$/;"	m
 EQUALS	build/tests/Makefile	/^EQUALS = =$/;"	m
-Enable	tests/catch.hpp	/^        typedef void Enable;$/;"	t	struct:Catch::TrueType
-FalseType	tests/catch.hpp	/^    struct FalseType {$/;"	s	namespace:Catch
-GIVEN	tests/catch.hpp	8026;"	d
+EXPR_DECAY_DOUBLE_ARRAY	mcts.h	/^    struct EXPR_DECAY_DOUBLE_ARRAY$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+EXPR_DECAY_DOUBLE_ARRAY	mcts.h	/^  namespace EXPR_DECAY_DOUBLE_ARRAY$/;"	n	namespace:MCTS
+ExprDecayGenerator	mcts.h	/^    struct ExprDecayGenerator$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+ExprDecayGenerator	tests/varidicInit.cpp	/^struct ExprDecayGenerator$/;"	s	file:
 GoBangState	games/gobang.h	/^  GoBangState(short int num_xs_ = 6, short int num_ys_ = 7,$/;"	f	class:GoBangState
 GoBangState	games/gobang.h	/^class GoBangState$/;"	c
 HEX	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	450;"	d	file:
 HEX	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	445;"	d	file:
-IContext	tests/catch.hpp	/^    struct IContext$/;"	s	namespace:Catch
 ID_VOID_MAIN	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-IGeneratorInfo	tests/catch.hpp	/^    struct IGeneratorInfo {$/;"	s	namespace:Catch
-IGeneratorsForTest	tests/catch.hpp	/^    struct IGeneratorsForTest {$/;"	s	namespace:Catch
-IMutableContext	tests/catch.hpp	/^    struct IMutableContext : IContext$/;"	s	namespace:Catch
-INTERNAL_CATCH_ACCEPT_EXPR	tests/catch.hpp	2674;"	d
-INTERNAL_CATCH_ACCEPT_INFO	tests/catch.hpp	2683;"	d
-INTERNAL_CATCH_ASSERTIONINFO_NAME	tests/catch.hpp	2671;"	d
-INTERNAL_CATCH_ELSE	tests/catch.hpp	2706;"	d
-INTERNAL_CATCH_GENERATE	tests/catch.hpp	3003;"	d
-INTERNAL_CATCH_IF	tests/catch.hpp	2701;"	d
-INTERNAL_CATCH_INFO	tests/catch.hpp	2764;"	d
-INTERNAL_CATCH_LINESTR	tests/catch.hpp	3001;"	d
-INTERNAL_CATCH_LINESTR2	tests/catch.hpp	3000;"	d
-INTERNAL_CATCH_METHOD_AS_TEST_CASE	tests/catch.hpp	508;"	d
-INTERNAL_CATCH_MSG	tests/catch.hpp	2757;"	d
-INTERNAL_CATCH_NO_THROW	tests/catch.hpp	2711;"	d
-INTERNAL_CATCH_REGISTER_LEGACY_REPORTER	tests/catch.hpp	6511;"	d
-INTERNAL_CATCH_REGISTER_REPORTER	tests/catch.hpp	6513;"	d
-INTERNAL_CATCH_SECTION	tests/catch.hpp	2818;"	d
-INTERNAL_CATCH_STRINGIFY	tests/catch.hpp	35;"	d
-INTERNAL_CATCH_STRINGIFY2	tests/catch.hpp	34;"	d
-INTERNAL_CATCH_TEST	tests/catch.hpp	2687;"	d
-INTERNAL_CATCH_TESTCASE	tests/catch.hpp	502;"	d
-INTERNAL_CATCH_TEST_CASE_METHOD	tests/catch.hpp	512;"	d
-INTERNAL_CATCH_THROWS	tests/catch.hpp	2739;"	d
-INTERNAL_CATCH_THROWS_AS	tests/catch.hpp	2746;"	d
-INTERNAL_CATCH_THROWS_IMPL	tests/catch.hpp	2724;"	d
-INTERNAL_CATCH_TRANSLATE_EXCEPTION	tests/catch.hpp	3057;"	d
-INTERNAL_CATCH_UNIQUE_NAME	tests/catch.hpp	32;"	d
-INTERNAL_CATCH_UNIQUE_NAME_LINE	tests/catch.hpp	31;"	d
-INTERNAL_CATCH_UNIQUE_NAME_LINE2	tests/catch.hpp	30;"	d
-INTERNAL_CHECK_THAT	tests/catch.hpp	2768;"	d
-IShared	tests/catch.hpp	/^    struct IShared : NonCopyable {$/;"	s	namespace:Catch
-ITestCase	tests/catch.hpp	/^    struct ITestCase : IShared {$/;"	s	namespace:Catch
-ITestCaseRegistry	tests/catch.hpp	/^    struct ITestCaseRegistry {$/;"	s	namespace:Catch
-If	tests/catch.hpp	/^    template<> struct If<false> : FalseType {};$/;"	s	namespace:Catch
-If	tests/catch.hpp	/^    template<> struct If<true> : TrueType {};$/;"	s	namespace:Catch
-If	tests/catch.hpp	/^    template<bool c> struct If : NotABooleanExpression<c> {};$/;"	s	namespace:Catch
-IsStreamInsertableHelper	tests/catch.hpp	/^    class IsStreamInsertableHelper {$/;"	c	namespace:Catch::Detail
 MCTS	mcts.h	/^namespace MCTS$/;"	n
 MCTS_HEADER_PETTER	mcts.h	2;"	d
-MethodTestCase	tests/catch.hpp	/^    MethodTestCase( void (C::*method)() ) : m_method( method ) {}$/;"	f	class:Catch::MethodTestCase
-MethodTestCase	tests/catch.hpp	/^class MethodTestCase : public SharedImpl<ITestCase> {$/;"	c	namespace:Catch
-Move	games/connect_four.h	/^	typedef int Move;$/;"	t	class:ConnectFourState
 Move	games/gobang.h	/^  typedef struct Move$/;"	s	class:GoBangState
 Move	games/gobang.h	/^  } Move;$/;"	t	class:GoBangState	typeref:struct:GoBangState::Move
-Move	games/nim.h	/^	typedef int Move;$/;"	t	class:NimState
 Move	mcts.h	/^    typedef typename State::Move Move;$/;"	t	class:MCTS::Node
-Move	tests/test_mcts.cpp	/^	typedef int Move;$/;"	t	class:TestGame	file:
-NOMINMAX	tests/catch.hpp	5741;"	d
-NameAndDesc	tests/catch.hpp	/^    NameAndDesc( const char* _name = "", const char* _description= "" )$/;"	f	struct:Catch::NameAndDesc
-NameAndDesc	tests/catch.hpp	/^struct NameAndDesc {$/;"	s	namespace:Catch
-NimState	games/nim.h	/^	NimState(int chips_ = 17)$/;"	f	class:NimState
-NimState	games/nim.h	/^class NimState$/;"	c
+N	tests/doubleInit.cpp	/^constexpr auto N = 40;$/;"	v
 Node	mcts.h	/^  Node<State>::Node(const State& state)$/;"	f	class:MCTS::Node
 Node	mcts.h	/^  Node<State>::Node(const State& state, const Move& move_, Node* parent_)$/;"	f	class:MCTS::Node
 Node	mcts.h	/^  class Node$/;"	c	namespace:MCTS
-NonCopyable	tests/catch.hpp	/^        NonCopyable() {}$/;"	f	class:Catch::NonCopyable
-NonCopyable	tests/catch.hpp	/^    class NonCopyable {$/;"	c	namespace:Catch
-NotImplementedException	tests/catch.hpp	/^    class NotImplementedException : public std::exception$/;"	c	namespace:Catch
-OC_TEST_CASE	tests/catch.hpp	3565;"	d
+OriginGenerator	mcts.h	/^    struct OriginGenerator$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+OriginGenerator	tests/varidicInit.cpp	/^struct OriginGenerator$/;"	s	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	293;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	296;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	299;"	d	file:
@@ -457,14 +354,9 @@ PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	373;"	d	
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	376;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	380;"	d	file:
 Preserve_State	mcts.h	/^  class Preserve_State$/;"	c	namespace:MCTS
-Ptr	tests/catch.hpp	/^        Ptr( Ptr const& other ) : m_p( other.m_p ){$/;"	f	class:Catch::Ptr
-Ptr	tests/catch.hpp	/^        Ptr( T* p ) : m_p( p ){$/;"	f	class:Catch::Ptr
-Ptr	tests/catch.hpp	/^        Ptr() : m_p( NULL ){}$/;"	f	class:Catch::Ptr
-Ptr	tests/catch.hpp	/^    class Ptr {$/;"	c	namespace:Catch
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	build/games/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	build/tests/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
-SCENARIO	tests/catch.hpp	8022;"	d
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	build/games/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	build/tests/Makefile	/^SHELL = \/bin\/sh$/;"	m
@@ -493,164 +385,55 @@ STRINGIFY_HELPER	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	283
 SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
 SUFFIXES	build/games/Makefile	/^SUFFIXES =$/;"	m
 SUFFIXES	build/tests/Makefile	/^SUFFIXES =$/;"	m
-SafeBool	tests/catch.hpp	/^    class SafeBool {$/;"	c	namespace:Catch
-SharedImpl	tests/catch.hpp	/^        SharedImpl() : m_rc( 0 ){}$/;"	f	struct:Catch::SharedImpl
-SharedImpl	tests/catch.hpp	/^    struct SharedImpl : T {$/;"	s	namespace:Catch
-SizedIf	tests/catch.hpp	/^    template<> struct SizedIf<sizeof(FalseType)> : FalseType {};$/;"	s	namespace:Catch
-SizedIf	tests/catch.hpp	/^    template<> struct SizedIf<sizeof(TrueType)> : TrueType {};$/;"	s	namespace:Catch
-SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo( SourceLineInfo const& other )$/;"	f	struct:Catch::SourceLineInfo
-SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo( std::string const& _file, std::size_t _line )$/;"	f	struct:Catch::SourceLineInfo
-SourceLineInfo	tests/catch.hpp	/^        SourceLineInfo() : line( 0 ){}$/;"	f	struct:Catch::SourceLineInfo
-SourceLineInfo	tests/catch.hpp	/^    struct SourceLineInfo {$/;"	s	namespace:Catch
-Support_Num_Players	games/gobang.h	/^  static const int Support_Num_Players = 3;$/;"	m	class:GoBangState
-Support_Num_Players	mcts.h	/^		static const int Support_Num_Players = getSupportNumPlayers<State>::value;$/;"	m	class:MCTS::Node
-THEN	tests/catch.hpp	8029;"	d
-TWOBLUECUBES_CATCH_APPROX_HPP_INCLUDED	tests/catch.hpp	3063;"	d
-TWOBLUECUBES_CATCH_ASSERTIONRESULT_BUILDER_H_INCLUDED	tests/catch.hpp	554;"	d
-TWOBLUECUBES_CATCH_ASSERTIONRESULT_HPP_INCLUDED	tests/catch.hpp	5941;"	d
-TWOBLUECUBES_CATCH_ASSERTIONRESULT_H_INCLUDED	tests/catch.hpp	845;"	d
-TWOBLUECUBES_CATCH_CAPTURE_HPP_INCLUDED	tests/catch.hpp	545;"	d
-TWOBLUECUBES_CATCH_COMMANDLINE_HPP_INCLUDED	tests/catch.hpp	3594;"	d
-TWOBLUECUBES_CATCH_COMMON_H_INCLUDED	tests/catch.hpp	28;"	d
-TWOBLUECUBES_CATCH_COMPILER_CAPABILITIES_HPP_INCLUDED	tests/catch.hpp	42;"	d
-TWOBLUECUBES_CATCH_CONFIG_HPP_INCLUDED	tests/catch.hpp	1536;"	d
-TWOBLUECUBES_CATCH_CONSOLE_COLOUR_HPP_INCLUDED	tests/catch.hpp	4306;"	d
-TWOBLUECUBES_CATCH_CONSOLE_COLOUR_IMPL_HPP_INCLUDED	tests/catch.hpp	5730;"	d
-TWOBLUECUBES_CATCH_CONTEXT_H_INCLUDED	tests/catch.hpp	263;"	d
-TWOBLUECUBES_CATCH_CONTEXT_IMPL_HPP_INCLUDED	tests/catch.hpp	5631;"	d
-TWOBLUECUBES_CATCH_DEBUGGER_HPP_INCLUDED	tests/catch.hpp	1424;"	d
-TWOBLUECUBES_CATCH_DEFAULT_MAIN_HPP_INCLUDED	tests/catch.hpp	7873;"	d
-TWOBLUECUBES_CATCH_EVALUATE_HPP_INCLUDED	tests/catch.hpp	959;"	d
-TWOBLUECUBES_CATCH_EXCEPTION_TRANSLATOR_REGISTRY_HPP_INCLUDED	tests/catch.hpp	5481;"	d
-TWOBLUECUBES_CATCH_EXPRESSIONRESULT_BUILDER_HPP_INCLUDED	tests/catch.hpp	6021;"	d
-TWOBLUECUBES_CATCH_EXPRESSION_DECOMPOSER_HPP_INCLUDED	tests/catch.hpp	548;"	d
-TWOBLUECUBES_CATCH_EXPRESSION_LHS_HPP_INCLUDED	tests/catch.hpp	551;"	d
-TWOBLUECUBES_CATCH_GENERATORS_HPP_INCLUDED	tests/catch.hpp	2826;"	d
-TWOBLUECUBES_CATCH_GENERATORS_IMPL_HPP_INCLUDED	tests/catch.hpp	5867;"	d
-TWOBLUECUBES_CATCH_HPP_INCLUDED	tests/catch.hpp	14;"	d
-TWOBLUECUBES_CATCH_IMPL_HPP_INCLUDED	tests/catch.hpp	3580;"	d
-TWOBLUECUBES_CATCH_INTERFACES_CAPTURE_H_INCLUDED	tests/catch.hpp	1330;"	d
-TWOBLUECUBES_CATCH_INTERFACES_CONFIG_H_INCLUDED	tests/catch.hpp	1947;"	d
-TWOBLUECUBES_CATCH_INTERFACES_EXCEPTION_H_INCLUDED	tests/catch.hpp	3006;"	d
-TWOBLUECUBES_CATCH_INTERFACES_GENERATORS_H_INCLUDED	tests/catch.hpp	266;"	d
-TWOBLUECUBES_CATCH_INTERFACES_REGISTRY_HUB_H_INCLUDED	tests/catch.hpp	1530;"	d
-TWOBLUECUBES_CATCH_INTERFACES_REPORTER_H_INCLUDED	tests/catch.hpp	1533;"	d
-TWOBLUECUBES_CATCH_INTERFACES_RUNNER_H_INCLUDED	tests/catch.hpp	3371;"	d
-TWOBLUECUBES_CATCH_INTERFACES_TESTCASE_H_INCLUDED	tests/catch.hpp	416;"	d
-TWOBLUECUBES_CATCH_LEGACY_REPORTER_ADAPTER_HPP_INCLUDED	tests/catch.hpp	6347;"	d
-TWOBLUECUBES_CATCH_LEGACY_REPORTER_ADAPTER_H_INCLUDED	tests/catch.hpp	6350;"	d
-TWOBLUECUBES_CATCH_LIST_HPP_INCLUDED	tests/catch.hpp	4303;"	d
-TWOBLUECUBES_CATCH_MATCHERS_HPP_INCLUDED	tests/catch.hpp	3144;"	d
-TWOBLUECUBES_CATCH_MESSAGE_HPP_INCLUDED	tests/catch.hpp	6316;"	d
-TWOBLUECUBES_CATCH_MESSAGE_H_INCLUDED	tests/catch.hpp	1275;"	d
-TWOBLUECUBES_CATCH_NOTIMPLEMENTED_EXCEPTION_HPP_INCLUDED	tests/catch.hpp	5610;"	d
-TWOBLUECUBES_CATCH_NOTIMPLEMENTED_EXCEPTION_H_INCLUDED	tests/catch.hpp	25;"	d
-TWOBLUECUBES_CATCH_OBJC_ARC_HPP_INCLUDED	tests/catch.hpp	599;"	d
-TWOBLUECUBES_CATCH_OBJC_HPP_INCLUDED	tests/catch.hpp	3386;"	d
-TWOBLUECUBES_CATCH_OPTION_HPP_INCLUDED	tests/catch.hpp	2224;"	d
-TWOBLUECUBES_CATCH_PTR_HPP_INCLUDED	tests/catch.hpp	290;"	d
-TWOBLUECUBES_CATCH_REGISTRY_HUB_HPP_INCLUDED	tests/catch.hpp	5306;"	d
-TWOBLUECUBES_CATCH_REPORTER_BASIC_HPP_INCLUDED	tests/catch.hpp	6450;"	d
-TWOBLUECUBES_CATCH_REPORTER_CONSOLE_HPP_INCLUDED	tests/catch.hpp	7427;"	d
-TWOBLUECUBES_CATCH_REPORTER_JUNIT_HPP_INCLUDED	tests/catch.hpp	7189;"	d
-TWOBLUECUBES_CATCH_REPORTER_REGISTRARS_HPP_INCLUDED	tests/catch.hpp	6453;"	d
-TWOBLUECUBES_CATCH_REPORTER_REGISTRY_HPP_INCLUDED	tests/catch.hpp	5446;"	d
-TWOBLUECUBES_CATCH_REPORTER_XML_HPP_INCLUDED	tests/catch.hpp	6854;"	d
-TWOBLUECUBES_CATCH_RESULT_TYPE_H_INCLUDED	tests/catch.hpp	849;"	d
-TWOBLUECUBES_CATCH_RUNNER_HPP_INCLUDED	tests/catch.hpp	3591;"	d
-TWOBLUECUBES_CATCH_RUNNER_IMPL_HPP_INCLUDED	tests/catch.hpp	4545;"	d
-TWOBLUECUBES_CATCH_RUNNING_TEST_HPP_INCLUDED	tests/catch.hpp	4548;"	d
-TWOBLUECUBES_CATCH_SECTION_HPP_INCLUDED	tests/catch.hpp	2782;"	d
-TWOBLUECUBES_CATCH_SECTION_INFO_HPP_INCLUDED	tests/catch.hpp	4551;"	d
-TWOBLUECUBES_CATCH_SFINAE_HPP_INCLUDED	tests/catch.hpp	560;"	d
-TWOBLUECUBES_CATCH_STREAMBUF_H_INCLUDED	tests/catch.hpp	1972;"	d
-TWOBLUECUBES_CATCH_STREAM_HPP_INCLUDED	tests/catch.hpp	1969;"	d
-TWOBLUECUBES_CATCH_TAGS_HPP_INCLUDED	tests/catch.hpp	1613;"	d
-TWOBLUECUBES_CATCH_TEST_CASE_INFO_HPP_INCLUDED	tests/catch.hpp	6109;"	d
-TWOBLUECUBES_CATCH_TEST_CASE_INFO_H_INCLUDED	tests/catch.hpp	1542;"	d
-TWOBLUECUBES_CATCH_TEST_CASE_REGISTRY_IMPL_HPP_INCLUDED	tests/catch.hpp	5309;"	d
-TWOBLUECUBES_CATCH_TEST_REGISTRY_HPP_INCLUDED	tests/catch.hpp	413;"	d
-TWOBLUECUBES_CATCH_TEST_SPEC_H_INCLUDED	tests/catch.hpp	1539;"	d
-TWOBLUECUBES_CATCH_TEXT_HPP_INCLUDED	tests/catch.hpp	6232;"	d
-TWOBLUECUBES_CATCH_TEXT_H_INCLUDED	tests/catch.hpp	3600;"	d
-TWOBLUECUBES_CATCH_TOSTRING_HPP_INCLUDED	tests/catch.hpp	557;"	d
-TWOBLUECUBES_CATCH_TOTALS_HPP_INCLUDED	tests/catch.hpp	1334;"	d
-TWOBLUECUBES_CATCH_VERSION_HPP_INCLUDED	tests/catch.hpp	6223;"	d
-TWOBLUECUBES_CATCH_VERSION_H_INCLUDED	tests/catch.hpp	5059;"	d
-TWOBLUECUBES_CATCH_XMLWRITER_HPP_INCLUDED	tests/catch.hpp	6857;"	d
-TWOBLUECUBES_CLARA_H_INCLUDED	tests/catch.hpp	3597;"	d
-TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED	tests/catch.hpp	12;"	d
-TestFunction	tests/catch.hpp	/^typedef void(*TestFunction)();$/;"	t	namespace:Catch
-TestGame	tests/test_mcts.cpp	/^	TestGame(int X_ = 2)$/;"	f	class:TestGame
-TestGame	tests/test_mcts.cpp	/^class TestGame$/;"	c	file:
-TrueIfSizeable	tests/catch.hpp	/^        template<int N> struct TrueIfSizeable : TrueType {};$/;"	s	class:Catch::Detail::IsStreamInsertableHelper
-TrueType	tests/catch.hpp	/^    struct TrueType {$/;"	s	namespace:Catch
+SignGenerator	games/gobang.h	/^	struct SignGenerator { static const char value=player_sign_map[index]; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+Support_Num_Players	games/gobang.h	/^  static constexpr const int Support_Num_Players = num_players;$/;"	m	class:GoBangState
+Support_Num_Players	mcts.h	/^    static const int Support_Num_Players = getSupportNumPlayers<State>::value;$/;"	m	class:MCTS::Node
 UCT_score	mcts.h	/^    double UCT_score;$/;"	m	class:MCTS::Node
-WHEN	tests/catch.hpp	8027;"	d
-X	tests/test_mcts.cpp	/^	int X;$/;"	m	class:TestGame	file:
-__COUNT__	games/gobang.h	/^static int __COUNT__ = 0;$/;"	v
-addRef	tests/catch.hpp	/^        virtual void addRef() const {$/;"	f	struct:Catch::SharedImpl
+a	tests/doubleInit.cpp	/^constexpr auto a = make_array<N>(fun);$/;"	v
 add_child	mcts.h	/^  Node<State>* Node<State>::add_child(const Move& move, const State& state)$/;"	f	class:MCTS::Node
 add_child_and_wont_add_anymore	mcts.h	/^  void Node<State>::add_child_and_wont_add_anymore(const Move& move,$/;"	f	class:MCTS::Node
-arcSafeRelease	tests/catch.hpp	/^inline void arcSafeRelease( NSObject* ){}$/;"	f
-arcSafeRelease	tests/catch.hpp	/^inline void arcSafeRelease( NSObject* obj ) {$/;"	f
-assertion_failed	mcts.h	/^  static void assertion_failed(const char* expr, const char* file_cstr,$/;"	f	namespace:MCTS
-attest	mcts.h	94;"	d
+attest	mcts.h	100;"	d
 best_child	mcts.h	/^  Node<State>* Node<State>::best_child() const$/;"	f	class:MCTS::Node
-board	games/connect_four.h	/^	vector<vector<char>> board;$/;"	m	class:ConnectFourState
 board	games/gobang.h	/^  vector<vector<vector<char>>> board;$/;"	m	class:GoBangState
-check	mcts.h	/^  static void check(bool expr, const char* message)$/;"	f	namespace:MCTS
-check_invariant	games/connect_four.h	/^	void check_invariant() const$/;"	f	class:ConnectFourState
 check_invariant	games/gobang.h	/^  void check_invariant() const$/;"	f	class:GoBangState
-check_invariant	games/nim.h	/^	void check_invariant() const$/;"	f	class:NimState
 children	mcts.h	/^    std::vector<Node*> children;$/;"	m	class:MCTS::Node
-chips	games/nim.h	/^	int chips;$/;"	m	class:NimState
 compute_move	mcts.h	/^  typename State::Move compute_move(const State root_state,$/;"	f	namespace:MCTS
 compute_tree	mcts.h	/^  const Node<State>* compute_tree(const State root_state,$/;"	f	namespace:MCTS
-contains	tests/catch.hpp	/^    inline bool contains( std::string const& s, std::string const& infix ) {$/;"	f	namespace:Catch
-dattest	mcts.h	100;"	d
-dattest	mcts.h	106;"	d
-deleteAll	tests/catch.hpp	/^    inline void deleteAll( ContainerT& container ) {$/;"	f	namespace:Catch
-deleteAllValues	tests/catch.hpp	/^    inline void deleteAllValues( AssociativeContainerT& container ) {$/;"	f	namespace:Catch
-description	tests/catch.hpp	/^    const char* description;$/;"	m	struct:Catch::NameAndDesc
+data	games/gobang.h	/^	const char ArrayHolder<args ...>::data[sizeof ... (args)] ={ args ... };$/;"	m	class:CONST_STATIC_ARRAY_GENERATOR::ArrayHolder
+data	games/gobang.h	/^	template<char ... args> struct ArrayHolder { static const char data[sizeof ... (args)]; };$/;"	m	struct:CONST_STATIC_ARRAY_GENERATOR::ArrayHolder
+data	mcts.h	/^      static constexpr const double data[sizeof...(args)] = {$/;"	m	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::ArrayHolder
+data	mcts.h	/^    constexpr const double ArrayHolder<Func, args...>::data[sizeof...(args)];$/;"	m	class:MCTS::EXPR_DECAY_DOUBLE_ARRAY::ArrayHolder
+data	tests/varidicInit.cpp	/^	static constexpr const double data[sizeof ... (args)]={ Func<args>::output ... };$/;"	m	struct:ArrayHolder	file:
+data	tests/varidicInit.cpp	/^constexpr const double ArrayHolder<Func, args ...>::data[sizeof ... (args)];$/;"	m	class:ArrayHolder	file:
+dattest	mcts.h	104;"	d
+decay_per_times	mcts.h	/^      static constexpr const double decay_per_times = 0.95;$/;"	m	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::ExprDecayGenerator
+decay_value	mcts.h	/^    static constexpr const double (&decay_value)[max_depth] =$/;"	m	class:MCTS::Preserve_State
+detail	tests/doubleInit.cpp	/^  namespace detail$/;"	n	namespace:std	file:
 do_last_move_for_preserve_state	mcts.h	/^    static void do_last_move_for_preserve_state(const State& root_state)$/;"	f	class:MCTS::Preserve_State
-do_move	games/connect_four.h	/^	void do_move(Move move)$/;"	f	class:ConnectFourState
 do_move	games/gobang.h	/^  void do_move(Move move)$/;"	f	class:GoBangState
-do_move	games/nim.h	/^	void do_move(Move move)$/;"	f	class:NimState
-do_move	tests/test_mcts.cpp	/^	void do_move(Move move)$/;"	f	class:TestGame
-do_random_move	games/connect_four.h	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:ConnectFourState
 do_random_move	games/gobang.h	/^  void do_random_move(RandomEngine* engine)$/;"	f	class:GoBangState
-do_random_move	games/nim.h	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:NimState
-do_random_move	tests/test_mcts.cpp	/^	void do_random_move(RandomEngine* engine)$/;"	f	class:TestGame
-empty	tests/catch.hpp	/^        bool empty() const {$/;"	f	struct:Catch::SourceLineInfo
-endsWith	tests/catch.hpp	/^    inline bool endsWith( std::string const& s, std::string const& suffix ) {$/;"	f	namespace:Catch
 features	build/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
 features	build/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
-file	tests/catch.hpp	/^        std::string file;$/;"	m	struct:Catch::SourceLineInfo
-forEach	tests/catch.hpp	/^    inline void forEach( ContainerT const& container, Function function ) {$/;"	f	namespace:Catch
-forEach	tests/catch.hpp	/^    inline void forEach( ContainerT& container, Function function ) {$/;"	f	namespace:Catch
-get	tests/catch.hpp	/^        T* get() { return m_p; }$/;"	f	class:Catch::Ptr
-get	tests/catch.hpp	/^        const T* get() const{ return m_p; }$/;"	f	class:Catch::Ptr
+fun	tests/doubleInit.cpp	/^constexpr double fun(double x) { return pow(0.95,x); }$/;"	f
+generate_array	games/gobang.h	/^	struct generate_array { typedef typename generate_array_impl<N-1,F>::result result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+generate_array	mcts.h	/^    struct generate_array$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+generate_array	tests/varidicInit.cpp	/^struct generate_array$/;"	s	file:
+generate_array_impl	games/gobang.h	/^	struct generate_array_impl { typedef typename generate_array_impl<N-1,F,F<N>::value,args...>::result result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+generate_array_impl	games/gobang.h	/^	struct generate_array_impl<0, F, args ...> { typedef ArrayHolder<F<0>::value, args...> result; };$/;"	s	namespace:CONST_STATIC_ARRAY_GENERATOR
+generate_array_impl	mcts.h	/^    struct generate_array_impl$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+generate_array_impl	mcts.h	/^    struct generate_array_impl<0, Func, F, args...>$/;"	s	namespace:MCTS::EXPR_DECAY_DOUBLE_ARRAY
+generate_array_impl	tests/varidicInit.cpp	/^struct generate_array_impl$/;"	s	file:
+generate_array_impl	tests/varidicInit.cpp	/^struct generate_array_impl<0, Func, F, args ...>$/;"	s	file:
 getLastMove	games/gobang.h	/^	const Move getLastMove()const {return {last_x,last_y,last_z};}$/;"	f	class:GoBangState
 getSupportNumPlayers	mcts.h	/^  struct getSupportNumPlayers$/;"	s	namespace:MCTS
 getSupportNumPlayers	mcts.h	/^  struct getSupportNumPlayers<$/;"	s	namespace:MCTS
 get_child_from_move_and_prune_other_child_and_unchina_all	mcts.h	/^  Node<State>::get_child_from_move_and_prune_other_child_and_unchina_all($/;"	f	class:MCTS::Node
-get_moves	games/connect_four.h	/^	std::vector<Move> get_moves() const$/;"	f	class:ConnectFourState
 get_moves	games/gobang.h	/^  std::vector<Move> get_moves() const$/;"	f	class:GoBangState
-get_moves	games/nim.h	/^	std::vector<Move> get_moves() const$/;"	f	class:NimState
-get_moves	tests/test_mcts.cpp	/^	std::vector<Move> get_moves() const$/;"	f	class:TestGame
-get_result	games/connect_four.h	/^	double get_result(int current_player_to_move) const$/;"	f	class:ConnectFourState
 get_result	games/gobang.h	/^  double get_result(int current_player_is_moved) const$/;"	f	class:GoBangState
-get_result	games/nim.h	/^	double get_result(int current_player_to_move) const$/;"	f	class:NimState
-get_result	tests/test_mcts.cpp	/^	double get_result(int current_player_to_move) const$/;"	f	class:TestGame
 get_untried_move	mcts.h	/^  typename State::Move Node<State>::get_untried_move(RandomEngine* engine) const$/;"	f	class:MCTS::Node
-get_winner	games/connect_four.h	/^	char get_winner() const$/;"	f	class:ConnectFourState
 get_winner	games/gobang.h	/^  char get_winner() const$/;"	f	class:GoBangState
 has_children	mcts.h	/^    bool has_children() const { return !children.empty(); }$/;"	f	class:MCTS::Node
-has_moves	games/connect_four.h	/^	bool has_moves() const$/;"	f	class:ConnectFourState
 has_moves	games/gobang.h	/^  bool has_moves() const$/;"	f	class:GoBangState
-has_moves	games/nim.h	/^	bool has_moves() const$/;"	f	class:NimState
-has_moves	tests/test_mcts.cpp	/^	bool has_moves() const$/;"	f	class:TestGame
 has_untried_moves	mcts.h	/^  bool Node<State>::has_untried_moves() const$/;"	f	class:MCTS::Node
 has_winner	games/gobang.h	/^	bool has_winner() const$/;"	f	class:GoBangState
 human_do_move	mcts.h	/^  void human_do_move(const State& root_state)$/;"	f	namespace:MCTS
@@ -671,113 +454,82 @@ info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^ch
 info_simulate_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
 info_version	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
 info_version	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
-invoke	tests/catch.hpp	/^    virtual void invoke() const {$/;"	f	class:Catch::MethodTestCase
-isTrue	tests/catch.hpp	/^    inline bool isTrue( bool value ){ return value; }$/;"	f	namespace:Catch
-last_col	games/connect_four.h	/^	int last_col;$/;"	m	class:ConnectFourState
-last_row	games/connect_four.h	/^	int last_row;$/;"	m	class:ConnectFourState
+integer_sequence	tests/doubleInit.cpp	/^    struct integer_sequence$/;"	s	namespace:std	file:
+iota	tests/doubleInit.cpp	/^      struct iota$/;"	s	namespace:std::detail	file:
+iota	tests/doubleInit.cpp	/^      struct iota<T, Nt, 0ul>$/;"	s	namespace:std::detail	file:
 last_state	mcts.h	/^    Preserve_State<State>::last_state[ComputeOptions::number_of_threads] = {};$/;"	m	class:MCTS::Preserve_State
 last_state	mcts.h	/^    static Node<State>* last_state[ComputeOptions::number_of_threads];$/;"	m	class:MCTS::Preserve_State
 last_x	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
 last_y	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
 last_z	games/gobang.h	/^  short int last_x, last_y, last_z;$/;"	m	class:GoBangState
-line	tests/catch.hpp	/^        std::size_t line;$/;"	m	struct:Catch::SourceLineInfo
-m_count	tests/catch.hpp	/^        std::size_t m_count;$/;"	m	struct:Catch::pluralise
-m_label	tests/catch.hpp	/^        std::string m_label;$/;"	m	struct:Catch::pluralise
-m_lineInfo	tests/catch.hpp	/^        SourceLineInfo m_lineInfo;$/;"	m	class:Catch::NotImplementedException
-m_method	tests/catch.hpp	/^    void (C::*m_method)();$/;"	m	class:Catch::MethodTestCase
-m_p	tests/catch.hpp	/^        T* m_p;$/;"	m	class:Catch::Ptr
-m_rc	tests/catch.hpp	/^        mutable unsigned int m_rc;$/;"	m	struct:Catch::SharedImpl
-m_what	tests/catch.hpp	/^        std::string m_what;$/;"	m	class:Catch::NotImplementedException
 main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
 main	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	build/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
 main	build/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
-main	games/connect_four.cpp	/^int main()$/;"	f
-main	games/gobang.cpp	/^int main()$/;"	f
-main	games/nim.cpp	/^int main()$/;"	f
-main_program	games/connect_four.cpp	/^void main_program()$/;"	f
-main_program	games/gobang.cpp	/^void main_program()$/;"	f
-makeSafe	tests/catch.hpp	/^        static type makeSafe( bool value ) {$/;"	f	class:Catch::SafeBool
+main	games/gobang.cpp	/^main()$/;"	f
+main	tests/doubleInit.cpp	/^int main() $/;"	f
+main	tests/varidicInit.cpp	/^int main()$/;"	f
+main_program	games/gobang.cpp	/^main_program(const int human_player_id = -1)$/;"	f
+markers	tests/varidicInit.cpp	/^	static constexpr const double (&markers)[index] = result::data;$/;"	m	struct:A	file:
+markers_result	games/gobang.h	/^	typedef typename CONST_STATIC_ARRAY_GENERATOR::generate_array<num_players,CONST_STATIC_ARRAY_GENERATOR::SignGenerator>::result markers_result;$/;"	t	class:GoBangState
+max_depth	mcts.h	/^    static constexpr int max_depth = 60;$/;"	m	class:MCTS::Preserve_State
 max_iterations	mcts.h	/^    int max_iterations;$/;"	m	struct:MCTS::ComputeOptions
 move	mcts.h	/^    const Move move;$/;"	m	class:MCTS::Node
 moves	mcts.h	/^    std::vector<Move> moves;$/;"	m	class:MCTS::Node
-name	tests/catch.hpp	/^    const char* name;$/;"	m	struct:Catch::NameAndDesc
-no_move	games/connect_four.h	/^	static const Move no_move = -1;$/;"	m	class:ConnectFourState
-no_move	games/gobang.h	/^  static const Move no_move;$/;"	m	class:GoBangState
-no_move	games/gobang.h	/^const GoBangState::Move GoBangState::no_move = {-1, -1, -1};$/;"	m	class:GoBangState
-no_move	games/nim.h	/^	static const Move no_move = -1;$/;"	m	class:NimState
-no_move	tests/test_mcts.cpp	/^	static const Move no_move = -1;$/;"	m	class:TestGame	file:
-none_player_marker	games/gobang.h	/^	static const char none_player_marker;$/;"	m	class:GoBangState
-none_player_marker	games/gobang.h	/^const char GoBangState::none_player_marker = '.';$/;"	m	class:GoBangState
-num_cols	games/connect_four.h	/^	int num_rows, num_cols;$/;"	m	class:ConnectFourState
-num_rows	games/connect_four.h	/^	int num_rows, num_cols;$/;"	m	class:ConnectFourState
-num_xs	games/gobang.h	/^  short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
-num_ys	games/gobang.h	/^  short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
-num_zs	games/gobang.h	/^  short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
+no_move	games/gobang.h	/^  static constexpr const Move no_move={-1,-1,-1};$/;"	m	class:GoBangState
+none_player_marker	games/gobang.h	/^	static constexpr const char none_player_marker = '.';$/;"	m	class:GoBangState
+num_xs	games/gobang.h	/^  const short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
+num_ys	games/gobang.h	/^  const short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
+num_zs	games/gobang.h	/^  const short int num_xs, num_ys, num_zs;$/;"	m	class:GoBangState
 number_of_threads	mcts.h	/^    static const int number_of_threads = 8;$/;"	m	struct:MCTS::ComputeOptions
 only_for_test	mcts.h	/^    static const int only_for_test = 0;$/;"	m	struct:MCTS::getSupportNumPlayers
-operator !	tests/catch.hpp	/^        bool operator !() const { return m_p == NULL; }$/;"	f	class:Catch::Ptr
 operator !=	games/gobang.h	/^    bool operator!=(const struct Move& ot) const { return !((*this) == ot); }$/;"	f	struct:GoBangState::Move
-operator *	tests/catch.hpp	/^        T& operator*() const { return *m_p; }$/;"	f	class:Catch::Ptr
-operator ->	tests/catch.hpp	/^        T* operator->() const { return m_p; }$/;"	f	class:Catch::Ptr
 operator <	games/gobang.h	/^    bool operator<(const struct Move& ot) const$/;"	f	struct:GoBangState::Move
-operator <<	games/connect_four.h	/^ostream& operator << (ostream& out, const ConnectFourState& state)$/;"	f
 operator <<	games/gobang.h	/^    friend std::ostream& operator<<(std::ostream& out, const struct Move& move)$/;"	f	struct:GoBangState::Move
-operator <<	games/gobang.h	/^operator<<(ostream& out, const GoBangState& state)$/;"	f
-operator <<	tests/catch.hpp	/^        friend std::ostream& operator << ( std::ostream& os, pluralise const& pluraliser ) {$/;"	f	struct:Catch::pluralise
-operator <<	tests/catch.hpp	/^    inline std::ostream& operator << ( std::ostream& os, SourceLineInfo const& info ) {$/;"	f	namespace:Catch
-operator =	tests/catch.hpp	/^        Ptr& operator = ( Ptr const& other ){$/;"	f	class:Catch::Ptr
-operator =	tests/catch.hpp	/^        Ptr& operator = ( T* p ){$/;"	f	class:Catch::Ptr
+operator <<	games/gobang.h	/^operator<<(ostream& out, const GoBangState<num_players>& state)$/;"	f
 operator ==	games/gobang.h	/^    bool operator==(const struct Move& ot) const$/;"	f	struct:GoBangState::Move
 operator >>	games/gobang.h	/^    friend std::istream& operator>>(std::istream& in, struct Move& move)$/;"	f	struct:GoBangState::Move
-operator SafeBool::type	tests/catch.hpp	/^        operator SafeBool::type() const { return SafeBool::makeSafe( m_p != NULL ); }$/;"	f	class:Catch::Ptr
+output	mcts.h	/^      static constexpr const double output = pow(decay_per_times, input);$/;"	m	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::ExprDecayGenerator
+output	tests/varidicInit.cpp	/^	static constexpr const double output=pow(0.95,input);$/;"	m	struct:ExprDecayGenerator	file:
 parent	mcts.h	/^    Node* parent;$/;"	m	class:MCTS::Node
-performOptionalSelector	tests/catch.hpp	/^inline id performOptionalSelector( id obj, SEL sel ) {$/;"	f
 player_is_moved	games/gobang.h	/^  int player_is_moved;$/;"	m	class:GoBangState
 player_is_moved	mcts.h	/^    const int player_is_moved;$/;"	m	class:MCTS::Node
-player_markers	games/connect_four.h	/^	static const char player_markers[3]; $/;"	m	class:ConnectFourState
-player_markers	games/connect_four.h	/^const char ConnectFourState::player_markers[3] = {'.', 'X', 'O'}; $/;"	m	class:ConnectFourState
-player_markers	games/gobang.h	/^  static const char player_markers[Support_Num_Players];$/;"	m	class:GoBangState
-player_markers	games/gobang.h	/^const char GoBangState::player_markers[GoBangState::Support_Num_Players] = {'X', 'O', 'L'};$/;"	m	class:GoBangState
-player_to_move	games/connect_four.h	/^	int player_to_move;$/;"	m	class:ConnectFourState
-player_to_move	games/nim.h	/^	int player_to_move;$/;"	m	class:NimState
-player_to_move	tests/test_mcts.cpp	/^	int player_to_move;$/;"	m	class:TestGame	file:
-pluralise	tests/catch.hpp	/^        pluralise( std::size_t count, std::string const& label )$/;"	f	struct:Catch::pluralise
-pluralise	tests/catch.hpp	/^    struct pluralise {$/;"	s	namespace:Catch
-print	games/connect_four.h	/^	void print(ostream& out) const$/;"	f	class:ConnectFourState
+player_markers	games/gobang.h	/^  static constexpr const char (&player_markers)[Support_Num_Players]= markers_result::data;$/;"	m	class:GoBangState
+player_sign_map	games/gobang.h	/^	constexpr char player_sign_map[]={'X','O','L','G','H','T','S','V','M'}; $/;"	m	namespace:CONST_STATIC_ARRAY_GENERATOR
 print	games/gobang.h	/^  void print(ostream& out) const$/;"	f	class:GoBangState
 prune_all_childs_without_one	mcts.h	/^  void Node<State>::prune_all_childs_without_one($/;"	f	class:MCTS::Node
 qnxnto	build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
-release	tests/catch.hpp	/^        virtual void release() const {$/;"	f	struct:Catch::SharedImpl
 reserved_moves	games/gobang.h	/^  vector<Move> reserved_moves;$/;"	m	class:GoBangState
-reset	tests/catch.hpp	/^        void reset() {$/;"	f	class:Catch::Ptr
+result	games/gobang.h	/^	struct generate_array { typedef typename generate_array_impl<N-1,F>::result result; };$/;"	t	struct:CONST_STATIC_ARRAY_GENERATOR::generate_array
+result	games/gobang.h	/^	struct generate_array_impl { typedef typename generate_array_impl<N-1,F,F<N>::value,args...>::result result; };$/;"	t	struct:CONST_STATIC_ARRAY_GENERATOR::generate_array_impl
+result	games/gobang.h	/^	struct generate_array_impl<0, F, args ...> { typedef ArrayHolder<F<0>::value, args...> result; };$/;"	t	struct:CONST_STATIC_ARRAY_GENERATOR::generate_array_impl
+result	mcts.h	/^                                           args...>::result result;$/;"	t	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::generate_array_impl
+result	mcts.h	/^                                      OriginGenerator>::result result;$/;"	t	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::EXPR_DECAY_DOUBLE_ARRAY
+result	mcts.h	/^      typedef ArrayHolder<Func, F<0>::value, args...> result;$/;"	t	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::generate_array_impl
+result	mcts.h	/^      typedef typename generate_array_impl<N - 1, Func, F>::result result;$/;"	t	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::generate_array
+result	tests/varidicInit.cpp	/^	typedef ArrayHolder<Func, F<0>::value, args...> result;$/;"	t	struct:generate_array_impl	file:
+result	tests/varidicInit.cpp	/^	typedef typename generate_array<index,ExprDecayGenerator,OriginGenerator>::result result;$/;"	t	struct:A	file:
+result	tests/varidicInit.cpp	/^	typedef typename generate_array_impl<N-1,Func,F,F<N>::value,args...>::result result;$/;"	t	struct:generate_array_impl	file:
+result	tests/varidicInit.cpp	/^	typedef typename generate_array_impl<N-1,Func,F>::result result;$/;"	t	struct:generate_array	file:
 select_child_UCT	mcts.h	/^  Node<State>* Node<State>::select_child_UCT() const$/;"	f	class:MCTS::Node
 set_parent_nullptr	mcts.h	/^  void Node<State>::set_parent_nullptr()$/;"	f	class:MCTS::Node
-sizer	tests/catch.hpp	/^        char sizer[1];$/;"	m	struct:Catch::TrueType
-sizer	tests/catch.hpp	/^        char sizer[2];$/;"	m	struct:Catch::FalseType
-startsWith	tests/catch.hpp	/^    inline bool startsWith( std::string const& s, std::string const& prefix ) {$/;"	f	namespace:Catch
-swap	tests/catch.hpp	/^        void swap( Ptr& other ) { std::swap( m_p, other.m_p ); }$/;"	f	class:Catch::Ptr
-throwLogicError	tests/catch.hpp	/^    inline void throwLogicError( std::string const& message, SourceLineInfo const& locationInfo ) {$/;"	f	namespace:Catch
-toLower	tests/catch.hpp	/^    inline std::string toLower( std::string const& s ) {$/;"	f	namespace:Catch
-toLowerInPlace	tests/catch.hpp	/^    inline void toLowerInPlace( std::string& s ) {$/;"	f	namespace:Catch
+size	tests/doubleInit.cpp	/^      static constexpr T size = sizeof...(I);$/;"	m	struct:std::integer_sequence	file:
+size	tests/doubleInit.cpp	/^    constexpr T integer_sequence<T, I...>::size;$/;"	m	class:std::integer_sequence	file:
+std	tests/doubleInit.cpp	/^namespace std$/;"	n	file:
 to_string	mcts.h	/^  std::string Node<State>::to_string() const$/;"	f	class:MCTS::Node
 tree_to_string	mcts.h	/^  std::string Node<State>::tree_to_string(int max_depth, int indent) const$/;"	f	class:MCTS::Node
-trueValue	tests/catch.hpp	/^        void trueValue() const {}$/;"	f	class:Catch::SafeBool
-update	mcts.h	/^  void Node<State>::update(double result[])$/;"	f	class:MCTS::Node
-value	mcts.h	/^    static const int value = 3;$/;"	m	struct:MCTS::getSupportNumPlayers
+update	mcts.h	/^  void Node<State>::update(double result[], double visit)$/;"	f	class:MCTS::Node
+value	games/gobang.h	/^	struct SignGenerator { static const char value=player_sign_map[index]; };$/;"	m	struct:CONST_STATIC_ARRAY_GENERATOR::SignGenerator
+value	mcts.h	/^      static constexpr const int value = index;$/;"	m	struct:MCTS::EXPR_DECAY_DOUBLE_ARRAY::OriginGenerator
+value	mcts.h	/^    static const int value = 2;$/;"	m	struct:MCTS::getSupportNumPlayers
 value	mcts.h	/^    static const int value = State::Support_Num_Players;$/;"	m	struct:MCTS::getSupportNumPlayers
-value	tests/catch.hpp	/^        static const bool value = false;$/;"	m	struct:Catch::FalseType
-value	tests/catch.hpp	/^        static const bool value = true;$/;"	m	struct:Catch::TrueType
+value	tests/varidicInit.cpp	/^	static constexpr const int value=index;$/;"	m	struct:OriginGenerator	file:
 verbose	mcts.h	/^    bool verbose;$/;"	m	struct:MCTS::ComputeOptions
-visits	mcts.h	/^    long long int visits;$/;"	m	class:MCTS::Node
-winner	tests/test_mcts.cpp	/^	int winner;$/;"	m	class:TestGame	file:
+visits	mcts.h	/^    double visits;$/;"	m	class:MCTS::Node
 wins	mcts.h	/^    double wins[Support_Num_Players];$/;"	m	class:MCTS::Node
 x	games/gobang.h	/^    short int x;$/;"	m	struct:GoBangState::Move
 y	games/gobang.h	/^    short int y;$/;"	m	struct:GoBangState::Move
 z	games/gobang.h	/^    short int z;$/;"	m	struct:GoBangState::Move
-~MethodTestCase	tests/catch.hpp	/^    virtual ~MethodTestCase() {}$/;"	f	class:Catch::MethodTestCase
 ~Node	mcts.h	/^  Node<State>::~Node()$/;"	f	class:MCTS::Node
-~NotImplementedException	tests/catch.hpp	/^        virtual ~NotImplementedException() throw() {}$/;"	f	class:Catch::NotImplementedException
-~Ptr	tests/catch.hpp	/^        ~Ptr(){$/;"	f	class:Catch::Ptr
