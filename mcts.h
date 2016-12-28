@@ -53,12 +53,19 @@ namespace MCTS
     int max_iterations;
     bool verbose;
 
-    ComputeOptions() : max_iterations(10000), verbose(false) {}
+    double self_win;
+    double suppress_others;
+    double active_search;
+    ComputeOptions()
+      : max_iterations(10000), verbose(false), self_win(1.0),
+        suppress_others(1.0), active_search(2.0)
+    {
+    }
   };
 
   template<typename State>
-  typename State::Move compute_move(
-    const State root_state, const ComputeOptions options = ComputeOptions());
+  typename State::Move compute_move(const State root_state,
+                                    const ComputeOptions options);
 }
 //
 //
@@ -142,7 +149,8 @@ namespace MCTS
 
     bool has_children() const { return !children.empty(); }
 
-    Node* select_child_UCT() const;
+    Node* select_child_UCT(const double self_win, const double suppress_others,
+                           const double active_search) const;
     Node* add_child(const Move& move, const State& state);
     Node* get_child_from_move_and_prune_other_child_and_unchina_all(
       const Move& move);
@@ -152,8 +160,9 @@ namespace MCTS
 
     void set_parent_nullptr();
 
-    std::string to_string() const;
-    std::string tree_to_string(int max_depth = 1000000, int indent = 0) const;
+    // std::string to_string() const;
+    // std::string tree_to_string(int max_depth = 1000000, int indent = 0)
+    // const;
 
     const Move move;
     Node* parent;
@@ -171,7 +180,7 @@ namespace MCTS
   private:
     Node(const State& state, const Move& move, Node* parent);
 
-    std::string indent_string(int indent) const;
+    // std::string indent_string(int indent) const;
 
     Node(const Node&);
     Node& operator=(const Node&);
@@ -245,7 +254,9 @@ namespace MCTS
   }
 
   template<typename State>
-  Node<State>* Node<State>::select_child_UCT() const
+  Node<State>* Node<State>::select_child_UCT(const double self_win,
+                                             const double suppress_others,
+                                             const double active_search) const
   {
     attest(!children.empty());
     for (auto child : children)
@@ -275,9 +286,12 @@ namespace MCTS
           max_non_me = temp;
       }
       child->UCT_score =
+        self_win *
         (double(child->wins[child->player_is_moved]) / double(child->visits) +
-         (1.0 - max_non_me) / (Node<State>::Support_Num_Players) +
-         std::sqrt(4.0 * std::log(double(this->visits)) / child->visits));
+         suppress_others * (1.0 - max_non_me) /
+           (Node<State>::Support_Num_Players) +
+         active_search *
+           std::sqrt(std::log(double(this->visits)) / child->visits));
     }
 
     return *std::max_element(
@@ -368,44 +382,44 @@ namespace MCTS
     // while ( ! wins.compare_exchange_strong(my_wins, my_wins + result));
   }
 
-  template<typename State>
-  std::string Node<State>::to_string() const
-  {
-    std::stringstream sout;
-    sout << "["
-         << "P" << 3 - player_is_moved << " "
-         << "M:" << move << " "
-         << "W/V: " << wins << "/" << visits << " "
-         << "U: " << moves.size() << "]\n";
-    return sout.str();
-  }
+  // template<typename State>
+  // std::string Node<State>::to_string() const
+  //{
+  // std::stringstream sout;
+  // sout << "["
+  //<< "P" << 3 - player_is_moved << " "
+  //<< "M:" << move << " "
+  //<< "W/V: " << wins << "/" << visits << " "
+  //<< "U: " << moves.size() << "]\n";
+  // return sout.str();
+  //}
 
-  template<typename State>
-  std::string Node<State>::tree_to_string(int max_depth, int indent) const
-  {
-    if (indent >= max_depth)
-    {
-      return "";
-    }
+  // template<typename State>
+  // std::string Node<State>::tree_to_string(int max_depth, int indent) const
+  //{
+  // if (indent >= max_depth)
+  //{
+  // return "";
+  //}
 
-    std::string s = indent_string(indent) + to_string();
-    for (auto child : children)
-    {
-      s += child->tree_to_string(max_depth, indent + 1);
-    }
-    return s;
-  }
+  // std::string s = indent_string(indent) + to_string();
+  // for (auto child : children)
+  //{
+  // s += child->tree_to_string(max_depth, indent + 1);
+  //}
+  // return s;
+  //}
 
-  template<typename State>
-  std::string Node<State>::indent_string(int indent) const
-  {
-    std::string s = "";
-    for (int i = 1; i <= indent; ++i)
-    {
-      s += "| ";
-    }
-    return s;
-  }
+  // template<typename State>
+  // std::string Node<State>::indent_string(int indent) const
+  //{
+  // std::string s = "";
+  // for (int i = 1; i <= indent; ++i)
+  //{
+  // s += "| ";
+  //}
+  // return s;
+  //}
 
   /////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////
@@ -541,7 +555,8 @@ namespace MCTS
       // Select a path through the tree to a leaf node.
       while (!node->has_untried_moves() && node->has_children())
       {
-        node = node->select_child_UCT();
+        node = node->select_child_UCT(options.self_win, options.suppress_others,
+                                      options.active_search);
         state.do_move(node->move);
       }
 
@@ -603,8 +618,8 @@ namespace MCTS
         node->wins[next_player] = node->visits;
       }
 
-      //if (need_to_end_count >= Preserve_State<State>::max_depth)
-        //need_to_end_count = Preserve_State<State>::max_depth - 1;
+      // if (need_to_end_count >= Preserve_State<State>::max_depth)
+      // need_to_end_count = Preserve_State<State>::max_depth - 1;
       // We have now reached a final state. Backpropagate the result
       // up the tree to the root node.
 
@@ -717,8 +732,9 @@ namespace MCTS
           max_no_me_wins = wins[i][move];
       // Expected success rate assuming a uniform prior (Beta(1, 1)).
       // https://en.wikipedia.org/wiki/Beta_distribution
-      double expected_success_rate = (w + 1) / (v + 2) +
-                                     (1.0 - (max_no_me_wins + 1) / (v + 2)) /
+      double expected_success_rate = options.self_win * (w + 1) / (v + 2) +
+                                     options.suppress_others *
+                                       (1.0 - (max_no_me_wins + 1) / (v + 2)) /
                                        Node<State>::Support_Num_Players;
       if (expected_success_rate > best_score)
       {
