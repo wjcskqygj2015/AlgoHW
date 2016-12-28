@@ -88,28 +88,16 @@ namespace MCTS
   using std::vector;
   using std::size_t;
 
-  static void check(bool expr, const char* message);
-  static void assertion_failed(const char* expr, const char* file, int line);
+// static void check(bool expr, const char* message);
+// static void assertion_failed(const char* expr, const char* file, int line);
 
-#define attest(expr)                                                           \
-  if (!(expr))                                                                 \
-  {                                                                            \
-    ::MCTS::assertion_failed(#expr, __FILE__, __LINE__);                       \
-  }
-#ifndef NDEBUG
-#define dattest(expr)                                                          \
-  if (!(expr))                                                                 \
-  {                                                                            \
-    ::MCTS::assertion_failed(#expr, __FILE__, __LINE__);                       \
-  }
-#else
-#define dattest(expr) ((void)0)
-#endif
+#define attest(expr) do{}while(0)
+#define dattest(expr) do{}while(0)
 
   template<typename State, typename = void>
   struct getSupportNumPlayers
   {
-    static const int value = 3;
+    static const int value = 2;
   };
 
   template<typename State>
@@ -250,33 +238,34 @@ namespace MCTS
     attest(!children.empty());
     for (auto child : children)
     {
-      //double square_sum = 0.0;
-      //double linear_sum = 0.0;
-      //for (int i =
-             //(child->player_is_moved + 1) % Node<State>::Support_Num_Players;
-           //i != child->player_is_moved;
-           //i = (i + 1) % Node<State>::Support_Num_Players)
+      // double square_sum = 0.0;
+      // double linear_sum = 0.0;
+      // for (int i =
+      //(child->player_is_moved + 1) % Node<State>::Support_Num_Players;
+      // i != child->player_is_moved;
+      // i = (i + 1) % Node<State>::Support_Num_Players)
       //{
-        //double temp = double(child->wins[i]) / double(child->visits);
-        //square_sum += temp * temp;
-        //linear_sum += temp;
+      // double temp = double(child->wins[i]) / double(child->visits);
+      // square_sum += temp * temp;
+      // linear_sum += temp;
       //}
-      //square_sum -= (linear_sum * linear_sum);
-      //square_sum /= (Node<State>::Support_Num_Players - 1);
+      // square_sum -= (linear_sum * linear_sum);
+      // square_sum /= (Node<State>::Support_Num_Players - 1);
 
-			double max_non_me = 0.0;
-			for (int i =
-						 (child->player_is_moved + 1) % Node<State>::Support_Num_Players;
-					 i != child->player_is_moved;
-					 i = (i + 1) % Node<State>::Support_Num_Players)
-			{
-				double temp = double(child->wins[i]) / double(child->visits);
-				if(temp>max_non_me)
-					max_non_me=temp;
-			}
+      double max_non_me = 0.0;
+      for (int i =
+             (child->player_is_moved + 1) % Node<State>::Support_Num_Players;
+           i != child->player_is_moved;
+           i = (i + 1) % Node<State>::Support_Num_Players)
+      {
+        double temp = double(child->wins[i]) / double(child->visits);
+        if (temp > max_non_me)
+          max_non_me = temp;
+      }
       child->UCT_score =
-        ( double(child->wins[child->player_is_moved]) / double(child->visits) + (1.0 - max_non_me ) +
-        std::sqrt(2.0 * std::log(double(this->visits)) / child->visits) );
+        (double(child->wins[child->player_is_moved]) / double(child->visits) +
+         (1.0 - max_non_me) +
+         std::sqrt(2.0 * std::log(double(this->visits)) / child->visits));
     }
 
     return *std::max_element(
@@ -325,7 +314,7 @@ namespace MCTS
     for (; itr != children.cend() && *itr != lucky_one_child; ++itr)
       delete *itr;
 
-    attest(itr != children.cend())
+    attest(itr != children.cend());
 
       children.erase(children.cbegin(), itr);
 
@@ -659,33 +648,33 @@ namespace MCTS
   /////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////
 
-  static void check(bool expr, const char* message)
-  {
-    if (!expr)
-    {
-      throw std::invalid_argument(message);
-    }
-  }
+  // static void check(bool expr, const char* message)
+  //{
+  // if (!expr)
+  //{
+  // throw std::invalid_argument(message);
+  //}
+  //}
 
-  static void assertion_failed(const char* expr, const char* file_cstr,
-                               int line)
-  {
-    using namespace std;
+  // static void assertion_failed(const char* expr, const char* file_cstr,
+  // int line)
+  //{
+  // using namespace std;
 
-    // Extract the file name only.
-    string file(file_cstr);
-    auto pos = file.find_last_of("/\\");
-    if (pos == string::npos)
-    {
-      pos = 0;
-    }
-    file = file.substr(pos + 1); // Returns empty string if pos + 1 == length.
+  //// Extract the file name only.
+  // string file(file_cstr);
+  // auto pos = file.find_last_of("/\\");
+  // if (pos == string::npos)
+  //{
+  // pos = 0;
+  //}
+  // file = file.substr(pos + 1); // Returns empty string if pos + 1 == length.
 
-    stringstream sout;
-    sout << "Assertion failed: " << expr << " in " << file << ":" << line
-         << ".";
-    throw runtime_error(sout.str().c_str());
-  }
+  // stringstream sout;
+  // sout << "Assertion failed: " << expr << " in " << file << ":" << line
+  //<< ".";
+  // throw runtime_error(sout.str().c_str());
+  //}
 }
 
 #endif

@@ -37,10 +37,10 @@ vector
 /media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.cpp
 iostream
 -
-mcts.h
--
 gobang.h
 /media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
+mcts.h
+-
 
 /media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
 algorithm
