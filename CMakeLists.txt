@@ -10,12 +10,10 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # Default locations to search for on various platforms.
 LIST(APPEND SEARCH_LIBS /usr/lib)
 LIST(APPEND SEARCH_LIBS /usr/local/lib)
-LIST(APPEND SEARCH_LIBS /usr/local/homebrew/lib) # Mac OS X
 LIST(APPEND SEARCH_LIBS /opt/local/lib)
 
 LIST(APPEND SEARCH_HEADERS /usr/include)
 LIST(APPEND SEARCH_HEADERS /usr/local/include)
-LIST(APPEND SEARCH_HEADERS /usr/local/homebrew/include) # Mac OS X
 LIST(APPEND SEARCH_HEADERS /opt/local/include)
 
 ENABLE_TESTING()
@@ -68,27 +66,8 @@ IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
 ENDIF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
 
 #
-# MSVC settings
-#
-IF (MSVC)
-  # Disable deprecation warning for standard functions.
-  ADD_DEFINITIONS("/wd4996")
-  # To get rid of annoying min and max macros if windows.h
-  # is included.
-  ADD_DEFINITIONS("-DNOMINMAX=1")
-  ADD_DEFINITIONS("-D_VARIADIC_MAX=6")
-ENDIF (MSVC)
-
-#
 # Include directories
 #
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR})
-INCLUDE_DIRECTORIES(third-party/Catch)
-IF (${USE_CINDER})
-	MESSAGE("-- Will be using Cinder.")
-	INCLUDE_DIRECTORIES(${CINDER_INCLUDE})
-ENDIF()
-FILE(GLOB MCTS_HEADERS ${CMAKE_SOURCE_DIR}/*.h)
 
 ADD_SUBDIRECTORY(games)
-#ADD_SUBDIRECTORY(tests)

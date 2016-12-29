@@ -163,6 +163,7 @@ namespace MCTS
     void add_child_and_wont_add_anymore(const Move& move, const State& state);
     void prune_all_childs_without_one(const Node<State>* lucky_one_child);
     void update(double result[], double visit);
+		void try_to_prune();
 
     void set_parent_nullptr();
 
@@ -237,6 +238,31 @@ namespace MCTS
     this->parent = nullptr;
   }
 
+  template<typename State>
+  void Node<State>::try_to_prune()
+  {
+		const int ratio=3;
+
+		double max_win_rate=0.0;
+		for(auto child : children)
+				if(max_win_rate<double(child->wins[child->player_is_moved]) / double(child->visits))
+					max_win_rate=double(child->wins[child->player_is_moved]) / double(child->visits);
+	
+		double min_win_rate = max_win_rate/ratio;	
+		for(auto iter= children.begin();iter!=children.end();iter++)
+		{
+			if(double((*iter)->wins[(*iter)->player_is_moved]) / double((*iter)->visits)<min_win_rate)
+			{
+				delete *iter;
+				children.erase(iter);
+			}
+		}
+
+    for (auto child : children)
+		{
+			child->try_to_prune();
+		}		
+  }
   template<typename State>
   template<typename RandomEngine>
   typename State::Move Node<State>::get_untried_move(RandomEngine* engine) const
@@ -555,6 +581,9 @@ namespace MCTS
     for (int iter = 1;
          iter <= options.max_iterations || options.max_iterations < 0; ++iter)
     {
+			//if(iter==options.max_iterations/2)
+				//root->try_to_prune();
+
       auto node = root;
       State state = root_state;
 
