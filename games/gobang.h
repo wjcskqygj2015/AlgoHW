@@ -1,5 +1,5 @@
-// Petter Strandmark 2013
-// petter.strandmark@gmail.com
+#ifndef GOBANG_H_
+#define GOBANG_H_
 
 #include <algorithm>
 #include <iostream>
@@ -411,4 +411,4 @@ operator<<(ostream& out, const GoBangState<num_players>& state)
   state.print(out);
   return out;
 }
-
+#endif //GOBANG_H_

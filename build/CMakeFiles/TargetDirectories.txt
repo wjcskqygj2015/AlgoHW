@@ -1,7 +1,7 @@
-/home/wjc/src/AlgoHW/build/CMakeFiles/test.dir
-/home/wjc/src/AlgoHW/build/CMakeFiles/edit_cache.dir
-/home/wjc/src/AlgoHW/build/CMakeFiles/rebuild_cache.dir
-/home/wjc/src/AlgoHW/build/games/CMakeFiles/test.dir
-/home/wjc/src/AlgoHW/build/games/CMakeFiles/rebuild_cache.dir
-/home/wjc/src/AlgoHW/build/games/CMakeFiles/edit_cache.dir
-/home/wjc/src/AlgoHW/build/games/CMakeFiles/gobang.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/test.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/edit_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/CMakeFiles/rebuild_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/test.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/rebuild_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/edit_cache.dir
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/build/games/CMakeFiles/gobang.dir

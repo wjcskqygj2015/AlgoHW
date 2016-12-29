@@ -1,49 +1,5 @@
-#ifndef MCTS_HEADER_PETTER
-#define MCTS_HEADER_PETTER
-//
-// Petter Strandmark 2013
-// petter.strandmark@gmail.com
-//
-// Monte Carlo Tree Search for finite games.
-//
-// Originally based on Python code at
-// http://mcts.ai/code/python.html
-//
-// Uses the "root parallelization" technique [1].
-//
-// This game engine can play any game defined by a state like this:
-/*
-
-class GameState
-{
-public:
-        typedef int Move;
-        static const Move no_move = ...
-
-        void do_move(Move move);
-        template<typename RandomEngine>
-        void do_random_move(*engine);
-        bool has_moves() const;
-        std::vector<Move> get_moves() const;
-
-        // Returns a value in {0, 0.5, 1}.
-        // This should not be an evaluation function, because it will only be
-        // called for finished games. Return 0.5 to indicate a draw.
-        double get_result(int current_player_is_moved) const;
-
-        int player_is_moved;
-
-        // ...
-private:
-        // ...
-};
-
-*/
-//
-// See the examples for more details. Given a suitable State, the
-// following function (tries to) compute the best move for the
-// player to move.
-//
+#ifndef MCTS_H_
+#define MCTS_H_
 
 namespace MCTS
 {
@@ -107,8 +63,6 @@ namespace MCTS
   using std::vector;
   using std::size_t;
 
-// static void check(bool expr, const char* message);
-// static void assertion_failed(const char* expr, const char* file, int line);
 
 #define attest(expr)                                                           \
   do                                                                           \
@@ -132,7 +86,7 @@ namespace MCTS
   {
     static const int value = State::Support_Num_Players;
 
-    static const int only_for_test = 0;
+    //static const int only_for_test = 0;
   };
   //
   // This class is used to build the game tree. The root is created by the users
@@ -166,10 +120,6 @@ namespace MCTS
 		void try_to_prune();
 
     void set_parent_nullptr();
-
-    // std::string to_string() const;
-    // std::string tree_to_string(int max_depth = 1000000, int indent = 0)
-    // const;
 
     const Move move;
     Node* parent;
@@ -413,45 +363,6 @@ namespace MCTS
     // double my_wins = wins.load();
     // while ( ! wins.compare_exchange_strong(my_wins, my_wins + result));
   }
-
-  // template<typename State>
-  // std::string Node<State>::to_string() const
-  //{
-  // std::stringstream sout;
-  // sout << "["
-  //<< "P" << 3 - player_is_moved << " "
-  //<< "M:" << move << " "
-  //<< "W/V: " << wins << "/" << visits << " "
-  //<< "U: " << moves.size() << "]\n";
-  // return sout.str();
-  //}
-
-  // template<typename State>
-  // std::string Node<State>::tree_to_string(int max_depth, int indent) const
-  //{
-  // if (indent >= max_depth)
-  //{
-  // return "";
-  //}
-
-  // std::string s = indent_string(indent) + to_string();
-  // for (auto child : children)
-  //{
-  // s += child->tree_to_string(max_depth, indent + 1);
-  //}
-  // return s;
-  //}
-
-  // template<typename State>
-  // std::string Node<State>::indent_string(int indent) const
-  //{
-  // std::string s = "";
-  // for (int i = 1; i <= indent; ++i)
-  //{
-  // s += "| ";
-  //}
-  // return s;
-  //}
 
   /////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////
@@ -831,4 +742,4 @@ namespace MCTS
   //}
 }
 
-#endif
+#endif //MCTS_H_

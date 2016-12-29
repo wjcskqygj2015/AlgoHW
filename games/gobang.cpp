@@ -3,8 +3,8 @@
 #include <iostream>
 using namespace std;
 #include "gobang.h"
+#include "config.h"
 #include <mcts.h>
-
 template<int num_players, int num_iterations>
 void
 main_program(MCTS::ComputeOptions player_options[num_players], const int human_player_id = -1)
@@ -32,7 +32,7 @@ main_program(MCTS::ComputeOptions player_options[num_players], const int human_p
   // player2_options.max_iterations = 400000;
   // player2_options.verbose = true;
 
-  GoBangState<num_players> state(6, 6, 6);
+  GoBangState<num_players> state(CONFIG::chessboard_size, CONFIG::chessboard_size, CONFIG::chessboard_size);
   while (state.has_moves())
   {
     cout << endl << "State: " << state << endl;
@@ -88,12 +88,15 @@ main()
 {
   try
   {
-		constexpr const int num_players=3;
-		constexpr const int max_iterations=1000000;
+		constexpr const int num_players=CONFIG::num_players;
+		constexpr const int max_iterations=CONFIG::max_iterations;
+		constexpr const int human_player_id=CONFIG::human_player_id;
   	MCTS::ComputeOptions player_options[num_players];
-		player_options[0]=MCTS::active_search;
-		player_options[1]=MCTS::sag_search;
-    main_program<num_players,max_iterations>(player_options);
+		for(int i=0;i<num_players;i++)
+			player_options[i]=CONFIG::player_options[i];
+		//player_options[0]=MCTS::active_search;
+		//player_options[1]=MCTS::sag_search;
+    main_program<num_players,max_iterations>(player_options,human_player_id);
   }
   catch (std::runtime_error& error)
   {

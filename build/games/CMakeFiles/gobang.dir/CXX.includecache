@@ -46,23 +46,29 @@ typeinfo
 vector
 -
 
-/home/wjc/src/AlgoHW/games/gobang.cpp
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/config.h
+../mcts.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
+
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.cpp
 iostream
 -
 gobang.h
-/home/wjc/src/AlgoHW/games/gobang.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
+config.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/config.h
 mcts.h
 -
 
-/home/wjc/src/AlgoHW/games/gobang.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/games/gobang.h
 algorithm
 -
 iostream
 -
 ../mcts.h
-/home/wjc/src/AlgoHW/mcts.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
 
-/home/wjc/src/AlgoHW/mcts.h
+/media/wjc/Workspace/src/mycode/homework/algo/gobang/mcts.h
 algorithm
 -
 array
